@@ -1,0 +1,38 @@
+/*
+ * Globals
+ */
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #fff;
+}
+body {
+  color: #999999;
+  /* text-align: center; */
+}
+
+h1 { 
+	font-family: 'Oswald', sans-serif; font-weight: 700; 
+	font-size: 50px;
+}
+
+
+
+
+
+
+.all {
+	margin: 0 auto;
+	padding: 20px;
+}
+
+
+/*.lime-green {
+	background-color: #1bf743
+}
+*/
