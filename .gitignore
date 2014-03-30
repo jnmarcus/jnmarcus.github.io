@@ -2,3 +2,5 @@ node_modules
 .tmp
 app
 test
+Gruntfile-old.js
+package-old.json
