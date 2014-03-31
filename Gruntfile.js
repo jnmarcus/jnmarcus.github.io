@@ -39,7 +39,7 @@ module.exports = function(grunt) {
 
     'gh-pages': {
       options: {
-        dotfiles: true,
+        // dotfiles: true,
         add: true,
       },
       //push to gh-pages
@@ -47,20 +47,20 @@ module.exports = function(grunt) {
         options: {
           base: 'pub',
           branch: 'gh-pages',
-          repo: 'https://github.com/jnmarcus/jnmarcus.github.io.git',
+          // repo: 'https://github.com/jnmarcus/jnmarcus.github.io.git',
           message: 'grunt',
         },
-        src: ['./dist/**/*'],
+        src: ['dist/**/*'],
       },
       //push to test branch, test-grunt
       'test-grunt': {
         options: {
           base: 'pub',
           branch: 'test-grunt',
-          repo: 'https://github.com/jnmarcus/jnmarcus.github.io.git', 
+          // repo: 'https://github.com/jnmarcus/jnmarcus.github.io.git', 
           message: 'grunt',
         },
-        src: ['./dist/**/*']  
+        src: ['dist/**/*']  
       },
     },
 
