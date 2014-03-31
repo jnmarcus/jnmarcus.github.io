@@ -39,12 +39,29 @@ module.exports = function(grunt) {
 
     'gh-pages': {
       options: {
-        base: 'pub',
-        branch: 'gh-pages',
-        repo: 'https://github.com/jnmarcus/jnmarcus.github.io.git',
-        message: 'grunt',
+        dotfiles: true,
+        add: true,
       },
-      src: '**/*',
+      //push to gh-pages
+      'gh-pages': {
+        options: {
+          base: 'pub',
+          branch: 'gh-pages',
+          repo: 'https://github.com/jnmarcus/jnmarcus.github.io.git',
+          message: 'grunt',
+        },
+        src: ['./dist/**/*'],
+      },
+      //push to test branch, test-grunt
+      'test-grunt': {
+        options: {
+          base: 'pub',
+          branch: 'test-grunt',
+          repo: 'https://github.com/jnmarcus/jnmarcus.github.io.git', 
+          message: 'grunt',
+        },
+        src: ['./dist/**/*']  
+      },
     },
 
     watch: {
