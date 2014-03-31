@@ -40,11 +40,14 @@ module.exports = function(grunt) {
     'gh-pages': {
       options: {
         base: 'pub',
-        branch: 'gh-pages',
+        // branch: 'gh-pages',
+        add: true,
+        dotfiles: true,
+        branch: 'test-grunt',
         repo: 'https://github.com/jnmarcus/jnmarcus.github.io.git',
         message: 'grunt',
       },
-      src: '**/*',
+      src: 'dist/**/*',
     },
 
     watch: {
@@ -83,11 +86,11 @@ module.exports = function(grunt) {
 
   grunt.registerTask('css-copy', ['copy:css', 'watch:dist']);
 
-  grunt.registerTask('css-pub', ['css', 'css-copy']);
+  // grunt.registerTask('css-pub', ['css', 'css-copy']); --DOESN'T WORK!!
 
-  // grunt.registerTask('dist-css', ['newer:less', 'newer:copy', 'watch']);
+  grunt.registerTask('dist-css', ['newer:less', 'newer:copy', 'watch']);
 
-  // grunt.registerTask('pub-css', ['newer:less', 'newer:copy:css']);
+  grunt.registerTask('pub-css', ['newer:less', 'newer:copy:css']);
 
   grunt.registerTask('pub-push', ['pub-css', 'gh-pages']);
 
