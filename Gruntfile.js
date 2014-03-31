@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 
     // Task configuration.
     less: {
-      noMinify: {
+      css: {
         options: {
           sourceMap: true,
           sourceMapFilename: 'custom-bootstrap.map'
@@ -30,19 +30,70 @@ module.exports = function(grunt) {
       }
     },
 
+    copy: {
+      css: {
+        src: 'dist/css/custom-bootstrap.min.css',
+        dest: 'pub/dist/css/custom-bootstrap.min.css',
+      },
+    },
+
+    'gh-pages': {
+      options: {
+        base: 'pub',
+        branch: 'gh-pages',
+        repo: 'https://github.com/jnmarcus/jnmarcus.github.io.git',
+        message: 'grunt',
+      },
+      src: '**/*',
+    },
+
     watch: {
-      all: {
+      //watch 'less/' directory for changes; if changed, recompile and re-minify custom-boostrap.less 
+      less: {
         files: ['less/**/*.less'],
         tasks: ['less'],
         options: {
-          spawn: false,
+          // spawn: false,
+          reload: true,
         },
       },
+      // watch for changes to minified files in the 'dist/' directory; if changed, copy the files that changed to the 'pub/dist/' directory
+      dist: {
+        files: ['dist/css/**/*.min.css'],
+        tasks: ['copy'],
+        options: {
+          spawn: false,
+          event: ['changed'],
+        },
+      },
+      // push: {
+      //   files: ['dist/css/custom-bootstrap.min.css'],
+      //   tasks: ['copy'],
+      //   options: {
+      //     spawn: false,
+      //     event: ['changed'],
+      //   },
+      // },
     },
   });
 
   //TASKS
+
+  grunt.registerTask('css', ['newer:less', 'watch:less']);
+
+  grunt.registerTask('css-copy', ['copy:css', 'watch:dist']);
+
+  grunt.registerTask('css-pub', ['css', 'css-copy']);
+
+  // grunt.registerTask('dist-css', ['newer:less', 'newer:copy', 'watch']);
+
+  // grunt.registerTask('pub-css', ['newer:less', 'newer:copy:css']);
+
+  grunt.registerTask('pub-push', ['pub-css', 'gh-pages']);
+
   // Default task.
-  grunt.registerTask('default', ['less', 'watch']);
+  grunt.registerTask('default', ['less', 'watch:less']);
+
+
 
 };
