@@ -104,7 +104,7 @@ module.exports = function(grunt) {
 
   // grunt.registerTask('dist-css', ['newer:less', 'newer:copy', 'watch']);
 
-  // grunt.registerTask('pub-css', ['newer:less', 'newer:copy:css']);
+  grunt.registerTask('pub-css', ['newer:less', 'newer:copy:css']);
 
   grunt.registerTask('pub-push', ['pub-css', 'gh-pages']);
 
