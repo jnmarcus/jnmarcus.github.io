@@ -1,0 +1,7 @@
+
+//Google Fonts custom mixin from the gist: https://gist.github.com/line-o/5568723
+.gFontImport (@name; @weights: 400; @subsets: latin) {
+@domain: 'http://fonts.googleapis.com';
+@escaped: ~`"@{name}".replace(/'([^']+)'/,'$1').replace(' ', '+')`; // needed to get rid of those single quotes
+@import url('@{domain}}/css?family=@{name}:@{weights}&subset=@{subsets}');
+}
