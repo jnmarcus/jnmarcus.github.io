@@ -37,6 +37,47 @@ module.exports = function(grunt) {
       },
     },
 
+    jekyll: {
+      serve: {
+        options: {
+          bundleExec: true,
+          src: '.',
+          dest: './_gh-pages',
+          config: '_config.yml',
+          serve: true,
+        server_port : 8000,
+        auto : true,
+        exclude: ['node_modules', 'less', 'app', 'test', 'Gemfile', 'Gemfile.lock', 'README.md', 'package.json', 'package-old.json', 'Gruntfile.js', 'Gruntfile-old.js', 'custom-bootstrap.map', 'site'],
+        }, 
+      },
+      dev: {
+        options: {
+          src: '.',
+          dest: './_gh-pages',
+        },
+      }, 
+
+      // server : {
+      //   src : 'templates',
+      //   dest: 'dev',
+      //   server : true,
+      //   server_port : 4000,
+      //   auto : true
+      // },
+      // dist: {                             // Target
+      //   options: {                           // Target options
+      //     dest: '<%= dist %>',
+      //     config: '_config.yml,_config.build.yml'
+      //   }
+      // },
+      // serve: {                               // Another target
+      //   options: {
+      //     dest: '.jekyll',
+      //     drafts: true
+      //   },
+      // },
+    },
+
     'gh-pages': {
       options: {
         // dotfiles: true,
@@ -83,6 +124,21 @@ module.exports = function(grunt) {
           event: ['changed'],
         },
       },
+
+      jekyll: {
+        files: [
+                '_includes/*.html',
+                '_layouts/*.html',
+                '_config.yml',
+                'index.html'
+            ],
+        tasks: ['jekyll:serve'],
+        options: {
+            interrupt: true,
+            // atBegin: true
+        },
+      },
+
       // push: {
       //   files: ['dist/css/custom-bootstrap.min.css'],
       //   tasks: ['copy'],
@@ -105,6 +161,8 @@ module.exports = function(grunt) {
   // grunt.registerTask('dist-css', ['newer:less', 'newer:copy', 'watch']);
 
   grunt.registerTask('pub-css', ['newer:less', 'newer:copy:css']);
+
+  grunt.registerTask('watch-all', ['less', 'newer:copy:css', 'jekyll', 'watch']);
 
   grunt.registerTask('pub-push', ['pub-css', 'gh-pages']);
 
