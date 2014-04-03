@@ -41,8 +41,8 @@ module.exports = function(grunt) {
       serve: {
         options: {
           bundleExec: true,
-          src: '.',
-          dest: './_gh-pages',
+          src: './site',
+          dest: './site/_gh-pages',
           config: '_config.yml',
           serve: true,
         server_port : 8000,
@@ -52,8 +52,8 @@ module.exports = function(grunt) {
       },
       dev: {
         options: {
-          src: '.',
-          dest: './_gh-pages',
+          src: './site',
+          dest: './site/_gh-pages',
         },
       }, 
 
@@ -127,10 +127,10 @@ module.exports = function(grunt) {
 
       jekyll: {
         files: [
-                '_includes/*.html',
-                '_layouts/*.html',
-                '_config.yml',
-                'index.html'
+                'site/_includes/*.html',
+                'site/_layouts/*.html',
+                'site/_config.yml',
+                'site/index.html'
             ],
         tasks: ['jekyll:serve'],
         options: {
