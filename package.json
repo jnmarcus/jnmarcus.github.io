@@ -1,4 +1,7 @@
 {
+  "name": "jnmarcus.github.com",
+  "description": "Jamie Marcus Portfolio Website",
+  "author": "Jamie Marcus",
   "repository": {
     "type": "git",
     "url": "https://github.com/jnmarcus/jnmarcus.github.io.git"
@@ -16,6 +19,7 @@
     "grunt-newer": "~0.7.0",
     "grunt-contrib-copy": "~0.5.0",
     "grunt-release-branch": "~0.2.0",
-    "grunt-contrib-clean": "~0.5.0"
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-jekyll": "~0.4.1"
   }
 }
