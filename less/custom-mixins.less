@@ -5,3 +5,20 @@
 @escaped: ~`"@{name}".replace(/'([^']+)'/,'$1').replace(' ', '+')`; // needed to get rid of those single quotes
 @import url('@{domain}}/css?family=@{name}:@{weights}&subset=@{subsets}');
 }
+
+.display-inline {
+	display: inline-block;
+}
+
+.pos-relative {
+	position: relative;
+}
+
+.center {
+	margin: 0 auto;
+}
+
+@boxmodel: border-box;
+.border-box {
+	.box-sizing(@boxmodel);
+}

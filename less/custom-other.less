@@ -1,4 +1,5 @@
 @import "custom-mixins.less";
+@import "components/header.less";
 
 //Google Fonts -- TO DO: CHANGE FONTS TO WHAT YOU WANT!!!!
 @gFontName: 'Roboto Slab';
@@ -15,4 +16,16 @@
  
 body {
 font-family: @sansFontFamily;
+}
+
+.center-inline-block {
+	.display-inline;
+	.pos-relative;
+	margin: 0 auto;
+}
+
+.wrapper-j {
+	.border-box;
+	margin: 1%;
+	// padding: 2%;
 }
