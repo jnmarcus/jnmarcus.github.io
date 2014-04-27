@@ -7524,4 +7524,15 @@ body {
   box-sizing: border-box;
   margin: 1%;
 }
+.footer-txt {
+  text-align: center;
+}
+.no-border-radius {
+  border-radius: 0px;
+}
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 /*# sourceMappingURL=custom-bootstrap.map */
