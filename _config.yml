@@ -3,10 +3,13 @@ lsi: false
 pygments: true
 markdown: kramdown
 
-# source: .
 
-source: .
+# source: .
 # destination: _gh_pages
+
+# source: ./site
+# destination: ./site/_gh_pages
+
 url: http://jnmarcus.github.io
 encoding: UTF-8
 exclude: ['node_modules', 'less', 'app', 'test', 'Gemfile', 'Gemfile.lock', 'README.md', 'package.json', 'package-old.json', 'Gruntfile.js', 'Gruntfile-old.js', 'custom-bootstrap.map', 'site']

@@ -9,6 +9,15 @@ module.exports = function(grunt) {
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
 
+    // Project settings
+    config: {
+      // Configurable paths
+      pub: 'pub',
+      dist: 'dist',
+      // jekyllBuild: '_site'
+      jekyllBuild: './site/_gh_pages'
+    },
+
     // Task configuration.
     less: {
       css: {
@@ -81,7 +90,7 @@ module.exports = function(grunt) {
     'gh-pages': {
       options: {
         // dotfiles: true,
-        add: true,
+        // add: true,  //add new src files but leave existing ones untouched, set add: true in your target options.
       },
       //push to gh-pages
       'gh-pages': {
@@ -91,17 +100,17 @@ module.exports = function(grunt) {
           // repo: 'https://github.com/jnmarcus/jnmarcus.github.io.git',
           message: 'grunt',
         },
-        src: ['dist/**/*'],
+        src: ['**/*']
       },
       //push to test branch, test-grunt
       'test-grunt': {
         options: {
-          base: 'pub',
+          base: '<%= config.pub %>',
           branch: 'test-grunt',
           // repo: 'https://github.com/jnmarcus/jnmarcus.github.io.git', 
-          message: 'grunt',
+          message: 'grunt testing 123'
         },
-        src: ['dist/**/*']  
+        src: ['**/*']  
       },
     },
 
@@ -152,8 +161,10 @@ module.exports = function(grunt) {
 
   //TASKS
 
+  //Watch LESS files for changes.  If changed, recompile, minify, and send to 'dist/css/'
   grunt.registerTask('css', ['newer:less', 'watch:less']);
 
+  //Watch 'dist/css/' for changes. Copy minified file to 'pub/dist/css/'
   grunt.registerTask('css-copy', ['copy:css', 'watch:dist']);
 
   grunt.registerTask('css-pub', ['css', 'css-copy']);
@@ -162,6 +173,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('pub-css', ['newer:less', 'newer:copy:css']);
 
+  //Execute Jekyll server to watch and build site. Watch LESS files for changes, recompile, minify, and distribute to 'dist/css/'; copy to 'pub/dist/css/'
   grunt.registerTask('watch-all', ['less', 'newer:copy:css', 'jekyll', 'watch']);
 
   grunt.registerTask('pub-push', ['pub-css', 'gh-pages']);
