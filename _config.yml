@@ -10,6 +10,9 @@ markdown: kramdown
 # source: ./site
 # destination: ./site/_gh_pages
 
+source: ./jekyll
+destination: ./jekyll/_site
+
 url: http://jnmarcus.github.io
 encoding: UTF-8
-exclude: ['node_modules', 'less', 'app', 'test', 'Gemfile', 'Gemfile.lock', 'README.md', 'package.json', 'package-old.json', 'Gruntfile.js', 'Gruntfile-old.js', 'custom-bootstrap.map', 'site']
+exclude: ['node_modules', 'less', 'app', 'test', 'Gemfile', 'Gemfile.lock', 'README.md', 'package.json', 'package-old.json', 'Gruntfile.js', 'Gruntfile-old.js', 'custom-bootstrap.map', 'site', 'gh-pages-build', '.grunt']
