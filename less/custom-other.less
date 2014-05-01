@@ -1,21 +1,11 @@
 @import "custom-mixins.less";
+@import "components/fonts.less";
 @import "components/header.less";
+@import "components/navbar.less";
 
-//Google Fonts -- TO DO: CHANGE FONTS TO WHAT YOU WANT!!!!
-@gFontName: 'Roboto Slab';
-@sansFontFamily: @gFontName, Arial, sans-serif;
- 
-/* v1.4
-.gFontImport(@gFontName);
-.gFontImport(@gFontName;'400,700');
-.gFontImport(@gFontName;'400,700';'latin,latin-ext');
-*/
-// .gFontInject(@gFontName);
-// .gFontInject(@gFontName;'400,700');
-// .gFontInject(@gFontName;'400,700';'latin,latin-ext');
- 
 body {
-font-family: @sansFontFamily;
+	background-color: #f8f8f8;
+	font-family: @sansFontFamily;
 }
 
 .center-inline-block {
