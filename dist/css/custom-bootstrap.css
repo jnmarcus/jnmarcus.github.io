@@ -7381,6 +7381,9 @@ td.visible-print {
 .margin-top-10-neg {
   margin-top: -10px;
 }
+.margin-top-15 {
+  margin-top: 15&;
+}
 .white {
   background-color: #ffffff;
 }
