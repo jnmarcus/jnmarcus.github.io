@@ -7551,4 +7551,9 @@ h2 {
   font-weight: 400;
   margin: 1em;
 }
+.btn-outline {
+  background-color: transparent;
+  color: inherit;
+  transition: all .5s;
+}
 /*# sourceMappingURL=custom-bootstrap.map */
