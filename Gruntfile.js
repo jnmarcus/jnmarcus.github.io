@@ -194,7 +194,7 @@ module.exports = function(grunt) {
 
   //WORKS -->
   //commit and push all changes in 'gh-pages/' directory to gh-pages branch
-  grunt.registerTask('deploy', ['gh-pages']);
+  grunt.registerTask('deploy', ['gh-pages:gh-pages']);
 
   //EXTRAS
   //Cleans 'jekyll/_site/dist/' (meant to be used WHILE a jekyll server is running)
