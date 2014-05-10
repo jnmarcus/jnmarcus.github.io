@@ -20,18 +20,84 @@
   	.oswald-regular;
   	// .pathway-font;
     color: #000;
+
+  }
+
+  // h2 {
+  //   background-color: @lime-green;
+  // }
+
+  h2.green-background {
+      background-color: @lime-green;
   }
 }
 
-h1, h2 {
+h1, h2, h3 {
 	.oswald-regular;
-	margin: 1em;
+	margin: 0.4em;
 }
 
+h3 {
+  .oswald-light;
+  font-weight: 300;
+  font-size: 1.1em;
+  color: #fff;
+}
 
+header {
+	margin: 0.6em;
+}
 
-// h1, h2, h3, h4, h5, h6 {
-// font-family: @font-family-sans-serif;
-// font-weight: @headings-font-weight;
-// color: #000;
-// }
+section {
+  .pad {
+    margin: 0.4em;
+    padding: 10px;
+  }
+}
+
+ .button-block {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -o-box-sizing: border-box;
+   box-sizing: border-box;
+   /*width: 24%;*/
+   padding: 5px 0;
+   margin: 10px 0;
+   text-align: center;
+   display: block;
+}
+
+.btn-success {
+  border-color: rgba(154, 205, 50, 0.79)  ;
+  background-color: rgba(154, 205, 50, 0.79);
+}
+
+.btn-lg {
+  .oswald-light;
+  font-size: 1.1em;
+  padding: 6px 26px;
+}
+
+ .btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+    border-color: #fff;
+}
+
+.btn-success.btn-outline {
+    color: #fff;
+}
+
+.btn-primary.btn-outline:hover,
+.btn-info.btn-outline:hover,
+.btn-warning.btn-outline:hover,
+.btn-danger.btn-outline:hover {
+    color: #fff;
+}
+
+.btn-success.btn-outline:hover {
+  background-color: rgba(255,255,255, 0.70);
+  border-color: #fff;
+  color: #000000;
+}
