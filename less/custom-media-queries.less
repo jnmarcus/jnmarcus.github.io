@@ -3,7 +3,23 @@
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) { 
   .homepage-section {
-    height: 500px;
+    min-height: @homepage-cover-height-md;
+
+    .overlay {
+      min-height: @homepage-cover-height-md;
+    }
+  }
+
+  .jumbotron {
+    min-height: 562px;
+
+    .text-container {
+      margin-top: 15%;
+    }
+
+    .green-background {
+      padding: 6.75px;
+    }
   }
 
   .button-block {
@@ -18,13 +34,24 @@
     display: inline-block;
   }
 
-
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: @screen-md-min) {
-  .homepage-section {
-    height: 600px;
+  .homepage-cover {
+    min-height: @homepage-cover-height-md;
+
+    .overlay {
+      min-height: @homepage-cover-height-md;
+    }
+  }
+
+  .jumbotron {
+    // min-height: 726px;
+
+    .text-container {
+      margin-top: 5%;
+    }
   }
 
   .button-block {
