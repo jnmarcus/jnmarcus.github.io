@@ -1,79 +1,79 @@
-@import "custom-mixins.less";
-@import "components/colors.less";
-@import "components/fonts.less";
-@import "components/header.less";
-@import "components/navbar.less";
-@import "components/footer.less";
+// @import "custom-variables.less";
+// @import "custom-mixins.less";
+// @import "custom-utilities.less";
+
+// CUSTOM COMPONENTS
+// @import "components/colors.less";
+// @import "components/fonts.less";
+// @import "components/header.less";
+// @import "components/navbar.less";
+// @import "components/footer.less";
+// @import "components/buttons.less";
+// @import "components/jumbotron.less";
 
 body {
 	background-color: #f8f8f8;
 	font-family: @pathway-font-family;
 }
 
-.center-inline-block {
-	.display-inline;
-	.pos-relative;
-	margin: 0 auto;
+section {
+  .pos-relative;
+
+  .pad {
+    margin: 0.4em;
+    padding: 10px;
+  }
+
 }
 
-.wrapper-j {
-	.border-box;
-	margin: 0 1%;
-	// padding: 2%;
-}
+// HOMEPAGE --------------------------------------------------
 
-.side-wrapper-2em {
-	margin: 0 2em;
-}
+@homepage-cover-height-sm: 350px;
+@homepage-cover-height-md: 500px;
 
-.no-border-radius {
-	border-radius: 0px;
-}
-
-.fixed-header {
-	position: fixed;
-	left: 0;
-	top: 0;
+.homepage-cover {
+	background: url(http://res.cloudinary.com/dc8ynxibm/image/upload/s--8sYAtF4f--/e_fill_light:50,q_jpegmini/v1399798056/splashpage1-2_opt.jpg) no-repeat center top;
+	-webkit-background-size: 100% 90%;
+	-moz-background-size: 100% 90%;
+	-o-background-size: 100% 90%;
+	background-size: 100% 90%;
 	width: 100%;
-}
-
-.homepage-section {
-	width: 100%;
-	height: 400px;
+	min-height: @homepage-cover-height-sm;
 	.border-box;
+	margin-top: -10px;
+	padding-top: 20px;
+	position: relative;
+	top: 50px;
+	text-align: center;
+	z-index: 0;
+
+	.overlay {
+		z-index: 1000;
+		background-color: rgba(154, 205, 50, 0.70);
+		min-height: @homepage-cover-height-sm;
+		.border-box;
+	}
 
 	.wrapper {
-		margin: 1% 5%;
+		// margin: 1% 5%;
 		padding: 1%;
+		margin-top: 2.1em;
 		.border-box;
 	}
 }
 
-.jumbotron {
-	// background: url(http://res.cloudinary.com/dc8ynxibm/image/upload/c_scale,e_trim,w_1400,o_85,q_80,e_fill_light:50/v1392056489/splashpage1_j6pdtp.jpg) no-repeat center center;
-	background: url(http://res.cloudinary.com/dc8ynxibm/image/upload/c_scale,e_trim,w_1400,e_fill_light:50/v1392056489/splashpage1_j6pdtp.jpg) no-repeat center center;
-	background-size: 100% 100%;
-	.border-box;
-	width: 100%;
-	max-height: 100%;
-	// height: 700px;
-	z-index: 0;
-}
+// --------------------------------------------------
 
-.overlay {
-	z-index: 1000;
-	background-color: rgba(154, 205, 50, 0.50);
-}
 
-.cover-img {
-	background: url(http://res.cloudinary.com/dc8ynxibm/image/upload/c_scale,e_trim,h_700/v1392056489/splashpage1_j6pdtp.jpg);
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	width: 100%;
-	height: 100%;
-}
+// .cover-img {
+// 	background: url(http://res.cloudinary.com/dc8ynxibm/image/upload/c_scale,e_trim,h_700/v1392056489/splashpage1_j6pdtp.jpg);
+// 	-webkit-background-size: cover;
+// 	-moz-background-size: cover;
+// 	-o-background-size: cover;
+// 	background-size: cover;
+// 	width: 100%;
+// 	height: 100%;
+// }
 
 .cover-text-big {
 	margin-bottom: 0;
@@ -81,10 +81,37 @@ body {
 	font-size: 30px;
 }
 
+.cover-text {
+	margin: 14% 5%;
+}
+
+.sit-below-navbar {
+	.border-box;
+	position: relative;
+	top: 50px;
+	margin-top: -10px;
+	// padding-top: 20px;
+}
+
+// CONTACT  --------------------------------------------------
+
 .contact {
 	width: 100%;
 	min-height: 200px;
 	.border-box;
 	// padding: 3em;
 	background-color: @lime-green;
+} 
+
+// --------------------------------------------------
+
+.page-header {
+	width: 100%;
+	.border-box;
+	padding: 6% 0;
+	margin-top: 60px;
+	// padding-top: 2%;
+	// padding-bottom: 2%;
+	background-color: @lime-green;
 }
+
