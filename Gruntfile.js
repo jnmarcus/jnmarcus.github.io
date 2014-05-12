@@ -97,6 +97,16 @@ module.exports = function(grunt) {
           // {src: '<%= config.jekyllBuild %>/contact.html', dest: '<%= config.ghPagesBuild %>/contact/index.html'},
         ],
       },
+      siteHTML: {
+        files: [
+          //static homepage
+          // { cwd: '<%= config.jekyllBuild %>/', src: ['index.html'], dest: './'},
+          //static about page
+          { expand: true, cwd: '<%= config.jekyllBuild %>/', src: ['about/*.html'], dest: './'},
+          //static contact page
+          { expand: true, cwd: '<%= config.jekyllBuild %>/', src: ['contact/*.html'], dest: './'},
+        ],
+      }
     },
 
     jekyll: {   //WORKS!!
