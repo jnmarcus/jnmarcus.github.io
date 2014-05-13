@@ -100,7 +100,7 @@ module.exports = function(grunt) {
       siteHTML: {
         files: [
           //static homepage
-          // { cwd: '<%= config.jekyllBuild %>/', src: ['index.html'], dest: './'},
+          { src: '<%= config.jekyllBuild %>/index.html', dest: './index.html'},
           //static about page
           { expand: true, cwd: '<%= config.jekyllBuild %>/', src: ['about/*.html'], dest: './'},
           //static contact page
