@@ -7393,16 +7393,23 @@ td.visible-print {
   font-family: 'Pathway Gothic One', sans-serif;
 }
 h1,
-h2,
-h3 {
+h2 {
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
 }
 h3 {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
-  font-size: 1.1em;
   color: #fff;
+}
+h1,
+h2,
+h3 {
+  margin-top: 10.5px;
+  margin-bottom: 10.5px;
+}
+.large-oswald {
+  font-size: 40px;
 }
 .display-inline {
   display: inline-block;
@@ -7421,8 +7428,20 @@ h3 {
 .margin-top-10-neg {
   margin-top: -10px;
 }
+.margin-top-10 {
+  margin-top: 10px;
+}
 .margin-top-15 {
   margin-top: 15%;
+}
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+.margin-right-4 {
+  margin-right: 4px;
+}
+.pad-bottom-10 {
+  padding-bottom: 10px;
 }
 .center-inline-block {
   display: inline-block;
@@ -7431,6 +7450,10 @@ h3 {
 }
 .no-border-radius {
   border-radius: 0px;
+}
+.spacer {
+  margin-left: 2px;
+  margin-right: 2px;
 }
 .wrapper-j {
   -webkit-box-sizing: border-box;
@@ -7496,7 +7519,15 @@ header.nav-header {
   text-transform: uppercase;
 }
 footer {
-  padding: 1%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1.5rem 1rem;
+  position: relative;
+  top: 0;
+  bottom: 0:
+	left: 0;
+  right: 0;
 }
 p {
   margin: 0;
@@ -7650,21 +7681,52 @@ section .pad {
   top: 50px;
   margin-top: -10px;
 }
-.contact {
+.about {
   width: 100%;
-  min-height: 200px;
+  position: relative;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.contact {
+  width: 100%;
+  min-height: 320px;
   background-color: rgba(154, 205, 50, 0.79);
+  position: relative;
+  padding: 1.5rem 0;
+}
+.contact .section-title {
+  margin-bottom: 3rem;
+}
+.contact a {
+  color: #ffffff;
+}
+.contact a:hover,
+.contact a:focus {
+  text-decoration: none;
+}
+.social-margin {
+  margin-right: 2rem;
+}
+a.social-icon {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1rem;
+  position: relative;
+}
+a.social-icon:hover {
+  color: #000000;
 }
 .page-header {
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 6% 0;
-  margin-top: 60px;
+  padding: 2em 1.3em;
+  margin: 0;
   background-color: rgba(154, 205, 50, 0.79);
 }
 /*** MEDIA QUERIES ***/
@@ -7694,6 +7756,12 @@ section .pad {
     margin: 10px 0;
     text-align: center;
     display: inline-block;
+  }
+  .text-center-sm {
+    text-align: center;
+  }
+  .social-margin {
+    margin-left: 2rem;
   }
 }
 /* Medium devices (desktops, 992px and up) */
