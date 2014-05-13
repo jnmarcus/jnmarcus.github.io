@@ -1,38 +1,24 @@
 ---
 <!-- layout: default -->
 layout: home
-title: Jamie Marcus Portfolio Site
+title: Home
 ---
 
-		<section class="homepage-section">
-			<div class="container-fluid">
+		<div class="clear-fix"></div>
+
+		<div class="jumbotron">
+			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 ">
-						<div class="homepage-section jumbotron">
-							<h1 class="text-center">Jamie Marcus</h1>
-							<div class="row">
-								<div class="col-md-4 text-center">
-									<h2>UX Designer</h2>
-								</div>
-								<div class="col-md-4 text-center">
-									<h2>Front End Developer</h2>
-								</div>
-								<div class="col-md-4 text-center">
-									<h2>Engineer</h2>
-								</div>
-							</div>
-						</div>
+					<div class="text-container text-center">
+						<h1 class="display-inline green-background">Hi.</h1><br>
+						<h2 class="display-inline green-background">My Name is</h2><br>
+						<h1 class="display-inline green-background">Jamie Marcus</h1><br>
+						<h2 class="display-inline green-background">I'm a UX Designer</h2>
+						<h2 class="display-inline green-background spacer"> & </h2>
+						<h2 class="display-inline green-background">Front End Developer</h2>
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
 
-		<section class="contact">
-			<div class="container-fluid">
-				<div class="row">
-					<header>
-						<h2 class="text-white">Contact Me</h2>
-					</header>
-				</div>
-			</div>
-		</section>
+		{% include contact.html %}
