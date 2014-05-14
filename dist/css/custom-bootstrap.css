@@ -7455,6 +7455,9 @@ h3 {
   margin-left: 2px;
   margin-right: 2px;
 }
+.v-space {
+  height: 8rem;
+}
 .wrapper-j {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -7620,7 +7623,9 @@ p {
   margin-left: 4px;
   margin-right: 4px;
 }
+html,
 body {
+  height: 100%;
   background-color: #f8f8f8;
   font-family: 'Pathway Gothic One', sans-serif;
 }
@@ -7728,6 +7733,54 @@ a.social-icon:hover {
   padding: 2em 1.3em;
   margin: 0;
   background-color: rgba(154, 205, 50, 0.79);
+}
+.card-item {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+}
+.card-item .card {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  width: 96%;
+  color: #222222;
+  font-family: 'Pathway Gothic One', sans-serif;
+  z-index: 500;
+  margin: 0 auto;
+}
+.card-item .card a {
+  color: #222222;
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+.card-item .card h3 {
+  color: #222222;
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+.card-item .card .card-header {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 20%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+.card-item .card .card-image {
+  position: relative;
+  width: 104%;
+  height: 50%;
+  margin-left: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.card-item .card .card-footer {
+  height: 30%;
 }
 /*** MEDIA QUERIES ***/
 /* Small devices (tablets, 768px and up) */

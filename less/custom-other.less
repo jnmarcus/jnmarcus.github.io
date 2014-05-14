@@ -11,7 +11,8 @@
 // @import "components/buttons.less";
 // @import "components/jumbotron.less";
 
-body {
+html,body {
+	height: 100%;
 	background-color: #f8f8f8;
 	font-family: @pathway-font-family;
 }
@@ -165,4 +166,66 @@ a.social-icon {
 	// padding-bottom: 2%;
 	background-color: @lime-green;
 }
+
+.card-item {
+	.border-box;
+	.pos-relative;
+	width: 100%;
+
+	.card {
+		.border-box;
+		.pos-relative;
+		background-color: @white;
+		border: 1px solid #eeeeee;
+		width: 96%;
+		color: @gray-darker;
+		.pathway-font;
+		z-index: 500;
+		margin: 0 auto;
+
+		a {
+			color: @gray-darker;
+			.pathway-font;
+		}
+
+		h3 {
+			color: @gray-darker;
+			.pathway-font;
+		}
+
+		.card-header {
+			.border-box;
+			height: 20%;
+			padding-left: 1%;
+			padding-right: 1%;
+		}
+
+		// header {
+		// 	height: 20%;
+		// }
+
+		.card-image {
+			.pos-relative;
+			width: 104%;
+			height: 50%;
+			margin-left: 0;
+			.border-box;
+		}
+
+		.card-footer {
+			height: 30%;
+		}
+
+		// footer {
+		// 	height: 30%;
+		// }
+	}
+
+	// img {
+	// 	width: 100%;
+	// }
+}
+
+
+
 
