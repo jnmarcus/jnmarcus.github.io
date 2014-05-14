@@ -14,7 +14,7 @@ encoding: UTF-8
 exclude: ['node_modules', 'less', 'app', 'test', 'Gemfile', 'Gemfile.lock', 'README.md', 'package.json', 'package-old.json', 'Gruntfile.js', 'Gruntfile-old.js', 'custom-bootstrap.map', 'site', 'gh-pages-build', '.grunt']
 
 # Setup
-title:            Jamie Marcus
+title:            'Jamie Marcus'
 tagline:          'UX Designer, Front End Developer, Engineer'
 description:      'Portfolio site for Jamie Marcus'
 
