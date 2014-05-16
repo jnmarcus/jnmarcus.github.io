@@ -18,9 +18,20 @@
 		  <ul class="nav navbar-nav navbar-right">
 	  		<li><a href="{{ site.url }}">Home</a></li>
 	  		<li><a href="{{ site.url }}/about">About</a></li>
-	  		<li><a href="{{ site.url }}/portfolio">Portfolio</a></li>
+	  		<li><a href="{{ site.url }}/portfolio-projects">Portfolio</a></li>
 	  		<li><a href="{{ site.url }}/contact">Contact</a></li>
 	  	</ul>
 	  </div><!-- /.navbar-collapse -->
 	</div><!-- /.container-fluid -->
 </nav>  <!-- END MAIN NAVIGATION -->
+
+
+<!-- ADD IN!! -->
+
+<!-- <ul>
+    {% for p in site.pages %}
+    <li>
+    	<a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
+    </li>
+    {% endfor %}
+</ul> -->
