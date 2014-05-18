@@ -3,9 +3,19 @@
 
 <!-- FOOTER -->
 
-<footer class="white">
+<footer class="white visible-xs">
 	<!-- <hr> -->
-	<div class="container">
+	<div class="container visible-xs">
+		<div class="row">
+			<div class="center-block">
+				<p class="muted center-block footer-txt"><a href="#">About this Site</a></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="center-block">
+				<p class="muted center-block footer-txt"><a href="{{ site.github.repo }}">View Project on Github</a></p>
+			</div>
+		</div>
 		<div class="row">
 			<div class="center-block">
 				<p class="muted center-block footer-txt">© 2014 Jamie Marcus. All rights reserved</p>
@@ -14,6 +24,26 @@
 	</div>
 </footer><!-- END FOOTER -->
 
-<!-- <li class="sidebar-nav-item"><a href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a></li>
-<li class="sidebar-nav-item"><a href="{{ site.github.repo }}">GitHub project</a></li>
-<li class="sidebar-nav-item">Currently v{{ site.version }}</li> -->
+<!-- <a href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a> -->
+<!-- <p>Currently v{{ site.version }}</p> -->
+
+<!-- FOOTER -->
+
+<footer class="white hidden-xs">
+	<!-- <hr> -->
+	<div class="container-fluid hidden-xs">
+		<div class="row">
+			<div class="col-sm-3 col-sm-offset-9">
+				<p class="muted pull-right"><a href="#">About this Site</a></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<p class="muted pull-left footer-txt">© 2014 Jamie Marcus. All rights reserved</p>
+			</div>
+			<div class="col-sm-6">
+				<p class="muted pull-right"><a href="{{ site.github.repo }}">View Project on Github</a></p>
+			</div>
+		</div>
+	</div>
+</footer><!-- END FOOTER -->
