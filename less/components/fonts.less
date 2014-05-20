@@ -13,6 +13,26 @@
 
 
 //FONTS
+
+//OSWALD FONT 
+@font-face {
+	font-family: 'Oswald', sans-serif;
+	src: url('../fonts/Oswald-Bold.ttf')  format('truetype');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Oswald', sans-serif;
+	src: url('../fonts/Oswald-Regular.ttf')  format('truetype');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Oswald', sans-serif;
+	src: url('../fonts/Oswald-Light.ttf')  format('truetype');
+	font-weight: 300;
+}
+
 @import url("http://fonts.googleapis.com/css?family=Oswald:400,700,300");
 
 @oswald-font-family: 'Oswald', sans-serif;
@@ -41,12 +61,27 @@
 
 
 //PATHWAY GOTHIC ONE -- only has one font-weight
+@font-face {
+	font-family: 'Pathway Gothic One', sans-serif;
+	src: url('../fonts/PathwayGothicOne-Regular.ttf')  format('truetype');
+}
+
 @import url("http://fonts.googleapis.com/css?family=Pathway+Gothic+One");
 
 @pathway-font-family: 'Pathway Gothic One', sans-serif;
 
 .pathway-font {
 	font-family: @pathway-font-family;
+}
+
+
+//LOBSTER FONT -- only has one font-weight
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
+@lobster-font-family: 'Lobster', cursive;
+
+.lobster-font {
+	font-family: @lobster-font-family;
 }
 
 // h1 { 
@@ -63,7 +98,6 @@ h3 {
   .oswald-light;
   font-weight: 300;
   // font-size: 1.1em;
-  color: #fff;
 }
 
 h1, h2, h3 {
