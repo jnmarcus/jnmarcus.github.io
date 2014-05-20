@@ -2,6 +2,7 @@ body {
 	height: 100%;
 	background-color: #f8f8f8;
 	font-family: @pathway-font-family;
+	font-size: 16px;
 }
 
 section {
@@ -13,6 +14,24 @@ section {
   }
 
 }
+
+.section-box {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	margin-top: 1rem;
+}
+
+.main {
+	min-height: 55rem;
+	position: relative;
+}
+
+// .white-box {
+// 	.white;
+// 	padding-top: 1rem;
+// 	padding-bottom: 1rem;
+// 	margin-top: 1rem;
+// }
 
 // HOMEPAGE --------------------------------------------------
 
@@ -154,63 +173,70 @@ a.social-icon {
 	background-color: @lime-green;
 }
 
-.card-item {
-	.border-box;
-	.pos-relative;
+
+.panel {
+	width: 96%;
+}
+
+.panel-header {
+	color: @gray;
+	.pathway-font;
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-left: 1%;
+	margin-right: 1%; 
+
+	h3 {
+		// font-size: 22.5px;
+		margin-bottom: 21px;
+		font-weight: 200;
+		line-height: 1.4;
+	}
+}
+
+
+
+a.card-snippet {
+	position: relative;
+	// background-color: @white;
+	padding: 15px;
 	width: 100%;
+	height: 100%;
+	display: block;
 
-	.card {
-		.border-box;
-		.pos-relative;
-		background-color: @white;
-		border: 1px solid #eeeeee;
-		width: 96%;
-		color: @gray-darker;
-		.pathway-font;
-		z-index: 500;
-		margin: 0 auto;
-
-		a {
-			color: @gray-darker;
-			.pathway-font;
-		}
-
-		h3 {
-			color: @gray-darker;
-			.pathway-font;
-		}
-
-		.card-header {
-			.border-box;
-			height: 20%;
-			padding-left: 1%;
-			padding-right: 1%;
-		}
-
-		// header {
-		// 	height: 20%;
-		// }
-
-		.card-image {
-			.pos-relative;
-			width: 104%;
-			height: 50%;
-			margin-left: 0;
-			.border-box;
-		}
-
-		.card-footer {
-			height: 30%;
-		}
-
-		// footer {
-		// 	height: 30%;
-		// }
+	p {
+		color: @gray;
+		margin-top: 0.2em;
 	}
 
-	// img {
-	// 	width: 100%;
-	// }
+	.lead {
+		font-size: 20px;
+	}
+
+	.label {
+		font-weight: 300;
+		font-size: 85%;
+		border-radius: 0;
+		margin-right: 0.5em;
+	}
+
+	&:hover {
+		background-color: @gray-lighter;
+		text-decoration: none;
+
+		h3 {
+			font-size: 30px;
+		}
+
+		p {
+			font-size: 22px;
+		}
+	}
+
+	img {
+		position: relative;
+		width: 98%;
+	}
 }
 
 
