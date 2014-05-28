@@ -1,13 +1,17 @@
----
-layout: default
----
+{% include head.html %}
 
-	    {{ content }}
+  {% include homepage-header.html %}  
 
-	    <!-- TO DO: MAKE NAVBAR BACKGROUND COLOR BLACK AFTER JUMBOTRON!!! -->
+  <div class="clear-fix"></div>
 
-	    {% include project-cards.html %}
+  {{ content }}
 
-	    {% include dev-frameworks.html %}
+  <!-- TO DO: MAKE NAVBAR BACKGROUND COLOR BLACK AFTER JUMBOTRON!!! -->
 
-	    
+  {% include project-cards.html %}
+
+  {% include contact.html %}
+
+  {% include footer.html %}
+
+{% include foot.html %}
