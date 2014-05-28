@@ -1,6 +1,6 @@
 body {
 	height: 100%;
-	background-color: #f8f8f8;
+	// background-color: #f8f8f8;
 	font-family: @pathway-font-family;
 	font-size: 16px;
 }
@@ -15,10 +15,23 @@ section {
 
 }
 
+img {
+	margin: 3rem auto;
+}
+
+.progress {
+	margin-top: 12px;
+}
+
 .section-box {
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
 	margin-top: 1rem;
+}
+
+.section-header {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
 }
 
 .main {
@@ -49,6 +62,8 @@ section {
 // }
 
 // HOMEPAGE --------------------------------------------------
+
+
 
 @homepage-cover-height-sm: 350px;
 @homepage-cover-height-md: 500px;
@@ -84,18 +99,64 @@ section {
 	}
 }
 
+.snippets-block {
+	background-color: @white;
+	// padding: 5% 0;
+	// margin-top: -30px;
+
+	header {
+		// padding: 3rem 0 2rem;
+		padding: 2rem 0;
+		// .bg-light-gray;
+	}
+}
+
 // --------------------------------------------------
+// .covered {
+// 	min-height: 700px;
+// 	width: 100%;
+// 	// position: fixed;
+// 	position: relative;
+	// top: 0;
+	// left: 0;
 
+	// img {
+	// 	position: absolute; 
+	//   top: 0; 
+	//   left: 0; 
+	//   right: 0; 
+	//   bottom: 0; 
+	//   width: 100%;
+	//   // height: 100%;
+	//   height: 90%;
+	//   margin: 0 auto;
+	// }
+// }
 
-// .cover-img {
+.cover-img {
 // 	background: url(http://res.cloudinary.com/dc8ynxibm/image/upload/c_scale,e_trim,h_700/v1392056489/splashpage1_j6pdtp.jpg);
+// background: url(http://res.cloudinary.com/dc8ynxibm/image/upload/q_jpegmini/v1400890753/splashpage1-2-1_pup2kl.jpg)no-repeat center top fixed;
 // 	-webkit-background-size: cover;
 // 	-moz-background-size: cover;
 // 	-o-background-size: cover;
 // 	background-size: cover;
-// 	width: 100%;
-// 	height: 100%;
-// }
+background: url(http://res.cloudinary.com/dc8ynxibm/image/upload/q_jpegmini/v1400890753/splashpage1-2-1_pup2kl.jpg)no-repeat;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+	width: 100%;
+	// min-height: 1000px;
+	// height: auto;
+	// position: absolute;
+	// top: 0;
+	// left: 0;
+	position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+}
 
 .cover-text-big {
 	margin-bottom: 0;
@@ -122,7 +183,8 @@ section {
 	position: relative;
 	.border-box;
 	padding-top: 2rem;
-	padding-bottom: 2rem;
+	padding-bottom: 5rem;
+	background-color: @white;
 }
 
 // --------------------------------------------------
@@ -197,14 +259,21 @@ a.social-icon {
 
 // --------------------------------------------------
 
+.page-header-section {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	min-height: 400px;
+}
+
 .page-header {
 	width: 100%;
 	.border-box;
-	padding: 2em 1.3em;
+	// padding: 2em 1.3em;
 	margin: 0;
 	// padding-top: 2%;
 	// padding-bottom: 2%;
-	background-color: @lime-green;
+	// background-color: @lime-green;
+	border-bottom: none;
 }
 
 
@@ -233,9 +302,10 @@ a.social-icon {
 a.card-snippet {
 	position: relative;
 	// background-color: @white;
-	padding: 15px 15px 22px;
-	width: 100%;
-	height: 100%;
+	// padding: 15px 15px 22px;
+	padding-bottom: 15px;
+	// width: 100%;
+	// height: 100%;
 	display: block;
 
 	p {
@@ -244,10 +314,15 @@ a.card-snippet {
 	}
 
 	.lead {
-		font-size: 20px;
+		// font-size: 20px;
+		font-size: 1.2em;
+		padding-left: 15px;
+		padding-right: 15px;
+		line-height: 2.0;
 	}
 
 	.label {
+		color: #000;
 		font-weight: 300;
 		font-size: 85%;
 		border-radius: 0;
@@ -255,24 +330,83 @@ a.card-snippet {
 	}
 
 	&:hover {
-		background-color: @gray-lighter;
+		// background-color: @gray-lighter;
+		// background-color: @brand-primary;
+		// background-color: @brand-info;
+		// opacity: 0.5;
 		text-decoration: none;
-		padding-bottom: 15px;
+		// padding-bottom: 15px;
+		// border: 5px solid @brand-primary;
+		// border-bottom: 0;
 
-		h3 {
-			font-size: 30px;
-		}
-
-		p {
-			font-size: 22px;
+		img {
+			opacity: 0.65;
 		}
 	}
 
 	img {
 		position: relative;
-		width: 98%;
+		width: 100%;
+
 	}
 }
+
+.panel-header {
+		padding: 5px 15px;
+}
+
+.panel {
+	&:hover {
+		border: 5px solid @brand-primary;
+	}
+}
+
+.panel-button-row {
+	width: 100%;
+	margin-bottom: 10px;
+	position: relative;
+
+	.panel-button {
+		position: relative;
+		font-size: 16px;
+		// color: @light-gray;
+		padding: 10px 15px;
+		width: 33.33%;
+		.border-box;
+	}
+}
+
+
+
+.skills-section {
+	// margin: 2em;
+	padding: 2em;
+}
+
+.ux-background {
+	background-color: @brand-primary;
+	.skills-section;
+}
+
+.fed-section {
+	min-height: 200px;
+}
+
+.fed-background {
+	background-color: @brand-info;
+	.skills-section;
+}
+
+.dev-frameworks {
+	background-color: @white;
+	padding: 5% 0;
+}
+
+.fa-lh {
+	line-height: 0.1em;
+}
+
+
 
 
 

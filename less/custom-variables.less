@@ -21,7 +21,8 @@
 // ## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               #f8f8f8;
+// @body-bg:               #f8f8f8;
+@body-bg:               #ffffff;
 //** Global text color on `<body>`.
 @text-color:            @gray;
 
@@ -40,5 +41,26 @@
 @headings-font-weight:    @oswald-regular;
 
 
+//== Navbar
+//
+//##
+
 //Inverted Navbar
 @navbar-inverse-bg:  #000;
+@navbar-inverse-brand-hover-color: #fff;
+@navbar-inverse-brand-hover-bg: #413F3F;
+
+@navbar-inverse-link-hover-color: @navbar-inverse-brand-hover-color;
+@navbar-inverse-link-hover-bg: @navbar-inverse-brand-hover-bg;
+@navbar-inverse-link-active-color: @navbar-inverse-link-hover-color;
+@navbar-inverse-link-active-bg: @navbar-inverse-link-hover-bg;
+
+
+//== Breadcrumbs
+//
+//##
+
+//** Text color of current page in the breadcrumb
+@breadcrumb-active-color:       @brand-info;
+
+

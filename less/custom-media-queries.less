@@ -2,6 +2,18 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) { 
+  .big-h-xl {
+    font-size: 4.375em;
+  }
+
+  .big-h-xxl {
+    font-size: 5.625em;
+  }
+
+  .center-on-mobile {
+    .text-left;
+  }
+
   .homepage-section {
     min-height: @homepage-cover-height-md;
 
@@ -12,13 +24,23 @@
 
   .jumbotron {
     min-height: 562px;
+    // min-height: 700px;
 
     .text-container {
-      margin-top: 15%;
+      // margin-top: 5%;
     }
 
     .green-background {
       padding: 6.75px;
+    }
+
+    h1, h2 {
+      // font-size: 3.625em;
+      font-size: 2.8em;
+    }
+
+    .text-bg-padding {
+      padding: 3px 10px 8px 10px;
     }
   }
 
@@ -42,9 +64,7 @@
     margin-left: 6rem;
   }
 
-  .big-h-xxl {
-    font-size: 5.625em;
-  }
+
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -61,7 +81,15 @@
     // min-height: 726px;
 
     .text-container {
-      margin-top: 5%;
+      // margin-top: 5%;
+    }
+
+    h1, h2 {
+      font-size: 4em;
+    }
+
+    .text-bg-padding {
+      padding: 3px 10px 13px 10px;
     }
   }
 
@@ -73,6 +101,7 @@
     text-align: center;
     display: inline-block;
   }
+
 }
 
 /* Large devices (large desktops, 1200px and up) */
