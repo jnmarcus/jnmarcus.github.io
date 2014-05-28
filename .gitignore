@@ -7,3 +7,4 @@ package-old.json
 .grunt
 _site
 custom-bootstrap.map
+jekyll/dist
