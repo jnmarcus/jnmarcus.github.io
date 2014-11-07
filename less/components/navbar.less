@@ -2,6 +2,13 @@
 	margin-bottom: 0;
 	.oswald-light;
 	font-size: 20px;
+
+	> li > a {
+		&:active {
+			color: @navbar-inverse-link-active-color;
+			background-color: @navbar-inverse-link-active-bg;
+		}
+	}
 }
 
 .navbar-brand {

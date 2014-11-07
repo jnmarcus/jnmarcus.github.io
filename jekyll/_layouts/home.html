@@ -4,11 +4,22 @@
 
   <div class="clear-fix"></div>
 
-  {{ content }}
+  <div id="home">
 
-  <!-- TO DO: MAKE NAVBAR BACKGROUND COLOR BLACK AFTER JUMBOTRON!!! -->
+    {{ content }}
 
-  {% include project-cards.html %}
+    <!-- TO DO: MAKE NAVBAR BACKGROUND COLOR BLACK AFTER JUMBOTRON!!! -->
+
+  </div>
+
+  <section id="work" class="work">
+
+    {% include project-cards.html %}
+
+    <!-- <a href="#">View All</a> -->
+     <!-- TO DO: ADD ACCORDIAN, THAT WHEN CLICKING ON LINK REVEALS ALL PROJECTS!!! -->
+
+  </section>
 
   {% include contact.html %}
 
