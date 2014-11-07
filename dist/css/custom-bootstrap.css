@@ -7903,6 +7903,9 @@ img {
   padding-bottom: 5rem;
   background-color: #ffffff;
 }
+.work {
+  padding: 3em 0;
+}
 .contact {
   width: 100%;
   min-height: 500px;

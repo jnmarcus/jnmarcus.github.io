@@ -56,7 +56,7 @@
     <![endif]-->
 
 </head>
-  <body >
+  <body data-spy="scroll" data-target=".navbar-collapse" >
     <!-- BEGIN GLOBAL SITE WRAPPER -->
     <div class="wrapper">
         
@@ -73,16 +73,13 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand homepage-navbar-brand" href="#">Jamie Marcus</a>
+		      <a class="navbar-brand homepage-navbar-brand" href="http://jnmarcus.github.io">Jamie Marcus</a>
 		    </div>
 		    <div class="collapse navbar-collapse">
 		      <ul class="nav navbar-nav navbar-right">
-		        <!-- <li class="active"><a href="http://jnmarcus.github.io">Home</a></li> -->
-		        <li><a href="http://jnmarcus.github.io">Home</a></li>
-		        <!-- <li><a href="http://jnmarcus.github.io/about">About</a></li> -->
+		        <li><a href="#home			">Home</a></li>
 		        <li><a href="/about">About</a></li>
-		        <!-- <li><a href="http://jnmarcus.github.io/work">Work</a></li> -->
-		        <li><a href="/work">Work</a></li>
+		        <li><a href="#work">Work</a></li>
 		        <li><a href="https://s3.amazonaws.com/port_site/Jamie+Marcus+Resume.pdf" target="blank">Resume</a></li>
 		        <li><a href="#contact">Contact</a></li>
 		      </ul>
@@ -94,7 +91,9 @@
 
   <div class="clear-fix"></div>
 
-  		<div class="clear-fix"></div>
+  <div id="home">
+
+    		<div class="clear-fix"></div>
 
 		<div class="jumbotron">
 
@@ -142,9 +141,13 @@
 		
 
 
-  <!-- TO DO: MAKE NAVBAR BACKGROUND COLOR BLACK AFTER JUMBOTRON!!! -->
+    <!-- TO DO: MAKE NAVBAR BACKGROUND COLOR BLACK AFTER JUMBOTRON!!! -->
 
-  <div class="v-space-xxs"></div>
+  </div>
+
+  <section id="work" class="work">
+
+    <div class="v-space-xxs"></div>
 
 <!-- SNIPPETS -->
 <section class="snippets-block">
@@ -264,6 +267,11 @@
 </section>  <!-- END SNIPPETS -->
 
 <div class="v-space-md bg-white pos-relative"></div>
+
+    <!-- <a href="#">View All</a> -->
+     <!-- TO DO: ADD ACCORDIAN, THAT WHEN CLICKING ON LINK REVEALS ALL PROJECTS!!! -->
+
+  </section>
 
   <!-- CONTACT SECTION -->
 <section id="contact" class="contact">
