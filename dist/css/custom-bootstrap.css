@@ -7631,6 +7631,10 @@ header.nav-header {
   font-weight: 300;
   font-size: 20px;
 }
+.navbar > li > a:active {
+  color: #ffffff;
+  background-color: #413f3f;
+}
 .navbar-brand {
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 28px;
