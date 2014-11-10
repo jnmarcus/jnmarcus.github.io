@@ -7,12 +7,12 @@ markdown: kramdown
 permalink:        pretty
 
 # Server
-source:	./jekyll
-destination: ./jekyll/_site
+source:	./dev/jekyll
+destination: ./dev/_pub
 url: http://jnmarcus.github.io
 encoding: UTF-8
 include: ['.nojekyll']
-exclude: ['node_modules', 'less', 'app', 'test', 'Gemfile', 'Gemfile.lock', 'README.md', 'package.json', 'package-old.json', 'Gruntfile.js', 'Gruntfile-old.js', 'custom-bootstrap.map', 'site', 'gh-pages-build', '.grunt']
+exclude: ['node_modules', 'dev/styles/less', 'Gemfile', 'Gemfile.lock', 'README.md', 'package.json', 'Gruntfile.js', 'site', '.grunt']
 
 # Setup
 title:            'Jamie Marcus'

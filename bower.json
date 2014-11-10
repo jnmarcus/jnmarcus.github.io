@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-site",
+  "version": "0.0.0",
+  "main": "index.html",
+  "homepage": "https://jnmarcus.github.io",
+  "description": "packages for portfolio site",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.3.0",
+    "font-awesome": "~4.2.0",
+    "modernizr": "~2.8.3",
+    "requirejs": "~2.1.15"
+  },
+  "devDependencies": {}
+}

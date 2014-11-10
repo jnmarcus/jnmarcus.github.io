@@ -13,50 +13,106 @@ module.exports = function(grunt) {
     config: {
         // Configurable paths
         pub: 'pub',
-        dist: 'dist',
-        jekyllBuild: './jekyll/_site',
+        dist: './dev/dist',
+        jekyllBuild: './dev/_pub',
         ghPagesBuild: 'gh-pages',
-        root: '.'
+        dev: './dev'
+    },
+    dev: {
+        styles: './dev/styles',
+        scripts: './dev/scripts',
+        pub: './dev/_pub',
+        dist: './dev/dist'
     },
 
     // TASK CONFIGURATION
 
+//    concat: {
+//      options: {
+//        banner: '<%= banner %>',
+//        stripBanners: true
+//      },
+//      dist: {
+//        src: ['lib/<%= pkg.name %>.js'],
+//        dest: 'dist/<%= pkg.name %>.js'
+//      }
+//    },
+//    uglify: {
+//      options: {
+//        banner: '<%= banner %>'
+//      },
+//      dist: {
+//        src: '<%= concat.dist.dest %>',
+//        dest: 'dist/<%= pkg.name %>.min.js'
+//      }
+//    },
+//    jshint: {
+//      options: {
+//        curly: true,
+//        eqeqeq: true,
+//        immed: true,
+//        latedef: true,
+//        newcap: true,
+//        noarg: true,
+//        sub: true,
+//        undef: true,
+//        unused: true,
+//        boss: true,
+//        eqnull: true,
+//        browser: true,
+//        globals: {}
+//      },
+//      gruntfile: {
+//        src: 'Gruntfile.js'
+//      },
+//      lib_test: {
+//        src: ['lib/**/*.js', 'test/**/*.js']
+//      }
+//    },
+//    qunit: {
+//      files: ['test/**/*.html']
+//    },
+
     less: {   //WORKS!
       css: {  //compile to CSS 
         options: {  //output sourcemap
+          strictMath: true,
           sourceMap: true,
-          sourceMapFilename: 'custom-bootstrap.map'
+          outputSourceFiles: true,
+          sourceMapURL: 'main.css.map',
+          sourceMapFilename: '<%= config.dev %>/dist/css/main.css.map'
         },
         files: {
-          'dist/css/custom-bootstrap.css': ['less/custom-bootstrap.less'],
+          '<%= config.dev %>/styles/css/main.css': ['<%= config.dev %>/styles/less/main.less'],
         },
       },
       minify: { //minify CSS file
         options: {
           cleancss: true,
         },
-        files: {
-          'dist/css/custom-bootstrap.min.css': ['less/custom-bootstrap.less'],
-        },
+        files: [
+          {src: '<%= config.dev %>/styles/css/main.css', dest: '<%= config.dev %>/styles/css/main.min.css'},
+          {src: '<%= config.dev %>/styles/css/main.css', dest: '<%= config.dev %>/dist/css/main.min.css'}
+        ],
       },
     },
 
-    clean: {
-      buildDist: {
-        src: [ '<%= config.jekyllBuild %>/dist' ]
-      },
-    },
+//    clean: {
+//      buildDist: {
+//        src: [ '<%= config.jekyllBuild %>/dist' ]
+//      },
+//    },
 
     copy: {  //WORKS!!
       styles: {   //'dist/css/' to 'jekyll/dist/css'
         expand: true,
         cwd: '<%= config.dist %>/',
         src: ['css/**/*'],
-        dest: 'jekyll/dist/'
+        dest: '<%= config.dev %>/jekyll/dist/'
       },  
       fonts: {    //'dist/fonts/' to everywhere
         files: [
-          { expand: true, cwd: '<%= config.dist %>/', src: ['fonts/**'], dest: 'jekyll/dist/'},
+          { expand: true, cwd: '<%= config.dist %>/', src: ['fonts/**'], dest: '<%= config.dev %>/jekyll/dist/'},
           { expand: true, cwd: '<%= config.dist %>/', src: ['fonts/**'], dest: '<%= config.ghPagesBuild %>/dist/'},
         ],
       },
@@ -64,26 +120,26 @@ module.exports = function(grunt) {
         expand: true,
         cwd: '<%= config.dist %>/',
         src: ['js/**'],
-        dest: 'jekyll/dist/',
+        dest: '<%= config.dev %>/jekyll/dist/'
       }, 
-      toBuildDist: {  //'jekyll/dist/' to 'jekyll/_site/dist/'
+      toJekyllDist: {  //'dev/dist/' to 'dev/jekyll/'
         expand: true,
-        cwd: 'jekyll/',
+        cwd: '<%= config.dev %>/',
         src: ['dist/**/*'],
-        dest: '<%= config.jekyllBuild %>/'
+        dest: 'dev/jekyll/'
       },
       minifiedAssets: {   //only minified assets to 'gh-pages/dist/' directories
         files: [
           //minified styles
-          {src: '<%= config.jekyllBuild %>/dist/css/custom-bootstrap.min.css', dest: '<%= config.ghPagesBuild %>/dist/css/custom-bootstrap.min.css'},
+          {src: '<%= config.jekyllBuild %>/dist/css/main.min.css', dest: '<%= config.ghPagesBuild %>/dist/css/main.min.css'},
           //minified javascript
           // {src: 'js/**.min.js', dest: '<%= config.ghPagesBuild %>/dist/js/'},
         ],
       },
       css: {  
         files: {
-          src: 'dist/css/custom-bootstrap.min.css', 
-          dest: 'gh-pages/dist/css/custom-bootstrap.min.css'
+          src: 'dist/css/main.min.css',
+          dest: 'gh-pages/dist/css/main.min.css'
         },
       },
       staticBuildFiles: { //static jekyll build files to staging directory 'gh-pages/' 
@@ -107,15 +163,27 @@ module.exports = function(grunt) {
           //static work page
           // { expand: true, cwd: '<%= config.jekyllBuild %>/', src: ['work/*.html'], dest: './'},
           //static contact page
-          { expand: true, cwd: '<%= config.jekyllBuild %>/', src: ['contact/*.html'], dest: './'},
+//          { expand: true, cwd: '<%= config.jekyllBuild %>/', src: ['contact/*.html'], dest: './'},
         ],
+      },
+      distToPub: {  //'dev/_pub/dist' to './dist'
+        expand: true,
+        cwd: '<%= config.dev %>/_pub/',
+        src: ['dist/**/*'],
+        dest: './'
+      },
+      pubToRoot: {  //'dev/_pub/' to './'
+        expand: true,
+        cwd: '<%= config.dev %>/',
+        src: ['_pub/**/*'],
+        dest: './'
       }
     },
 
     jekyll: {   //WORKS!!
       options: {
         bundleExec: true,
-        src: './jekyll'
+        src: './dev/jekyll'
       },
       serve: {
         options: {
@@ -125,14 +193,14 @@ module.exports = function(grunt) {
           server_port: 8000, //+
           watch: true, //+
           drafts: true,
-          exclude: ['node_modules', 'less', 'gh-pages', 'Gemfile', 'Gemfile.lock', 'README.md', 'package.json', 'package-old.json', 'Gruntfile.js', 'Gruntfile-old.js', 'custom-bootstrap.map', '.grunt', 'about', 'test']
+          exclude: ['node_modules', 'less', 'gh-pages', 'Gemfile', 'Gemfile.lock', 'README.md', 'package.json', 'Gruntfile.js','custom-bootstrap.map', '.grunt', 'about', 'test']
         },
       },
       build: {
         options: {
           dest: '<%= config.jekyllBuild %>',
           drafts: true,
-          exclude: ['node_modules', 'less', 'gh-pages', 'Gemfile', 'Gemfile.lock', 'README.md', 'package.json', 'package-old.json', 'Gruntfile.js', 'Gruntfile-old.js', 'custom-bootstrap.map', '.grunt', 'about', 'test']
+          exclude: ['node_modules', 'less', 'gh-pages', 'Gemfile', 'Gemfile.lock', 'README.md', 'package.json', 'Gruntfile.js','custom-bootstrap.map', '.grunt', 'about', 'test']
         },
       },
     },
@@ -158,22 +226,29 @@ module.exports = function(grunt) {
 
     watch: {
       less: {   //Recompile and minify CSS files when changes to LESS files are made -- WORKS!
-        files: ['less/**/*.less'],
+        files: ['dev/styles/less/**/*.less'],
         tasks: ['less', 'copy:styles'],
       },
-      distBuild: {
-        files: ['jekyll/dist/**/*'],
-        tasks: ['clean:buildDist', 'copy:toBuildDist'],
+      dist: {
+        files: ['dev/dist/**/*'],
+        tasks: ['newer:copy:toJekyllDist']
       },
-      build:{
-        files: [
-                './jekyll/_includes/*.html',
-                './jekyll/_layouts/*.html',
-                './jekyll/*.html',
-                './jekyll/_drafts/*.html'
-            ],
-        tasks: ['copy:staticBuildFiles'],
+//      distBuild: {
+//        files: ['jekyll/dist/**/*'],
+//        tasks: ['clean:buildDist', 'copy:toBuildDist'],
+//      },
+      pub:{
+        files: ['./dev/_pub/**/*'],
+        tasks: ['newer:copy:siteHTML', 'newer:copy:distToPub'],
       },
+//      src: {
+//        files: '<%= jshint.src.src %>',
+//        tasks: ['jshint:src', 'qunit'],
+//      },
+//      test: {
+//        files: '<%= jshint.test.src %>',
+//        tasks: ['jshint:test', 'qunit'],
+//      },
     },
 
     concurrent: {
@@ -190,8 +265,8 @@ module.exports = function(grunt) {
 
   //TASKS
   //WORKS -->
-  // Jekyll Serve
-  grunt.registerTask('exec-serve', ['jekyll:serve']);
+  // Jekyll Serve - copies 'dev/dist/' to 'dev/_pub', then builds jekyll files
+  grunt.registerTask('serve', ['copy:toJekyllDist','jekyll:serve']);
 
   //WORKS -->
   //Watch LESS files for changes, compile to CSS, and minify. Copy CSS from 'dist/css/' to 'jekyll/dist/css/'
@@ -224,6 +299,8 @@ module.exports = function(grunt) {
 
   //TEST TASKS
   grunt.registerTask('test-copy', ['copy:test']);
+
+  // grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
 
   //Grunt Dev --run jekyll server, build jekyll static files, watch less files, compile to css
 

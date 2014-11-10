@@ -1,7 +1,8 @@
 {
-  "name": "jnmarcus.github.com",
+  "name": "my-portfolio",
   "description": "Jamie Marcus Portfolio Website",
   "author": "Jamie Marcus",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/jnmarcus/jnmarcus.github.io.git"
