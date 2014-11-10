@@ -3,8 +3,9 @@ node_modules
 app
 test
 Gruntfile-old.js
-package-old.json
 .grunt
 _site
 custom-bootstrap.map
 jekyll/dist
+jekyll/test.html
+jekyll/test-project.html

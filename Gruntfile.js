@@ -15,7 +15,8 @@ module.exports = function(grunt) {
         pub: 'pub',
         dist: 'dist',
         jekyllBuild: './jekyll/_site',
-        ghPagesBuild: 'gh-pages'
+        ghPagesBuild: 'gh-pages',
+        root: '.'
     },
 
     // TASK CONFIGURATION
@@ -103,6 +104,8 @@ module.exports = function(grunt) {
           { src: '<%= config.jekyllBuild %>/index.html', dest: './index.html'},
           //static about page
           { expand: true, cwd: '<%= config.jekyllBuild %>/', src: ['about/*.html'], dest: './'},
+          //static work page
+          // { expand: true, cwd: '<%= config.jekyllBuild %>/', src: ['work/*.html'], dest: './'},
           //static contact page
           { expand: true, cwd: '<%= config.jekyllBuild %>/', src: ['contact/*.html'], dest: './'},
         ],
@@ -193,6 +196,9 @@ module.exports = function(grunt) {
   //WORKS -->
   //Watch LESS files for changes, compile to CSS, and minify. Copy CSS from 'dist/css/' to 'jekyll/dist/css/'
   grunt.registerTask('styles-dev', ['less', 'newer:copy:styles']);
+
+  //Copy generated HTML & minified css to root
+  grunt.registerTask('copyToRoot', ['less:minify', 'copy:siteHTML']);
 
   //WORKS -->
   //Build site for development: builds, but doesn't serve jekyll files, compiles and minifies CSS
