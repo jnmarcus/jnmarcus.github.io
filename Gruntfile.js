@@ -104,11 +104,11 @@ module.exports = function(grunt) {
 //    },
 
     copy: {  //WORKS!!
-      styles: {   //'dist/css/' to 'jekyll/dist/css'
-        expand: true,
-        cwd: '<%= config.dist %>/',
-        src: ['css/**/*'],
-        dest: '<%= config.dev %>/jekyll/dist/'
+      styles: {   //'dev/styles/css/' to 'dist/css/' and 'jekyll/dist/css'
+        files: [
+          { expand: true, cwd: '<%= dev.styles %>/', src: ['css/*'], dest: '<%= dev.dist %>/'},
+          { expand: true, cwd: '<%= dev.styles %>/', src: ['css/*'], dest: '<%= config.dev %>/jekyll/dist/'}
+        ],
       },  
       fonts: {    //'dist/fonts/' to everywhere
         files: [
