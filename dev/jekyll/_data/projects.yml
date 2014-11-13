@@ -1,0 +1,71 @@
+- id: 1
+  file: transcense-1
+  title: Transcense
+  subtitle: App Structure, Navigation, & User Interface
+  imageURL: http://lorempixel.com/300/250/technics/7/
+  url: /projects/projects/transcense-1.html
+  category: ux
+  tags:
+    - tag1: Mobile UX
+    - tag2: Information Architecture
+    - tag3: ui design
+
+- id: 2
+  file: transcense-2
+  title: Transcense
+  subtitle:
+  imageURL: http://lorempixel.com/300/250/technics/8/
+  url: /projects/transcense-2.html
+  category: ux
+  tags:
+    - tag1: Mobile UX
+    - tag2:
+    - tag3:
+
+- id: 3
+  file: transcense-3
+  title: Transcense
+  subtitle:
+  imageURL: http://lorempixel.com/300/250/technics/9/
+  url: /projects/transcense-3.html
+  category: dev
+  tags:
+    - tag1: front-end dev
+    - tag2: html5
+    - tag3: css3
+
+- id: 4
+  file: truespirit
+  title: Truespirit
+  subtitle:
+  imageURL:
+  url: /projects/truespirit.html
+  category: ux
+  tags:
+    - tag1: Web UX
+    - tag2: E-Commerce
+    - tag3: Site Architecture
+
+- file: netflix-social
+  id: 5
+  title: Netflix Social
+  subtitle:
+  imageURL: http://res.cloudinary.com/dc8ynxibm/image/upload/c_scale,w_350/v1399671937/netflix_cover_ejknmv.png
+  url:
+  category: ux
+  tags:
+    - tag1: Mobile UX
+    - tag2: UI Design
+    - tag3: Interaction Design
+
+- file:
+  id:
+  title:
+  subtitle:
+  imageURL:
+  url:
+  category:
+  tags:
+    - tag1:
+    - tag2:
+    - tag3:

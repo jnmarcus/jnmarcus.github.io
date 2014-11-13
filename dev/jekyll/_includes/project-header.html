@@ -1,1 +1,19 @@
-<h2>{{ post.name }}</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 pp-project-header-txt center-on-mobile">
+            <h1 class="big-h capitol pp-project-title">{{ page.title }}</h1>
+            <h2 class="small-h2 text-gray pp-project-subtitle">{{ page.subtitle }}</h2>
+            <h2 class="lead oswald-light no-lead">{{ page.description }}</h2>
+            <h5 class="lead pp-project-tags no-lead">
+                <span class="label label-info">{{ page.category }}</span>
+                <span class="label label-success">{{ page.tag1 }}</span>
+                <span class="label label-success">{{ page.tag2 }}</span>
+            </h5>
+
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <img src="{{ page.coverPhotoURL }}" class="img-responsive"
+                 alt="{{ page.coverPhotoALT}}">
+        </div>
+    </div>
+</div>
