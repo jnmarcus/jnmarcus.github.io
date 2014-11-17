@@ -1,5 +1,5 @@
-safe: true
-lsi: false
+safe: false
+lsi: true
 pygments: true
 markdown: kramdown
 
@@ -12,12 +12,20 @@ destination: ./dev/_pub
 url: http://jnmarcus.github.io
 encoding: UTF-8
 include: ['.nojekyll']
-exclude: ['node_modules', 'dev/styles/less', 'Gemfile', 'Gemfile.lock', 'README.md', 'package.json', 'Gruntfile.js', 'site', '.grunt']
+exclude: ['node_modules', 'dev/styles/less', 'Gemfile', 'Gemfile.lock', 'README.md', 'package.json', 'Gruntfile.js', 'site', '.grunt', 'dev/jekyll/projects/sample.html']
 
 # Setup
 title:            'Jamie Marcus'
 tagline:          'UX Designer, Front End Developer, Engineer'
 description:      'Portfolio site for Jamie Marcus'
+
+defaults:
+  -
+    scope:
+      path: "./dev/jekyll/projects"
+      type: "pages"
+    values:
+      layout: "project" # overrides previous default layout
 
 author:
   name:           'Jamie Marcus'

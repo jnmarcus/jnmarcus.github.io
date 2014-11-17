@@ -76,7 +76,7 @@ module.exports = function(grunt) {
     less: {   //WORKS!
       css: {  //compile to CSS 
         options: {  //output sourcemap
-          strictMath: true,
+          strictMath: false,
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapURL: 'main.css.map',
