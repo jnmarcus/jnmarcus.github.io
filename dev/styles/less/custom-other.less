@@ -384,11 +384,15 @@ a.card-snippet {
 
 .panel-header {
 		padding: 5px 15px;
+		color: @white;
 }
 
-.panel {
-	&:hover {
-		border: 5px solid @brand-primary;
+.panel-primary {
+	border: 5px solid @brand-primary;
+	.panel-header {
+		h3 {
+			color: @white;
+		}
 	}
 }
 
