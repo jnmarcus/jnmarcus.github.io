@@ -15,7 +15,8 @@
     "animate.less": "*",
     "lesshat": "~3.0.2",
     "wow": "~1.0.2",
-    "mixitup": "~2.1.7"
+    "mixitup": "~2.1.7",
+    "venobox": "~1.5.2"
   },
   "devDependencies": {}
 }
