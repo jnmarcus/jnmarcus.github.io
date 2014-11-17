@@ -15,6 +15,11 @@
   padding-right: 0;
 }
 
+.no-vertical-margin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .spacer {
   margin-left: 2px;
   margin-right: 2px;
@@ -44,6 +49,75 @@
 	-webkit-box-shadow: inset 0px 1px 4px 1px rgba(0,0,0,0.75);
 	-moz-box-shadow: inset 0px 1px 4px 1px rgba(0,0,0,0.75);
 	box-shadow: inset 0px 1px 4px 1px rgba(0,0,0,0.75);
+}
+
+// PADDING UTILITIES --------------------------------------------------
+@pad-25: 25px;
+@pad-50: 12.5px;
+@pad-75: 75px;
+
+.pad-25-vertical {
+  padding-top: @pad-25;
+  padding-bottom: @pad-25;
+}
+
+.pad-25-top {
+  padding-top: @pad-25;
+}
+
+.pad-25-bottom {
+  padding-bottom: @pad-25;
+}
+
+.pad-50 {
+  padding: @pad-50;
+}
+
+.pad-50-top {
+  padding-top: @pad-50;
+}
+
+.pad-50-bottom {
+  padding-bottom: @pad-50;
+}
+
+.pad-50-left {
+  padding-left: 0;
+}
+
+.pad-50-right {
+  padding-right: @pad-50;
+}
+
+.pad-50-vertical {
+  padding-top: @pad-50;
+  padding-bottom: @pad-50;
+}
+
+.pad-50-lateral {
+  padding-right: @pad-50;
+  padding-left: @pad-50;
+}
+
+.pad-75 {
+  padding: @pad-75;
+}
+
+.pad-75-top {
+  padding-top: @pad-75;
+}
+.pad-75-bottom {
+  padding-bottom: @pad-75;
+}
+
+.pad-75-vertical {
+  padding-top: @pad-75;
+  padding-bottom: @pad-75;
+}
+
+.pad-75-lateral {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 // WRAPPERS --------------------------------------------------

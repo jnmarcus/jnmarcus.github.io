@@ -1,12 +1,29 @@
----
-layout: default
----
+{% include head.html %}
 
-<article>
-    <header>
-        {% include project-header.html %}
-    </header>
+    {% include header.html %}
 
-    {{ content }}
+        <div class="clear-fix"></div>
 
-</article>
+        <section>
+          {% include project-links.html %}
+        </section>
+
+        <article>
+
+            <header class="page-header page-header-section">
+
+                {% include project-header.html %}
+
+            </header>
+
+            {{ content }}
+
+        </article>
+
+        {% include pagination-buttons.html %}
+
+        {% include contact.html %}
+
+    {% include footer.html %}
+
+{% include foot.html %}

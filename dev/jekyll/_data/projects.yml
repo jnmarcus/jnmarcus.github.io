@@ -2,8 +2,7 @@
   file: transcense-1
   title: Transcense
   subtitle: App Structure, Navigation, & User Interface
-  imageURL: http://lorempixel.com/300/250/technics/7/
-  url: /projects/projects/transcense-1.html
+  imageURL: http://res.cloudinary.com/dc8ynxibm/image/upload/v1415851305/placeit-transcense-v1.jpg
   category: ux
   tags:
     - tag1: Mobile UX
@@ -13,9 +12,8 @@
 - id: 2
   file: transcense-2
   title: Transcense
-  subtitle:
-  imageURL: http://lorempixel.com/300/250/technics/8/
-  url: /projects/transcense-2.html
+  subtitle: Onboarding
+  imageURL: http://res.cloudinary.com/dc8ynxibm/image/upload/s--sTuPrbXL--/c_scale,h_350,q_jpegmini/v1415851305/transcense2-cover-1.jpg
   category: ux
   tags:
     - tag1: Mobile UX
@@ -25,21 +23,19 @@
 - id: 3
   file: transcense-3
   title: Transcense
-  subtitle:
-  imageURL: http://lorempixel.com/300/250/technics/9/
-  url: /projects/transcense-3.html
+  subtitle: Web Development
+  imageURL: http://res.cloudinary.com/dc8ynxibm/image/upload/s--wb63lYm9--/c_scale,h_350,q_jpegmini/v1415851305/transcense3-cover-1.jpg
   category: dev
   tags:
-    - tag1: front-end dev
-    - tag2: html5
-    - tag3: css3
+    - tag1: html5
+    - tag2: css3
+    - tag3: js
 
 - id: 4
   file: truespirit
   title: Truespirit
-  subtitle:
-  imageURL:
-  url: /projects/truespirit.html
+  subtitle: E-Commerce Website
+  imageURL: http://res.cloudinary.com/dc8ynxibm/image/upload/s--qCPeIxp8--/c_scale,h_350,q_jpegmini/v1415851306/truespirit-cover-1.jpg
   category: ux
   tags:
     - tag1: Web UX
@@ -50,8 +46,7 @@
   id: 5
   title: Netflix Social
   subtitle:
-  imageURL: http://res.cloudinary.com/dc8ynxibm/image/upload/c_scale,w_350/v1399671937/netflix_cover_ejknmv.png
-  url:
+  imageURL: http://res.cloudinary.com/dc8ynxibm/image/upload/s--zN7qa3IQ--/q_jpegmini/v1416184867/netflix-cover2.jpg
   category: ux
   tags:
     - tag1: Mobile UX

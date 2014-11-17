@@ -8,6 +8,11 @@ p {
   .oswald-light;
 }
 
+ul, ol {
+  .oswald-light;
+  margin-top: 10px;
+}
+
 section {
   .pos-relative;
 
@@ -18,9 +23,13 @@ section {
 
 }
 
-img {
-	margin: 3rem auto;
+hr {
+	border-width: 3px 0 0;
 }
+
+//img {
+//	margin: 3rem auto;
+//}
 
 .progress {
 	margin-top: 12px;
@@ -163,7 +172,7 @@ background: url(http://res.cloudinary.com/dc8ynxibm/image/upload/q_jpegmini/v140
 
 .cover-text-big {
 	margin-bottom: 0;
-	.oswald-bold;
+//	.oswald-bold;
 	font-size: 30px;
 }
 
@@ -361,9 +370,9 @@ a.card-snippet {
 		// border: 5px solid @brand-primary;
 		// border-bottom: 0;
 
-		img {
-			opacity: 0.65;
-		}
+//		img {
+//			opacity: 0.65;
+//		}
 	}
 
 	img {
@@ -432,8 +441,108 @@ a.card-snippet {
   min-height: 450px;
 }
 
-.project-cards {
-  list-style: none;
+.links-section {
+  width: 100%;
+  background-color: @white;
+//  background-color: @brand-success;
+//  opacity: 0.6;
+  border-bottom: 3px solid @brand-info;
+//  padding: 6px;
+
+  .all-projects {
+    border-right: 3px solid @brand-info;
+  }
+
+  ul.project-links {
+    li {
+      list-style: none;
+      display: inline-block;
+    }
+  }
+
+  a {
+    color: @brand-info;
+    .oswald-light;
+    font-size: 16px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+    &:hover, &:active {
+//      background-color: white;
+      background-color: @brand-info;
+      color: @white;
+      display: inline-block;
+      text-decoration: none;
+//      border-bottom: 3px solid @white;
+    }
+
+//    &:active {
+////      background-color: @white;
+//      border: 2px solid @white;
+//    }
+  }
+}
+
+
+
+
+
+/* Section Dividers */
+.section-divider {
+  z-index: 999;
+  width: 100%;
+  display: table;
+  max-height: 450px;
+  border-bottom: 2px solid #E6EAED;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 30px;
+  padding-bottom: 70px;
+  margin-top: 45px;
+
+
+  background-position: center center;
+
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  background-attachment: relative;
+
+  text-align: center;
+}
+
+.textdivider h1 {
+  padding-top: 70px;
+  color: white;
+  font-size: 40px;
+}
+
+.textdivider p {
+  color: white;
+  font-size: 25px;
+}
+
+.profile-pic {
+	height:	250px;
+	width: 200px;
+}
+
+
+/* Section Dividers Backgrounds */
+
+.san-francisco {
+  background-image: url(https://farm7.staticflickr.com/6152/6142495197_bd9c41cc55_b.jpg);
+//  opacity: 0.7;
+//  filter: alpha(opacity=70);
 }
 
 

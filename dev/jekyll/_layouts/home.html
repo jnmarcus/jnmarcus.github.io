@@ -12,7 +12,31 @@
 
   </div>
 
-  {% include work.html %}
+	<!-- ABOUT ME SECTION --->
+	<section id="about" class="pad-50-vertical">
+		{% include about-me.html %}
+		{% include dev-skills.html %}
+	</section>
+
+<section id="work" class="gray-section pad-50-vertical">
+
+  {% include project-cards.html %}
+
+</section>
+
+<section id="process" class="pad-50-vertical">
+	{% include process.html %}
+</section>
+
+	<!-- ==== SECTION DIVIDER1 -->
+	<section class="section-divider textdivider san-francisco">
+		<div class="container">
+			<h1>Get In Touch!</h1>
+			<hr>
+			<p>I live in sunny San Francisco, California.  I am currently available for work and would love to chat!</p>
+			<a href="#" class="btn btn-lg btn-outline btn-white-big">Contact Me</a>
+		</div><!-- container -->
+	</section><!-- section -->
 
   {% include contact.html %}
 

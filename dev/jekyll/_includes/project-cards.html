@@ -1,120 +1,39 @@
-<div class="v-space-xxs"></div>
-
-<!-- SNIPPETS -->
-<section class="snippets-block">
-
-	<header class="text-center section-box">
-		<!-- <h1 class="lobster-font">Featured Projects</h1> -->
-		<h2>Featured Projects</h2>
-	</header>
-
-	<div class="v-space-sm"></div>
-
-	<div class="container">
-		<!-- <hr> -->
+<!-- WORK -->
+<!--<section id="#work" class="content-section">-->
+	<div class="container">   <!-- CONTAINER -->
 		<div class="row">
-
-			<!-- <div class="col-sm-6 col-md-4">
-				<article>
-					<a href="#" class="panel card-snippet">
-						<h3>Project Title</h3>
-
-						<p><img src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--37_q2ji4--/q_jpegmini/v1399671973/truespirit_cover_he4zvx.jpg" class="white img-responsive"></p>
-					
-						<p class="lead"><span class="label label-success">Tag1</span><span class="label label-success">Tag2</span></p>
-					</a>
-				</article>
+			<div class="col-xs-12 text-center">
+				<header class="section-header">
+					<h2>Featured Work</h2></header>
 			</div>
+		</div>
+		<div class="row">  <!-- WRAPPER ROW -->
+			<div class="col-sm-10 col-sm-offset-1">   <!-- WRAPPER DIV -->
 
-			<div class="col-sm-6 col-md-4">
-				<article>
-					<a href="#" class="card-snippet">
-						<h3>Project Title</h3>
-						
-						<p><img data-src="holder.js/100%x300/auto/lava" class="white img-responsive"></p>
-						<p><img src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--1j2uIYH---/q_jpegmini/v1399671937/netflix_cover_ejknmv.jpg" class="white img-responsive"></p>
-					
-						<p class="lead"><span class="label label-success">Tag1</span><span class="label label-success">Tag2</span></p>
-					</a>
-				</article>
-			</div>
-
-			<div class="col-sm-6 col-md-4">
-				<article>
-					<a href="#" class="card-snippet">
-						<h3>Project Title</h3>
-						
-						<p><img data-src="holder.js/100%x300/auto/vine" class="img-responsive"></p>
-					
-						<p class="lead"><span class="label label-success">Tag1</span><span class="label label-success">Tag2</span></p>
-					</a>
-				</article>
-			</div> -->
-
-			<div class="col-sm-6 col-lg-4">
-				<article class="panel panel-default ">
-					<a href="#" class="card-snippet">
-						
-						<h3 class="panel-header oswald-regular">Truespirit</h3>
-						<h5 class="lead">
-							<span class="label label-success">Web UX</span>
-							<span class="label label-success">E-Commerce</span>
-							<span class="label label-success">UI Design</span>
-						</h5>
-						
-						<p><img data-src="holder.js/100%x200/auto" class="img-responsive"></p>
-						<!-- <p><img src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--37_q2ji4--/q_jpegmini/v1399671973/truespirit_cover_he4zvx.jpg" class="white img-responsive"></p> -->
-		
-					</a>
-					<div class="panel-button-row">
-						<!-- <a href="#" class="panel-button">View Code</a> -->
-					</div>
-				</article>
-			</div>
-
-			<div class="col-sm-6 col-lg-4">
-				<article class="panel panel-default ">
-					<a href="#" class="card-snippet">
-						
-						<h3 class="panel-header oswald-regular">Netflix SOCIAL</h3>
-						<h5 class="lead">
-							<span class="label label-success">Mobile UX</span>
-							<span class="label label-success">UI Design</span>
-							<span class="label label-success">Interaction Design</span>
-						</h5>
-						
-						<p><img data-src="holder.js/100%x200/auto" class="img-responsive"></p>
-						<!-- <p><img src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--1j2uIYH---/q_jpegmini/v1399671937/netflix_cover_ejknmv.jpg" class="white img-responsive"></p> -->
-			
-					</a>
-					<div class="panel-button-row">
-						<!-- <a href="#" class="panel-button">View Code</a> -->
-					</div>
-				</article>
-			</div>
-
-			<div class="col-sm-6 col-lg-4">
-				<article class="panel panel-default ">
-					<a href="#" class="card-snippet">
-						
-						<h3 class="panel-header oswald-regular">DotDash3</h3>
-						<h5 class="lead">
-							<span class="label label-success">Information Architecture</span>
-							<span class="label label-success">Interaction Design</span>
-						</h5>
-						
-						<p><img data-src="holder.js/100%x200/auto" class="img-responsive"></p>
-			
-					</a>
-					<div class="panel-button-row">
-						<!-- <a href="#" class="panel-button">View Code</a> -->
-					</div>
-				</article>
-			</div>
-
-		</div> <!-- END ROW -->
-	</div>  <!-- END CONTAINER -->
-
-</section>  <!-- END SNIPPETS -->
-
-<div class="v-space-md bg-white pos-relative"></div>
+				<div class="row">   <!-- PROJECT CARDS ROW -->
+					<ul class="project-cards">   <!-- PROJECT CARDS -->
+						{% for project in site.data.projects %}
+						<li>
+							<div id="{{ project.id }}" class="project col-xs-12 col-sm-4 col-md-4">
+								<article id="{{ project.file }}">
+									<a href="/projects/{{ project.file }}.html" class="card-snippet card">
+										<p><img class="img-responsive" src="{{ project.imageURL }}"></p>
+										<h3><small class="text-black">{{ project.title }}</small></h3>
+										<h4>{{ project.subtitle }}</h4>
+										<!--<h5 class="lead">-->
+										<!--<span class="label label-success">{{ project.tag1 }}</span>-->
+										<!--<span class="label label-success">{{ project.tag2 }}</span>-->
+										<!--<span class="label label-success">{{ project.tag3 }}</span>-->
+										<!--</h5>-->
+									</a>
+								</article>
+							</div>
+						</li>
+						{% endfor %}
+					</ul>   <!-- /END PROJECT CARDS -->
+				</div>   <!-- /END PROJECT CARDS ROW -->
+			</div>   <!-- /END WRAPPER DIV -->
+		</div>   <!-- /END WRAPPER ROW -->
+	</div>   <!-- /END CONTAINER -->
+<!--</section>-->
+<!-- /END WORK -->

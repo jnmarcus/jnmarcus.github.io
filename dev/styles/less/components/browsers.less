@@ -1,0 +1,87 @@
+@browser-color: #E7ECF2;
+@white: #ffffff;
+
+@browser-height: 400px;
+@browser-width: 500px;
+@browser-top-height: @browser-width * 0.15;
+
+//NOTE: use the commented out code for margin issues when adjusting size, border, etc..
+
+.browser-border {
+  border: 6px solid @browser-color;
+  border-radius: 6px;
+}
+
+.browser-ui-element {
+  height: @browser-width * 0.045;
+  background-color: @white;
+  border: 1px solid @browser-color;
+  border-radius: 4px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.browser {
+  margin: 20px auto 0;
+  max-width: @browser-width;
+  min-height: @browser-height;
+  .browser-border;
+  background-color: @white;
+  -webkit-box-shadow: 0px 10px 10px 5px rgba(0,0,0,0.15);
+  box-shadow: 0px 10px 10px 5px rgba(0,0,0,0.15);
+
+  .browser-top {
+    background-color: @browser-color;
+    .browser-border;
+    border-width: 2px;
+    border-radius: 2px 2px 0 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    height: @browser-top-height;
+    margin: -5px auto;
+    box-sizing: border-box;
+    .circle {
+      border: 5px solid #D8D8D8;
+      border-radius: 5px;
+      margin-right: 2px;
+      display: inline-block;
+    }
+    .arrow-buttons {
+      width: 8%;
+      .browser-ui-element;
+      margin-left: 2%;
+      //margin-top: 4px;
+    }
+    .search-box {
+      .browser-ui-element;
+      width: 85%;
+      margin-left: 2.5%;
+      //margin-top: 10px;
+    }
+  }
+  img {
+    &.in-browser {
+      position: relative;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.circle-div {
+  //margin-top: 5px;
+  margin-left: 3px;
+  margin-bottom: 2px;
+  display: block;
+}
+
+.browser-ui-block {
+//  margin-top: 0.35em;
+  display: block;
+}
+
+
+.browser1 {
+
+}
