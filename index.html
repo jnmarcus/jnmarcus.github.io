@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="Portfolio site for Jamie Marcus">
+    <meta name="keywords"
+          content="HTML, CSS, JS, JavaScript, UX, user experience, front-end, frontend, web development">
     <meta name="author" content="Jamie Marcus">
 
     <meta name="google-site-verification" content="6pNS5wHP258Ml-yKCXns5vPuguNOo9obtEfR0EZeknA" />
@@ -39,7 +41,10 @@
 
 	<!-- STYLES -->
     <link href="dist/css/main.min.css" rel="stylesheet">
-    <link href="../../dev/dist/css/main.min.css" rel="stylesheet">
+    <link href="../../dist/css/main.min.css" rel="stylesheet">
+
+    <!--<link href="dist/css/main.css" rel="stylesheet">-->
+    <!--<link href="../../dist/css/main.css" rel="stylesheet">-->
 
     <!-- SCRIPTS -->
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -76,8 +81,9 @@
 		    <div class="collapse navbar-collapse">
 		      <ul class="nav navbar-nav navbar-right">
 		        <li><a href="#home			">Home</a></li>
-		        <li><a href="/about">About</a></li>
+		        <li><a href="#about">About</a></li>
 		        <li><a href="#work">Work</a></li>
+						<li><a href="#process">Process</a></li>
 		        <li><a href="https://s3.amazonaws.com/port_site/Jamie+Marcus+Resume.pdf" target="blank">Resume</a></li>
 		        <li><a href="#contact">Contact</a></li>
 		      </ul>
@@ -91,186 +97,317 @@
 
   <div id="home">
 
-    		<div class="clear-fix"></div>
+    <div class="clear-fix"></div>
 
-		<div class="jumbotron">
+<div class="jumbotron">
 
-			<!-- DESKTOP AND LAPTOP -->
-			<div class="container visible-md visible-lg">
-				<div class="row">
-					<div class="col-xs-12">
-						<div class="text-container">
-							<h1>Hi.<br>My Name is Jamie Marcus.<br>I'm a
-							<span class="display-inline white-on-turquoise text-bg-padding margin-top-20 spacer-2x">UX Designer </span>&<br>
-							<span class="display-inline pink-on-yellow text-bg-padding margin-top-20">Front End Developer</span></h1>
-						</div>   
-					</div>
-				</div>
-			</div>   <!-- END DESKTOP AND LAPTOP -->
-
-			<!-- TABLET AND MOBILE -->
-			<div class="container-fluid visible-xs visible-sm">
-				<div class="row">
-					<div class="col-xs-12">
-
-						<!-- TABLET ONLY -->
-						<div class="text-container text-center visible-sm">
-							<h1 class="margin-bottom-10">Hi.</h1>
-							<h1>My Name is Jamie Marcus.</h1>
-							<h1 class="display-inline">I'm a</h1>
-							<h1 class="display-inline white-on-turquoise text-bg-padding spacer-2x">UX Designer</h1>
-							<h1 class="display-inline">&</h1>
-							<h1 class="display-inline pink-on-yellow text-bg-padding">Front End Developer</h1>
-						</div>   <!-- END TABLET ONLY -->
-
-						<!-- MOBILE ONLY -->
-						<div class="text-container text-center visible-xs">
-							<h1>Hi.<br>My Name is Jamie Marcus. I'm a
-							<span class="display-inline white-on-turquoise text-bg-padding margin-top-10 spacer-2x">UX Designer</span>&
-							<span class="display-inline pink-on-yellow text-bg-padding margin-top-10">Front End Developer</span></h1>
-
-						</div>		<!-- END MOBILE ONLY -->	
-
-					</div>
+	<!-- DESKTOP AND LAPTOP -->
+	<div class="container visible-md visible-lg">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="text-container pad-25-top">
+					<h1>Hi.<br>My Name is Jamie Marcus.<br>I'm a
+						<span class="display-inline white-on-turquoise text-bg-padding margin-top-20 spacer-2x">UX Designer </span>&<br>
+						<span class="display-inline pink-on-yellow text-bg-padding margin-top-20">Front End Developer</span></h1>
 				</div>
 			</div>
 		</div>
+	</div>   <!-- END DESKTOP AND LAPTOP -->
 
-		
+	<!-- TABLET AND MOBILE -->
+	<div class="container-fluid visible-xs visible-sm">
+		<div class="row">
+			<div class="col-xs-12">
 
+				<!-- TABLET ONLY -->
+				<div class="text-container text-center pad-75-vertical visible-sm">
+					<h1 class="margin-bottom-10">Hi.</h1>
+					<h1>My Name is Jamie Marcus.</h1>
+					<h1 class="display-inline">I'm a</h1>
+					<h1 class="display-inline white-on-turquoise text-bg-padding spacer-2x">UX Designer</h1>
+					<h1 class="display-inline">&</h1>
+					<h1 class="display-inline pink-on-yellow text-bg-padding">Front End Developer</h1>
+				</div>   <!-- END TABLET ONLY -->
+
+				<!-- MOBILE ONLY -->
+				<div class="text-container text-center pad-75-vertical visible-xs">
+					<h1>Hi.<br>My Name is Jamie Marcus. I'm a
+						<span class="display-inline white-on-turquoise text-bg-padding margin-top-10 spacer-2x">UX Designer</span>&
+						<span class="display-inline pink-on-yellow text-bg-padding margin-top-10">Front End Developer</span></h1>
+
+				</div>		<!-- END MOBILE ONLY -->
+
+			</div>
+		</div>
+	</div>
+</div>
 
     <!-- TO DO: MAKE NAVBAR BACKGROUND COLOR BLACK AFTER JUMBOTRON!!! -->
+</div>
 
-  </div>
+	<!-- ABOUT ME SECTION --->
+	<section id="about dev-skills" class=" section-box pad-50-vertical">
+		<!--<section class="section gray-section content-section">-->
+  <div class="container">
+    <div class="row">
+      <!--Start heading-->
+      <div class="col-xs-12 text-center">
+        <header class="section-header">
+          <h2>About Me</h2></header>
+      </div>
+      <!--End heading-->
+    </div>
 
-  <section id="work" class="work">
+    <!-- About Me Section -->
 
-    <div class="v-space-xxs"></div>
+		<!--<section id="dev-skills" class="section-box">-->
+  <!--<div class="container">-->
 
-<!-- SNIPPETS -->
-<section class="snippets-block">
+    <!--<div class="row">-->
+      <!--<div class="col-xs-12">-->
+        <!--<header>-->
+          <!--<h2 class="big-h capitol">FED <i class="fa fa-angle-left fa-lg fa-lh"></i> / <i class="fa fa-angle-right fa-lg fa-lh"></i></h2>-->
+        <!--</header>-->
+      <!--</div>-->
+    <!--</div>-->
 
-	<header class="text-center section-box">
-		<!-- <h1 class="lobster-font">Featured Projects</h1> -->
-		<h2>Featured Projects</h2>
-	</header>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="about-media"><img src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--IX5zR6Ql--/q_jpegmini/v1399672903/jamie-marcus-headpic2.jpg" src="#" alt="Jamie Marcus" class="img-responsive img-circle profile-pic"></div>
+      </div>
 
-	<div class="v-space-sm"></div>
+      <div class="bump-down col-sm-8">
+        <div class="row">
+          <div class="col-sm-2 col-sm-offset-2">
+            <h4>HTML</h4>
+          </div>
 
-	<div class="container">
-		<!-- <hr> -->
+          <div class="col-sm-8">
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
+                <span class="sr-only">95% Complete</span>
+              </div>
+            </div>
+          </div>
+        </div>  <!-- END ROW -->
+
+        <div class="row">
+          <div class="col-sm-3 col-sm-offset-1">
+            <h4>CSS3 / LESS</h4>
+          </div>
+
+          <div class="col-sm-8">
+            <div class="progress">
+              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
+                <span class="sr-only">95% Complete</span>
+              </div>
+            </div>
+          </div>
+        </div>  <!-- END ROW -->
+
+        <div class="row">
+          <div class="col-sm-3 col-sm-offset-1">
+            <h4>Git / Subversion Control</h4>
+          </div>
+
+          <div class="col-sm-8 margin-top-10">
+            <div class="progress">
+              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                <span class="sr-only">80% Complete</span>
+              </div>
+            </div>
+          </div>
+        </div>  <!-- END ROW -->
+
+        <div class="row">
+          <div class="col-sm-3 col-sm-offset-1">
+            <h4>Javascript / jQuery</h4>
+          </div>
+
+          <div class="col-sm-8">
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
+                <span class="sr-only">55% Complete</span>
+              </div>
+            </div>
+          </div>
+        </div>  <!-- END ROW -->
+
+        <div class="row">
+          <div class="col-sm-3 col-sm-offset-1">
+            <h4>Other</h4>
+          </div>
+
+          <div class="col-sm-8">
+            <div class="progress">
+              <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%;">
+                <span class="sr-only">35% Complete</span>
+              </div>
+            </div>
+          </div>
+        </div>  <!-- END ROW -->
+
+      </div>
+    </div>
+	
+	</div>
+</section>
+	</section>
+
+<section id="work" class="gray-section pad-50-vertical">
+
+  <!-- WORK -->
+<!--<section id="#work" class="content-section">-->
+	<div class="container">   <!-- CONTAINER -->
 		<div class="row">
-
-			<!-- <div class="col-sm-6 col-md-4">
-				<article>
-					<a href="#" class="panel card-snippet">
-						<h3>Project Title</h3>
-
-						<p><img src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--37_q2ji4--/q_jpegmini/v1399671973/truespirit_cover_he4zvx.jpg" class="white img-responsive"></p>
-					
-						<p class="lead"><span class="label label-success">Tag1</span><span class="label label-success">Tag2</span></p>
-					</a>
-				</article>
+			<div class="col-xs-12 text-center">
+				<header class="section-header">
+					<h2>Featured Work</h2></header>
 			</div>
+		</div>
+		<div class="row">  <!-- WRAPPER ROW -->
+			<div class="col-sm-10 col-sm-offset-1">   <!-- WRAPPER DIV -->
 
-			<div class="col-sm-6 col-md-4">
-				<article>
-					<a href="#" class="card-snippet">
-						<h3>Project Title</h3>
+				<div class="row">   <!-- PROJECT CARDS ROW -->
+					<ul class="project-cards">   <!-- PROJECT CARDS -->
 						
-						<p><img data-src="holder.js/100%x300/auto/lava" class="white img-responsive"></p>
-						<p><img src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--1j2uIYH---/q_jpegmini/v1399671937/netflix_cover_ejknmv.jpg" class="white img-responsive"></p>
-					
-						<p class="lead"><span class="label label-success">Tag1</span><span class="label label-success">Tag2</span></p>
-					</a>
-				</article>
-			</div>
-
-			<div class="col-sm-6 col-md-4">
-				<article>
-					<a href="#" class="card-snippet">
-						<h3>Project Title</h3>
+						<!--<li>-->
+							<!--<div id="1" class="project col-xs-12 col-sm-4 col-md-4">-->
+								<!--<article id="transcense-1">-->
+									<!--<a href="/projects/transcense-1.html" class="card-snippet card">-->
+										<!--<p><img class="img-responsive" src="http://res.cloudinary.com/dc8ynxibm/image/upload/v1415851305/placeit-transcense-v1.jpg"></p>-->
+										<!--<h3><small class="text-black">Transcense</small></h3>-->
+										<!--<h4>App Structure, Navigation, & User Interface</h4>-->
+										<!--&lt;!&ndash;<h5 class="lead">&ndash;&gt;-->
+										<!--&lt;!&ndash;<span class="label label-success"></span>&ndash;&gt;-->
+										<!--&lt;!&ndash;<span class="label label-success"></span>&ndash;&gt;-->
+										<!--&lt;!&ndash;<span class="label label-success"></span>&ndash;&gt;-->
+										<!--&lt;!&ndash;</h5>&ndash;&gt;-->
+									<!--</a>-->
+								<!--</article>-->
+							<!--</div>-->
+						<!--</li>-->
 						
-						<p><img data-src="holder.js/100%x300/auto/vine" class="img-responsive"></p>
-					
-						<p class="lead"><span class="label label-success">Tag1</span><span class="label label-success">Tag2</span></p>
-					</a>
-				</article>
-			</div> -->
-
-			<div class="col-sm-6 col-lg-4">
-				<article class="panel panel-default ">
-					<a href="#" class="card-snippet">
+						<li>
+							<div id="2" class="project col-xs-12 col-sm-4 col-md-4">
+								<article id="transcense-2">
+									<a href="/projects/transcense-2.html" class="card-snippet card">
+										<p><img class="img-responsive" src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--sTuPrbXL--/c_scale,h_350,q_jpegmini/v1415851305/transcense2-cover-1.jpg"></p>
+										<h3><small class="text-black">Transcense</small></h3>
+										<h4>Onboarding</h4>
+										<!--<h5 class="lead">-->
+										<!--<span class="label label-success"></span>-->
+										<!--<span class="label label-success"></span>-->
+										<!--<span class="label label-success"></span>-->
+										<!--</h5>-->
+									</a>
+								</article>
+							</div>
+						</li>
 						
-						<h3 class="panel-header oswald-regular">Truespirit</h3>
-						<h5 class="lead">
-							<span class="label label-success">Web UX</span>
-							<span class="label label-success">E-Commerce</span>
-							<span class="label label-success">UI Design</span>
-						</h5>
+						<!--<li>-->
+							<!--<div id="3" class="project col-xs-12 col-sm-4 col-md-4">-->
+								<!--<article id="transcense-3">-->
+									<!--<a href="/projects/transcense-3.html" class="card-snippet card">-->
+										<!--<p><img class="img-responsive" src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--wb63lYm9--/c_scale,h_350,q_jpegmini/v1415851305/transcense3-cover-1.jpg"></p>-->
+										<!--<h3><small class="text-black">Transcense</small></h3>-->
+										<!--<h4>Web Development</h4>-->
+										<!--&lt;!&ndash;<h5 class="lead">&ndash;&gt;-->
+										<!--&lt;!&ndash;<span class="label label-success"></span>&ndash;&gt;-->
+										<!--&lt;!&ndash;<span class="label label-success"></span>&ndash;&gt;-->
+										<!--&lt;!&ndash;<span class="label label-success"></span>&ndash;&gt;-->
+										<!--&lt;!&ndash;</h5>&ndash;&gt;-->
+									<!--</a>-->
+								<!--</article>-->
+							<!--</div>-->
+						<!--</li>-->
 						
-						<p><img data-src="holder.js/100%x200/auto" class="img-responsive"></p>
-						<!-- <p><img src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--37_q2ji4--/q_jpegmini/v1399671973/truespirit_cover_he4zvx.jpg" class="white img-responsive"></p> -->
-		
-					</a>
-					<div class="panel-button-row">
-						<!-- <a href="#" class="panel-button">View Code</a> -->
-					</div>
-				</article>
-			</div>
-
-			<div class="col-sm-6 col-lg-4">
-				<article class="panel panel-default ">
-					<a href="#" class="card-snippet">
+						<li>
+							<div id="4" class="project col-xs-12 col-sm-4 col-md-4">
+								<article id="truespirit">
+									<a href="/projects/truespirit.html" class="card-snippet card">
+										<p><img class="img-responsive" src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--qCPeIxp8--/c_scale,h_350,q_jpegmini/v1415851306/truespirit-cover-1.jpg"></p>
+										<h3><small class="text-black">Truespirit</small></h3>
+										<h4>E-Commerce Website</h4>
+										<!--<h5 class="lead">-->
+										<!--<span class="label label-success"></span>-->
+										<!--<span class="label label-success"></span>-->
+										<!--<span class="label label-success"></span>-->
+										<!--</h5>-->
+									</a>
+								</article>
+							</div>
+						</li>
 						
-						<h3 class="panel-header oswald-regular">Netflix SOCIAL</h3>
-						<h5 class="lead">
-							<span class="label label-success">Mobile UX</span>
-							<span class="label label-success">UI Design</span>
-							<span class="label label-success">Interaction Design</span>
-						</h5>
+						<!--<li>-->
+							<!--<div id="5" class="project col-xs-12 col-sm-4 col-md-4">-->
+								<!--<article id="netflix-social">-->
+									<!--<a href="/projects/netflix-social.html" class="card-snippet card">-->
+										<!--<p><img class="img-responsive" src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--zN7qa3IQ--/q_jpegmini/v1416184867/netflix-cover2.jpg"></p>-->
+										<!--<h3><small class="text-black">Netflix Social</small></h3>-->
+										<!--<h4></h4>-->
+										<!--&lt;!&ndash;<h5 class="lead">&ndash;&gt;-->
+										<!--&lt;!&ndash;<span class="label label-success"></span>&ndash;&gt;-->
+										<!--&lt;!&ndash;<span class="label label-success"></span>&ndash;&gt;-->
+										<!--&lt;!&ndash;<span class="label label-success"></span>&ndash;&gt;-->
+										<!--&lt;!&ndash;</h5>&ndash;&gt;-->
+									<!--</a>-->
+								<!--</article>-->
+							<!--</div>-->
+						<!--</li>-->
 						
-						<p><img data-src="holder.js/100%x200/auto" class="img-responsive"></p>
-						<!-- <p><img src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--1j2uIYH---/q_jpegmini/v1399671937/netflix_cover_ejknmv.jpg" class="white img-responsive"></p> -->
-			
-					</a>
-					<div class="panel-button-row">
-						<!-- <a href="#" class="panel-button">View Code</a> -->
-					</div>
-				</article>
-			</div>
-
-			<div class="col-sm-6 col-lg-4">
-				<article class="panel panel-default ">
-					<a href="#" class="card-snippet">
+						<!--<li>-->
+							<!--<div id="" class="project col-xs-12 col-sm-4 col-md-4">-->
+								<!--<article id="">-->
+									<!--<a href="/projects/.html" class="card-snippet card">-->
+										<!--<p><img class="img-responsive" src=""></p>-->
+										<!--<h3><small class="text-black"></small></h3>-->
+										<!--<h4></h4>-->
+										<!--&lt;!&ndash;<h5 class="lead">&ndash;&gt;-->
+										<!--&lt;!&ndash;<span class="label label-success"></span>&ndash;&gt;-->
+										<!--&lt;!&ndash;<span class="label label-success"></span>&ndash;&gt;-->
+										<!--&lt;!&ndash;<span class="label label-success"></span>&ndash;&gt;-->
+										<!--&lt;!&ndash;</h5>&ndash;&gt;-->
+									<!--</a>-->
+								<!--</article>-->
+							<!--</div>-->
+						<!--</li>-->
 						
-						<h3 class="panel-header oswald-regular">DotDash3</h3>
-						<h5 class="lead">
-							<span class="label label-success">Information Architecture</span>
-							<span class="label label-success">Interaction Design</span>
-						</h5>
-						
-						<p><img data-src="holder.js/100%x200/auto" class="img-responsive"></p>
-			
-					</a>
-					<div class="panel-button-row">
-						<!-- <a href="#" class="panel-button">View Code</a> -->
-					</div>
-				</article>
-			</div>
-
-		</div> <!-- END ROW -->
-	</div>  <!-- END CONTAINER -->
-
-</section>  <!-- END SNIPPETS -->
-
-<div class="v-space-md bg-white pos-relative"></div>
-
-    <!-- <a href="#">View All</a> -->
-     <!-- TO DO: ADD ACCORDIAN, THAT WHEN CLICKING ON LINK REVEALS ALL PROJECTS!!! -->
+					</ul>   <!-- /END PROJECT CARDS -->
+				</div>   <!-- /END PROJECT CARDS ROW -->
+			</div>   <!-- /END WRAPPER DIV -->
+		</div>   <!-- /END WRAPPER ROW -->
+	</div>   <!-- /END CONTAINER -->
+<!--</section>-->
+<!-- /END WORK -->
 
 </section>
 
+<!--<section id="process" class="pad-50-vertical">-->
+	<!--<div class="container">   &lt;!&ndash; CONTAINER &ndash;&gt;-->
+	<!--<div class="row">-->
+		<!--<div class="col-xs-12 text-center">-->
+			<!--<header class="section-header">-->
+				<!--<h2>Process</h2>-->
+				<!--</header>-->
+		<!--</div>-->
+	<!--</div>-->
+
+	<!--<div class="row">-->
+
+	<!--</div>-->
+<!--</div>-->
+<!--</section>-->
+
+	<!-- ==== SECTION DIVIDER1 -->
+	<!--<section class="section-divider textdivider san-francisco">-->
+		<!--<div class="container">-->
+			<!--<h1>Get In Touch!</h1>-->
+			<!--<hr>-->
+			<!--<p>I live in sunny San Francisco, California.  I am currently available for work and would love to chat!</p>-->
+			<!--<a href="#" class="btn btn-lg btn-outline btn-white-big">Contact Me</a>-->
+		<!--</div>&lt;!&ndash; container &ndash;&gt;-->
+	<!--</section>&lt;!&ndash; section &ndash;&gt;-->
 
   <!-- CONTACT SECTION -->
 <section id="contact" class="contact">
@@ -291,10 +428,10 @@
 				<div class="row">   <!-- EMAIL ADDRESS -->
 					<div  class="social-block col-xs-12 text-center pad-bottom-10 visible-xs visible-sm">  <!-- MOBILE SECTION -->
 						<!-- TO DO: ADD IN COPY EMAIL ADDRESS TEXT BUTTON!!! -->
-						<h3 class="pad-bottom-10 text-white"><a href="mailto:jnmarcus87@gmail.com" class="social-icon"><i class="fa fa-envelope-o fa-lg margin-right-4"></i> jnmarcus87@gmail.com</a></h3>
+						<h3 class="pad-bottom-10 text-white pathway-font"><a href="mailto:jnmarcus87@gmail.com" class="social-icon"><i class="fa fa-envelope-o fa-lg margin-right-4"></i> jnmarcus87@gmail.com</a></h3>
 					</div>   <!-- END MOBILE SECTION -->
 					<div class="email-block col-xs-12 text-center pad-bottom-10 visible-md visible-lg">   <!-- DESKTOP/LAPTOP SECTION -->
-						<h3 class="pad-bottom-10 text-yellow big-h3 visible-md visible-lg"><i class="fa fa-envelope-o fa-lg margin-right-4"></i>jnmarcus87@gmail.com</h3>
+						<h3 class="pad-bottom-10 text-yellow big-h3 pathway-font visible-md visible-lg"><i class="fa fa-envelope-o fa-lg margin-right-4"></i>jnmarcus87@gmail.com</h3>
 						<!-- <a href="#" class="btn btn-outline"><i class="fa fa-copy fa-lg fa-fw"></i>  Copy to Clipboard</a> -->
 					</div>   <!-- END DESKTOP/LAPTOP SECTION -->
 				</div>  <!-- END ROW -->   <!-- END EMAIL ADDRESS -->
@@ -329,27 +466,26 @@
 	</div>   <!-- END CONTAINER -->
 </section>   <!-- END CONTACT SECTION -->
 
-  
-<div class="clear-fix"></div>
+  <div class="scroll-btn"><a id="scroll-to-top" href="#" class="btn btn-info scroll-btn"><i class="fa fa-angle-up fa-2x fa-scroll-btn" role="button" data-toggle="tooltip"></i></a></div>
 
-<!-- FOOTER -->
+  <!-- FOOTER -->
 
 <footer class="white visible-xs">
 	<!-- <hr> -->
-	<div class="container visible-xs">
+	<div class="container visible-xs footer-content-mobile">
 		<div class="row">
 			<div class="center-block">
-				<p class="muted center-block footer-txt"><a href="#" class="text-black">About this Site</a></p>
+				<p class="muted center-block footer-txt"><small><a href="#" class="text-black">About this Site</a></small></p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="center-block">
-				<p class="muted center-block footer-txt"><a href="https://github.com/jnmarcus/jnmarcus.github.io" class="text-black" target="blank">View Project on Github</a></p>
+				<p class="muted center-block footer-txt"><small></small><a href="https://github.com/jnmarcus/jnmarcus.github.io" class="text-black" target="blank">View Project on Github</a></small></p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="center-block">
-				<p class="muted center-block footer-txt">© 2014 Jamie Marcus. All rights reserved</p>
+				<p class="muted center-block footer-txt"><small>© 2014 Jamie Marcus. All rights reserved</small></p>
 			</div>
 		</div>
 	</div>
@@ -362,18 +498,18 @@
 
 <footer class="white hidden-xs">
 	<!-- <hr> -->
-	<div class="container-fluid hidden-xs">
+	<div class="container-fluid hidden-xs footer-content">
 		<div class="row">
 			<div class="col-sm-3 col-sm-offset-9">
-				<p class="muted pull-right"><a href="#" class="text-black">About this Site</a></p>
+				<p class="muted pull-right"><small><a href="#" class="text-black">About this Site</a></small></p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-6">
-				<p class="muted pull-left footer-txt">© 2014 Jamie Marcus. All rights reserved</p>
+				<p class="muted pull-left footer-txt"><small>© 2014 Jamie Marcus. All rights reserved</small></p>
 			</div>
 			<div class="col-sm-6">
-				<p class="muted pull-right"><a href="https://github.com/jnmarcus/jnmarcus.github.io" class="text-black" target="blank">View Project on Github</a></p>
+				<p class="muted pull-right"><small><a href="https://github.com/jnmarcus/jnmarcus.github.io" class="text-black" target="blank">View Project on Github</a></small></p>
 			</div>
 		</div>
 	</div>
@@ -384,13 +520,35 @@
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script>
+	$('.carousel').carousel({
+		interval: 5000 //changes the speed
+	});
+</script>
+<script>
+	$(window).scroll(function() {
+		$('#device1').each(function(){
+			var imagePos = $(this).offset().top;
 
-<script src="http://cdnjs.cloudflare.com/ajax/libs/holder/2.3.1/holder.min.js"></script>
-<script src="dist/js/holder.js"></script>
-<script src="../dist/js/holder.js"></script>
+			var topOfWindow = $(window).scrollTop();
+			if (imagePos < topOfWindow+400) {
+				$(this).addClass("slideUp");
+			}
+		});
+	});
+</script>
+<!--<script src="dist/js/bs-material.js"></script>-->
+<!--<script src="dist/js/bs-material-ripples.js"></script>-->
+<!--<script src="_bower_components/wow/dist/js/wow.min.js"></script>-->
+<script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.0.2/wow.min.js"></script>
+<script>
+  new WOW().init();
+</script>
+
 
 </body>
 </html>
