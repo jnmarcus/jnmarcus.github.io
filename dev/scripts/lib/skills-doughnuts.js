@@ -1,3 +1,5 @@
+/* Skills Doughnuts */
+
 var htmlDoughnut = document.getElementById("html").getContext("2d");
 var cssDoughnut = document.getElementById("css").getContext("2d");
 var jsDoughnut = document.getElementById("js").getContext("2d");

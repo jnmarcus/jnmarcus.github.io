@@ -12,11 +12,11 @@ module.exports = function(grunt) {
     // Project settings
     config: {
         // Configurable paths
-        pub: 'pub',
-        dist: './dev/dist',
         jekyllBuild: './dev/_pub',
         ghPagesBuild: 'gh-pages',
-        dev: './dev'
+        dev: './dev',
+        prod: '.',
+        bower: './dev/_bower_components'
     },
     dev: {
         styles: './dev/styles',
@@ -37,15 +37,38 @@ module.exports = function(grunt) {
 //        dest: 'dist/<%= pkg.name %>.js'
 //      }
 //    },
-//    uglify: {
-//      options: {
-//        banner: '<%= banner %>'
-//      },
-//      dist: {
-//        src: '<%= concat.dist.dest %>',
-//        dest: 'dist/<%= pkg.name %>.min.js'
-//      }
-//    },
+   // <%= config.dev %>/dist/js/**/*.js
+
+    concat: {
+      options: {
+        // define a string to put between each file in the concatenated output
+        separator: ';'
+      },
+      dist: {
+        // the files to concatenate
+        src: [
+              '<%= config.bower %>/jquery/dist/jquery.js',
+              '<%= config.bower %>/bootstrap/dist/js/bootstrap.js',
+              '<%= config.bower %>/bootstrap-material-design/scripts/*.js',
+              '<%= config.bower %>/wow/dist/wow.js',
+              '<%= config.bower %>/Chart.js/Chart.js',
+              '<%= config.dev %>/scripts/lib/*.js'
+        ],
+        // the location of the resulting JS file
+        dest: '<%= config.dev %>/scripts/scripts.js',
+      }
+    },
+    uglify: {
+      options: {
+        // the banner is inserted at the top of the output
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+      },
+      dist: {
+        files: {
+          '<%= config.dev %>/jekyll/dist/js/scripts.min.js': ['<%= concat.dist.dest %>']
+        }
+      }
+    },
 //    jshint: {
 //      options: {
 //        curly: true,
@@ -80,7 +103,7 @@ module.exports = function(grunt) {
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapURL: 'main.css.map',
-          sourceMapFilename: '<%= config.dev %>/dist/css/main.css.map'
+          sourceMapFilename: '<%= config.dev %>/styles/css/main.css.map'
         },
         files: {
           '<%= config.dev %>/styles/css/main.css': ['<%= config.dev %>/styles/less/main.less'],
@@ -92,16 +115,19 @@ module.exports = function(grunt) {
         },
         files: [
           {src: '<%= config.dev %>/styles/css/main.css', dest: '<%= config.dev %>/styles/css/main.min.css'},
-          {src: '<%= config.dev %>/styles/css/main.css', dest: '<%= config.dev %>/dist/css/main.min.css'}
+          {src: '<%= config.dev %>/styles/css/main.css', dest: '<%= config.dev %>/jekyll/dist/css/main.min.css'}
         ],
       },
     },
 
-//    clean: {
-//      buildDist: {
-//        src: [ '<%= config.jekyllBuild %>/dist' ]
-//      },
-//    },
+    clean: {
+      dist: {
+        src: [ 'dist' ]
+      },
+      //buildDist: {
+      //  src: [ '<%= config.jekyllBuild %>/dist' ]
+      //},
+    },
 
     copy: {  //WORKS!!
       styles: {   //'dev/styles/css/' to 'dist/css/' and 'jekyll/dist/css'
@@ -111,10 +137,9 @@ module.exports = function(grunt) {
         ],
       },  
       fonts: {    //'dist/fonts/' to everywhere
-        files: [
-          { expand: true, cwd: '<%= config.dist %>/', src: ['fonts/**'], dest: '<%= config.dev %>/jekyll/dist/'},
-          { expand: true, cwd: '<%= config.dist %>/', src: ['fonts/**'], dest: '<%= config.ghPagesBuild %>/dist/'},
-        ],
+        files: {
+          expand: true, cwd: '<%= config.dev %>/jekyll/dist/', src: ['fonts/**'], dest: 'dist/'
+        },
       },
       scripts: {   //'dist/js/' to 'jekyll/dist/js'
         expand: true,
@@ -122,12 +147,12 @@ module.exports = function(grunt) {
         src: ['js/**'],
         dest: '<%= config.dev %>/jekyll/dist/'
       }, 
-      toJekyllDist: {  //'dev/dist/' to 'dev/jekyll/'
-        expand: true,
-        cwd: '<%= config.dev %>/',
-        src: ['dist/**/*'],
-        dest: 'dev/jekyll/'
-      },
+      //toJekyllDist: {  //'dev/dist/' to 'dev/jekyll/'
+      //  expand: true,
+      //  cwd: '<%= config.dev %>/',
+      //  src: ['dist/**/*'],
+      //  dest: 'dev/jekyll/'
+      //},
       minifiedAssets: {   //only minified assets to 'gh-pages/dist/' directories
         files: [
           //minified styles
@@ -136,30 +161,42 @@ module.exports = function(grunt) {
           // {src: 'js/**.min.js', dest: '<%= config.ghPagesBuild %>/dist/js/'},
         ],
       },
+      js: {
+        expand: true,
+        cwd: '<%= config.dev %>/jekyll/dist/js/',
+        src: ['scripts.min.js'],
+        dest: 'dist/js/'
+      },
       css: {  
         files: {
-          src: 'dist/css/main.min.css',
-          dest: 'gh-pages/dist/css/main.min.css'
+          src: '<%= config.dev %>/jekyll/dist/css/main.min.css',
+          dest: 'dist/css/main.min.css'
         },
       },
-      staticBuildFiles: { //static jekyll build files to staging directory 'gh-pages/' 
-        files: [
+      img: {
+        files: {
+          src: '<%= config.dev %>/jekyll/dist/img/**/*',
+          dest: 'dist/img/**/*'
+        }
+      },
+      //staticBuildFiles: { //static jekyll build files to staging directory 'gh-pages/'
+      //  files: [
           //static homepage
-          {src: '<%= config.jekyllBuild %>/index.html', dest: '<%= config.ghPagesBuild %>/index.html'},
+          //{src: '<%= config.jekyllBuild %>/index.html', dest: '<%= config.ghPagesBuild %>/index.html'}
           //static about page
-          {src: '<%= config.jekyllBuild %>/about.html', dest: '<%= config.ghPagesBuild %>/about/index.html'},
+          //{src: '<%= config.jekyllBuild %>/about.html', dest: '<%= config.ghPagesBuild %>/about/index.html'},
           //static portfolio projects page
           // {src: '<%= config.jekyllBuild %>/portfolio-projects.html', dest: '<%= config.ghPagesBuild %>/portfolio-projects/index.html'},
           //static contact page
           // {src: '<%= config.jekyllBuild %>/contact.html', dest: '<%= config.ghPagesBuild %>/contact/index.html'},
-        ],
-      },
+      //  ],
+      //},
       siteHTML: {
         files: [
           //static homepage
           { src: '<%= config.jekyllBuild %>/index.html', dest: './index.html'},
           //static about page
-          { expand: true, cwd: '<%= config.jekyllBuild %>/', src: ['about/*.html'], dest: './'},
+          //{ expand: true, cwd: '<%= config.jekyllBuild %>/', src: ['about/*.html'], dest: './'},
           //static work page
           // { expand: true, cwd: '<%= config.jekyllBuild %>/', src: ['work/*.html'], dest: './'},
           //static contact page
@@ -229,18 +266,22 @@ module.exports = function(grunt) {
         files: ['dev/styles/less/**/*.less'],
         tasks: ['less', 'copy:styles'],
       },
-      dist: {
-        files: ['dev/dist/**/*'],
-        tasks: ['newer:copy:toJekyllDist']
+      js: {
+        files: ['dev/scripts/lib/**/*', 'Gruntfile.js'],
+        tasks: ['concat', 'uglify'],
       },
+      //dist: {
+      //  files: ['dev/dist/**/*'],
+      //  tasks: ['newer:copy:toJekyllDist']
+      //},
 //      distBuild: {
 //        files: ['jekyll/dist/**/*'],
 //        tasks: ['clean:buildDist', 'copy:toBuildDist'],
 //      },
-      pub:{
-        files: ['./dev/_pub/**/*'],
-        tasks: ['newer:copy:siteHTML', 'newer:copy:distToPub'],
-      },
+//      pub:{
+//        files: ['./dev/_pub/**/*'],
+//        tasks: ['newer:copy:siteHTML', 'newer:copy:distToPub'],
+//      },
 //      src: {
 //        files: '<%= jshint.src.src %>',
 //        tasks: ['jshint:src', 'qunit'],
@@ -260,7 +301,7 @@ module.exports = function(grunt) {
       },
       target2: ['jekyll:serve'],
       target3: ['watch:less', 'watch:jekyll']
-    },
+    }
   });
 
   //TASKS
@@ -295,7 +336,7 @@ module.exports = function(grunt) {
 
   //WORKS -->
   //Copy all contents of 'dist/' to 'jekyll/dist/' -- NOTE: 'dist/fonts/' contents go everywhere
-  grunt.registerTask('dist', ['copy:styles', 'copy:fonts', 'copy:scripts']);
+  grunt.registerTask('dist', ['clean', 'copy:css', 'copy:fonts', 'copy:js', 'copy:img']);
 
   //TEST TASKS
   grunt.registerTask('test-copy', ['copy:test']);
