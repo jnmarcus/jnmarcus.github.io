@@ -14,6 +14,7 @@ coverPhotoTitle: Transcense Portfolio Piece 2
 coverPhotoALT: cover photo for transcense portfolio piece by jamie marcus
 image1: c_scale,w_1500/v1415966696/split-app-signup-transcense-2-2-large.png
 image2: s--OsEuV29q--/q_jpegmini/v1415657698/transcense-2-3.jpg
+image2big: s--vFKkYrH3--/c_scale,q_jpegmini,w_1240/v1416920857/transcense-2-3-big.jpg
 image3: s--TZHJoxkb--/q_jpegmini/v1415657698/transcense-2-4.jpg
 image4: s--77D4H5Br--/q_jpegmini/v1415657701/transcense-2-5.jpg
 image5: v1415657698/transcense-2-7.png
@@ -29,7 +30,8 @@ image7: s--pymTxXhq--/q_jpegmini/v1416195734/UserFlow_TranscenseNewUserInvite.jp
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 col-sm-7">
-				<img class="img-responsive project-img" src="{{page.cloudinary}}/{{page.image1}}" alt="">
+				<a href="{{page.cloudinary}}/{{page.image1}}" class="portfolioImage">
+					<img class="img-responsive project-img" src="{{page.cloudinary}}/{{page.image1}}" alt=""></a>
 			</div>
 			<div class="col-xs-12 col-sm-5">
 				<h2 class="section-title-one-side center-on-mobile">Split-App Signup / Login</h2>
@@ -57,7 +59,8 @@ image7: s--pymTxXhq--/q_jpegmini/v1416195734/UserFlow_TranscenseNewUserInvite.jp
 				<p class="lead project-text center-on-mobile">
 				<strong>Host Invites Participants</strong></p>
 				<p class="lead project-text pad-25-bottom center-on-mobile">At the start of a meeting, hosts can send batch invites to all participants at once.  Two types of meeting invites can be sent together: invites to existing users - users that have the app installed, and invites to new users - users who do not yet have the app installed.</p>
-				<img src="{{page.cloudinary}}/{{page.image2}}" class="img-responsive project-img center-block">
+				<a href="{{page.cloudinary}}/{{page.image2big}}" class="portfolioImage">
+					<img src="{{page.cloudinary}}/{{page.image2}}" class="img-responsive project-img center-block"></a>
 			</div>
 		</div>
 
@@ -82,7 +85,9 @@ image7: s--pymTxXhq--/q_jpegmini/v1416195734/UserFlow_TranscenseNewUserInvite.jp
 				<p class="lead project-text center-on-mobile pad-25-top">
 					<strong>Users With the App Installed</strong><br><em> Receive Meeting Invites Directly in the App</em></p>
 
-				<p class="lead project-text pad-25-bottom center-on-mobile">The <em>active state</em> of the 'Meeting Room' tab will change from empty to displaying a meeting invitation waiting for the participant to accept (screen <span class="visible-xs">below)</span> <span class="hidden-xs">on the right)</span></p>
+				<p class="lead project-text center-on-mobile">The <em>active state</em> of the 'Meeting Room' tab will change from empty to displaying a meeting invitation, waiting for the participant to accept (see screen <span class="visible-xs">below)</span> <span class="hidden-xs">on right)</span></p>
+				<a href="#" class="btn btn-link btn-xs margin-top-10">What if the app isn't open when the invite is sent?</a>
+
 			</div>
 			<div class="col-xs-12 col-sm-6">
 				<div id="" class="slideUp">
@@ -91,6 +96,26 @@ image7: s--pymTxXhq--/q_jpegmini/v1416195734/UserFlow_TranscenseNewUserInvite.jp
 							<div class="screen1"></div>
 						</div>
 						<div class="button"></div>
+					</div>
+				</div>
+
+				<div class="text-center margin-top-20 pad-25-top">
+					<!--<div class="btn-group" role="group" aria-label="...">-->
+						<!--<button type="button" class="btn btn-default">Left</button>-->
+						<!--<button type="button" class="btn btn-default active">Middle</button>-->
+						<!--<button type="button" class="btn btn-default">Right</button>-->
+					<!--</div>-->
+
+					<div class="btn-group" data-toggle="buttons">
+						<label class="btn btn-primary">
+							<input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1
+						</label>
+						<label class="btn btn-primary active">
+							<input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+						</label>
 					</div>
 				</div>
 			</div>
@@ -108,11 +133,13 @@ image7: s--pymTxXhq--/q_jpegmini/v1416195734/UserFlow_TranscenseNewUserInvite.jp
 				<p class="lead text-center pad-25-vertical no-side-padding project-text">In addition to the invite received in the 'Meeting Room' tab, users are also able to receive meeting invites via notifications.  Either an in-app or out-of-app notification will be delivered to the user if the 'Meeting Room' tab is not already open on their phones.  Tapping on the notification - in-app or out-of-app, will bypass the screen above, connect users to the meeting, and bring them straight to the active meeting session in the app.</p>
 			</div>
 			<div class="col-xs-12 col-sm-6">
-				<img class="img-responsive project-img" src="{{page.cloudinary}}/{{page.image5}}" title="Transcense Notifications Userflow" alt="userflow diagram for notifications for transcense' mobile app">
+				<a href="{{page.cloudinary}}/{{page.image5}}" class="portfolioImage">
+					<img class="img-responsive project-img" src="{{page.cloudinary}}/{{page.image5}}" title="Transcense Notifications Userflow" alt="userflow diagram for notifications for transcense' mobile app"></a>
 				<p class="text-center"><small>Notifications Userflow</small></p>
 			</div>
 			<div class="col-xs-12 col-sm-6">
-				<img class="img-responsive project-img" src="{{page.cloudinary}}/{{page.image6}}" title="Sketches of Notification Screens" alt="sketches for notifications screens for transcense's mobile app.  correspond with the notifications userflow.">
+				<a href="{{page.cloudinary}}/{{page.image6}}" class="portfolioImage">
+					<img class="img-responsive project-img" src="{{page.cloudinary}}/{{page.image6}}" title="Sketches of Notification Screens" alt="sketches for notifications screens for transcense's mobile app.  correspond with the notifications userflow."></a>
 				<p class="text-center"><small>Sketches for the notification screens that correspond with the orange boxes in the userflow<span class="visible-xs">above</span> <span class="hidden-xs">to the left</span></small></p>
 			</div>
 			<div class="col-xs-12 text-center">
