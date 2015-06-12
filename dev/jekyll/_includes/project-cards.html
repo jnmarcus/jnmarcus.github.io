@@ -7,33 +7,24 @@
 					<h2>Featured Work</h2></header>
 			</div>
 		</div>
-		<div class="row">  <!-- WRAPPER ROW -->
-			<div class="col-sm-12">   <!-- WRAPPER DIV -->
-
-				<div class="row">   <!-- PROJECT CARDS ROW -->
-					<ul class="project-cards">   <!-- PROJECT CARDS -->
-						{% for project in site.data.projects %}
-						<li>
-							<div id="{{ project.id }}" class="project col-xs-6 col-sm-4 col-md-4">
-								<article id="{{ project.file }}">
-									<a href="/projects/{{ project.file }}.html" class="card-snippet card">
-										<p><img class="img-responsive" src="{{ project.imageURL }}"></p>
-										<h3><small class="text-black">{{ project.title }}</small></h3>
-										<h4>{{ project.subtitle }}</h4>
-										<!--<h5 class="lead">-->
-										<!--<span class="label label-success">{{ project.tag1 }}</span>-->
-										<!--<span class="label label-success">{{ project.tag2 }}</span>-->
-										<!--<span class="label label-success">{{ project.tag3 }}</span>-->
-										<!--</h5>-->
-									</a>
-								</article>
-							</div>
-						</li>
-						{% endfor %}
-					</ul>   <!-- /END PROJECT CARDS -->
-				</div>   <!-- /END PROJECT CARDS ROW -->
-			</div>   <!-- /END WRAPPER DIV -->
-		</div>   <!-- /END WRAPPER ROW -->
+		<div class="row pad-25-lateral">  <!-- WRAPPER ROW -->
+			{% for project in site.data.projects %}
+			<div id="{{ project.id }}" class="project col-xs-12 col-sm-4 col-md-4">   <!-- PROJECT CARDS -->
+				<article id="{{ project.file }}">
+					<a href="/projects/{{ project.file }}.html" class="card-snippet card">
+						<p><img class="img-responsive" src="{{ project.imageURL }}"></p>
+						<div class="cardDetails text-center">
+						<!-- /.card-details -->
+							<h3 class="text-black">{{ project.title }}</h3>
+							<h4>{{ project.subtitle }}</h4>
+							<button class="btn btn-primary btn-sm">View</button>
+						</div>
+					</a>
+				</article>
+			</div>     <!-- /END PROJECT CARDS -->
+			<!-- /.clearfix -->
+			{% endfor %}
+		</div>   <!-- /END PROJECT CARDS ROW -->
 	</div>   <!-- /END CONTAINER -->
 <!--</section>-->
 <!-- /END WORK -->

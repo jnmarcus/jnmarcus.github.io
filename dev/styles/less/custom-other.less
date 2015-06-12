@@ -334,11 +334,11 @@ a.social-icon {
 a.card-snippet {
 	position: relative;
 	// background-color: @white;
-	// padding: 15px 15px 22px;
-	padding-bottom: 15px;
+	//padding-bottom: 15px;
 	// width: 100%;
 	// height: 100%;
 	display: block;
+	margin-bottom: 20px;
 
 	p {
 		color: @gray;
@@ -361,25 +361,50 @@ a.card-snippet {
 		margin-right: 0.5em;
 	}
 
+	//.card-details {
+	//	.hidden();
+	//}
+
+	.cardDetails {
+		display: block;
+		opacity: 0;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 0;
+		color: #000;
+	}
+
 	&:hover {
 		// background-color: @gray-lighter;
 		// background-color: @brand-primary;
-		// background-color: @brand-info;
+		 background-color: @white;
 		// opacity: 0.5;
 		text-decoration: none;
 		// padding-bottom: 15px;
 		// border: 5px solid @brand-primary;
 		// border-bottom: 0;
 
-//		img {
-//			opacity: 0.65;
-//		}
+		img {
+			//opacity: 0.65;
+			opacity: 0.1;
+		}
+
+		.cardDetails {
+			padding-top: 14%;
+			height: 100%;
+			transition: all 200ms ease-in-out 0s;
+			opacity: 1;
+		}
+
+		//.card-details {
+		//	.show();
+		//}
 	}
 
 	img {
 		position: relative;
 		width: 100%;
-
 	}
 }
 
