@@ -41,14 +41,14 @@
 
 	<!-- STYLES -->
     <link href="dist/css/main.min.css" rel="stylesheet">
+		<link href="../dist/css/main.min.css" rel="stylesheet">
     <link href="../../dist/css/main.min.css" rel="stylesheet">
 
-    <!--<link href="dist/css/main.css" rel="stylesheet">-->
-    <!--<link href="../../dist/css/main.css" rel="stylesheet">-->
-
     <!-- SCRIPTS -->
+    <script src="dist/js/modernizr.js"></script>
+    <script src="../dist/js/modernizr.js"></script>
     <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!--<script src="bower_components/modernizr/modernizr.js"></script>-->
     <!-- endbuild -->
 
      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -58,433 +58,391 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-			ga('create', 'UA-56942467-1', 'jnmarcus.github.io/');
-			ga('require', 'displayfeatures');
-			ga('send', 'pageview');
+      ga('create', 'UA-56942467-1', 'jnmarcus.github.io/');
+      ga('require', 'displayfeatures');
+      ga('send', 'pageview');
 
-		</script>
+    </script>
 
 </head>
   <body data-spy="scroll" data-target=".navbar-collapse" >
     <!-- BEGIN GLOBAL SITE WRAPPER -->
     <div class="wrapper">
-        
 
-
-  <header>
-	<nav>
-		<div id="clear-navbar" class="navbar navbar-inverse navbar-fixed-top" data-0="background-color: transparent" data-720="background-color: transparent" data-750="background-color: #000" role="navigation">
-		  <div class="container">
-		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <a class="navbar-brand homepage-navbar-brand" href="http://jnmarcus.github.io">Jamie Marcus</a>
-		    </div>
-		    <div class="collapse navbar-collapse">
-		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="#home			">Home</a></li>
-		        <li><a href="#about">About</a></li>
-		        <li><a href="#work">Work</a></li>
-						<li><a href="#process">Process</a></li>
-		        <li><a href="https://s3.amazonaws.com/port_site/Jamie+Marcus+Resume.pdf" target="blank">Resume</a></li>
-		        <li><a href="#contact">Contact</a></li>
-		      </ul>
-		    </div><!--/.nav-collapse -->
-		  </div>
-		</div>
-	</nav>
-</header>  
-
-  <div class="clear-fix"></div>
-
-  <div id="home">
-
-    <div class="clear-fix"></div>
-
-<div class="jumbotron">
-
-	<!-- DESKTOP AND LAPTOP -->
-	<div class="container visible-md visible-lg">
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="text-container pad-25-top">
-					<h1>Hi.<br>My Name is Jamie Marcus.<br>I'm a
-						<span class="display-inline white-on-turquoise text-bg-padding margin-top-20 spacer-2x">UX Designer </span>&<br>
-						<span class="display-inline pink-on-yellow text-bg-padding margin-top-20">Front End Developer</span></h1>
+		<header>
+		<nav>
+			<div id="clear-navbar" class="navbar navbar-inverse navbar-fixed-top" data-0="background-color: transparent" data-720="background-color: transparent" data-750="background-color: #000" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand homepage-navbar-brand" href="http://jnmarcus.github.io">Jamie Marcus</a>
+					</div>
+					<div class="collapse navbar-collapse">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#home">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#work">Work</a></li>
+							<li><a href="#process">Process</a></li>
+							<li><a href="https://s3.amazonaws.com/port_site/Jamie+Marcus+Resume.pdf" target="blank">Resume</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div><!--/.nav-collapse -->
 				</div>
 			</div>
-		</div>
-	</div>   <!-- END DESKTOP AND LAPTOP -->
+		</nav>
+	</header>
 
-	<!-- TABLET AND MOBILE -->
-	<div class="container-fluid visible-xs visible-sm">
-		<div class="row">
-			<div class="col-xs-12">
+		<div class="clear-fix"></div>
 
-				<!-- TABLET ONLY -->
-				<div class="text-container text-center pad-75-vertical visible-sm">
-					<h1 class="margin-bottom-10">Hi.</h1>
-					<h1>My Name is Jamie Marcus.</h1>
-					<h1 class="display-inline">I'm a</h1>
-					<h1 class="display-inline white-on-turquoise text-bg-padding spacer-2x">UX Designer</h1>
-					<h1 class="display-inline">&</h1>
-					<h1 class="display-inline pink-on-yellow text-bg-padding">Front End Developer</h1>
-				</div>   <!-- END TABLET ONLY -->
+		<div id="home">
 
-				<!-- MOBILE ONLY -->
-				<div class="text-container text-center pad-75-vertical visible-xs">
-					<h1>Hi.<br>My Name is Jamie Marcus. I'm a
-						<span class="display-inline white-on-turquoise text-bg-padding margin-top-10 spacer-2x">UX Designer</span>&
-						<span class="display-inline pink-on-yellow text-bg-padding margin-top-10">Front End Developer</span></h1>
+			<div class="clear-fix"></div>
 
-				</div>		<!-- END MOBILE ONLY -->
+			<div class="jumbotron">
 
+		<!-- DESKTOP AND LAPTOP -->
+		<div class="container visible-md visible-lg">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="text-container pad-25-top">
+						<h1>Hi.<br>My Name is Jamie Marcus.<br>I'm a
+							<span class="display-inline white-on-turquoise text-bg-padding margin-top-20 spacer-2x">UX Designer </span>&<br>
+							<span class="display-inline pink-on-yellow text-bg-padding margin-top-20">Front End Developer</span></h1>
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
-</div>
+		</div>   <!-- END DESKTOP AND LAPTOP -->
 
-    <!-- TO DO: MAKE NAVBAR BACKGROUND COLOR BLACK AFTER JUMBOTRON!!! -->
-</div>
+		<!-- TABLET AND MOBILE -->
+		<div class="container-fluid visible-xs visible-sm">
+			<div class="row">
+				<div class="col-xs-12">
 
-	<!-- ABOUT ME SECTION --->
-<section id="about" class="pad-50-vertical">
-	<!--<section class="section gray-section content-section">-->
-	<div class="container">
-		<div class="row">
-			<!--Start heading-->
-			<div class="col-xs-12 text-center">
-				<header class="section-header">
-					<h2>About Me</h2></header>
-			</div>
-			<!--End heading-->
-		</div>
+					<!-- TABLET ONLY -->
+					<div class="text-container text-center pad-75-vertical visible-sm">
+						<h1 class="margin-bottom-10">Hi.</h1>
+						<h1>My Name is Jamie Marcus.</h1>
+						<h1 class="display-inline">I'm a</h1>
+						<h1 class="display-inline white-on-turquoise text-bg-padding spacer-2x">UX Designer</h1>
+						<h1 class="display-inline">&</h1>
+						<h1 class="display-inline pink-on-yellow text-bg-padding">Front End Developer</h1>
+					</div>   <!-- END TABLET ONLY -->
 
-		<!-- About Me Section -->
-		<div class="row">
+					<!-- MOBILE ONLY -->
+					<div class="text-container text-center pad-75-vertical visible-xs">
+						<h1>Hi.<br>My Name is Jamie Marcus. I'm a
+							<span class="display-inline white-on-turquoise text-bg-padding margin-top-10 spacer-2x">UX Designer</span>&
+							<span class="display-inline pink-on-yellow text-bg-padding margin-top-10">Front End Developer</span></h1>
 
-			<div class="col-xs-3 col-md-2">
-				<div class="about-media center-block"><img src="http://res.cloudinary.com/dc8ynxibm/image/upload/v1399672137/jamie_marcus_headpic.jpg" alt="Jamie Marcus" class="img-responsive"></div>
-			</div>
+					</div>		<!-- END MOBILE ONLY -->
 
-			<div class="col-xs-9 col-sm-9 col-md-10 pad-50-left">
-				<div class="about-desc">
-					<p class="lead no-lead small-lead">I am a UX designer with a background in engineering, and experience working as a front-end developer.</p>
-					<p class="lead no-lead small-lead pad-25-bottom">I enjoy designing and developing digital products optimized for the people using them!</p>
-					<!--<div class="page-scroll margin-top-20"><a class="btn btn-default" href="#contact">Hire Me</a>-->
-					<!--<a class="btn btn-default" href="#works">See Portfolio</a>-->
-					<!--</div>-->
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="container">
 
-		<div class="row">
-			<div class="skills-wrapper">
-				<h3 class="text-center pathway-font pad-25-vertical">Experience</h3>
-				<!--Start skills left-->
-				<div class="col-sm-6 col-md-6 pad-25-lateral">
-					<div class="skills-main left">
-						<!--Start skills info #1-->
-						<h4 class="heading-progress">Lean / Agile Projects <span class="pull-right">95%</span></h4>
-						<div class="progress">
-							<div class="progress-bar" style="width: 95%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="95" role="progressbar">
+    	<!-- TO DO: MAKE NAVBAR BACKGROUND COLOR BLACK AFTER JUMBOTRON!!! -->
+
+  	</div>
+
+	<!-- ABOUT ME SECTION -->
+	<section id="about" class="pad-50-vertical">
+		<!--<section class="section gray-section content-section">-->
+	  <div class="container">
+    	<div class="row">
+				<!--Start heading-->
+				<div class="col-xs-12 text-center">
+					<header class="section-header">
+						<h2>About Me</h2></header>
+				</div>
+				<!--End heading-->
+    	</div>
+
+			<div class="row">
+				<div class="col-xs-12 col-sm-8 col-md-7">
+					<div class="row">
+						<!-- mobile only -->
+						<div class="col-xs-6 col-xs-offset-3 pad-25-bottom visible-xs-block">
+							<div class="about-media center-block">
+								<img src="http://res.cloudinary.com/dc8ynxibm/image/upload/v1399672137/jamie_marcus_headpic.jpg" alt="Jamie Marcus" class="img-responsive img-circle">
+							</div>
+						</div>
+						<!-- on desktop -->
+						<div class="col-sm-3 pad-25-bottom hidden-xs">
+							<div class="about-media center-block">
+								<img src="http://res.cloudinary.com/dc8ynxibm/image/upload/v1399672137/jamie_marcus_headpic.jpg" alt="Jamie Marcus" class="img-responsive img-circle">
 							</div>
 						</div>
 
-
-						<h4 class="heading-progress">Web UX<span class="pull-right">95%</span></h4>
-						<div class="progress">
-							<div class="progress-bar" style="width: 95%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="95" role="progressbar">
-							</div>
-						</div>
-
-
-						<!--Start skills info #2-->
-						<h4 class="heading-progress">Web Development<span class="pull-right">90%</span></h4>
-						<div class="progress">
-							<div class="progress-bar" style="width: 90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" role="progressbar">
-							</div>
-						</div>
-
-
-
-						<!--Start skills info #3-->
-						<h4 class="heading-progress">Information Architecture<span class="pull-right">95%</span></h4>
-						<div class="progress">
-							<div class="progress-bar" style="width: 95%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="95" role="progressbar">
-							</div>
-						</div>
-
-
-						<!--Start skills info #4-->
-						<h4 class="heading-progress">Digital Marketing & SEO <span class="pull-right">85%</span></h4>
-						<div class="progress">
-							<div class="progress-bar" style="width: 85%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="85" role="progressbar">
+						<div class="col-xs-12 col-sm-9">
+							<div class="about-desc">
+								<p class="lead no-lead small-lead">I'm a Civil Engineer gone UX Designer & Developer!  I enjoy designing & developing digital products optimized for the people using them.</p>
+								<p class="lead no-lead small-lead pad-10-bottom">I'm also a product strategist & consultant.  I work with interdisciplinary, technical & non-technical teams to help boost communication & make sure projects stay on track & within budget.</p>
 							</div>
 						</div>
 
 					</div>
+					<!-- /.row -->
 				</div>
-				<!--End skills left-->
 
-				<!--Start skills right-->
-				<div class="col-sm-6 col-md-6 pad-25-lateral ">
-					<div class="skills-main right">
-						<!--Start skills info #5-->
-						<h4 class="heading-progress">Project Management<span class="pull-right">95%</span></h4>
-						<div class="progress">
-							<div class="progress-bar" style="width: 95%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="95" role="progressbar">
+				<div class="col-xs-12 col-sm-4 col-md-5">
+					<div class="row pad-50-top">
+						<div class="col-xs-12 col-sm-6 col-sm-offset-3 pad-25-bottom">
+							<div class="center-block text-center">
+								<a class="btn btn-primary btn-xl btn-block btn-shadow" href="#work">Check Out My Work</a>
 							</div>
 						</div>
 
-						<h4 class="heading-progress">Mobile UX<span class="pull-right">90%</span></h4>
-						<div class="progress">
-							<div class="progress-bar" style="width: 90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" role="progressbar">
-							</div>
-						</div>
-
-
-						<!--Start skills info #6-->
-						<h4 class="heading-progress">Product Development<span class="pull-right">92%</span></h4>
-						<div class="progress">
-							<div class="progress-bar" style="width: 92%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="92" role="progressbar">
-							</div>
-						</div>
-
-
-						<!--Start skills info #7-->
-						<h4 class="heading-progress">Interaction Design<span class="pull-right">85%</span></h4>
-						<div class="progress">
-							<div class="progress-bar" style="width: 85%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="85" role="progressbar">
-							</div>
-						</div>
-
-
-						<!--Start skills info #8-->
-						<h4 class="heading-progress">IoT<span class="pull-right">70%</span></h4>
-						<div class="progress">
-							<div class="progress-bar" style="width: 70%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" role="progressbar">
+						<div class="col-xs-12 col-sm-6 col-sm-offset-3 pad-25-top">
+							<div class="center-block text-center">
+								<a href="#contact" class="btn btn-success btn-xl btn-block btn-shadow">Contact Me</a>
 							</div>
 						</div>
 
 					</div>
+					<!-- /.row -->
 				</div>
-				<!--End skills right-->
-			</div>
-			<!--/.skills-wrapper  -->
-		</div> <!-- /.row-->
-
-	</div> <!-- /.container-->
-
-	<!--</section>-->
-	<div class="container">
-		<div class="row">
-			<h3 class="text-center pathway-font pad-25-vertical">Dev Skills</h3>
-
-			<div class="col-xs-6 col-sm-3 col-sm-offset-2">
-				<canvas id="html" height="160" width="160"></canvas>
-				<p class="lead text-black">HTML5</p>
-				<br>
+				<!-- /.col-xs-12 -->
 			</div>
 
-			<div class="col-xs-6 col-sm-3">
-				<canvas id="css" height="160" width="160"></canvas>
-				<p class="lead text-black">CSS3 / LESS</p>
-				<br>
-			</div>
-
-			<div class="col-xs-6 col-sm-3">
-				<canvas id="js" height="160" width="160"></canvas>
-				<p class="lead text-black">JavaScript / jQuery</p>
-				<br>
-			</div>
-
-			<div class="col-xs-6 col-sm-3 col-sm-offset-4">
-				<canvas id="git" height="160" width="160"></canvas>
-				<p class="lead text-black">Git / Subversion Control</p>
-				<br>
-			</div>
-
-			<div class="col-xs-6 col-sm-3">
-				<canvas id="devOps" height="160" width="160"></canvas>
-				<p class="lead text-black">DevOps</p>
-				<br>
-			</div>
-
-		</div>
-	</div>
-</section>
-
-
-<section id="work" class="gray-section pad-50-vertical">
-
-  <!-- WORK -->
-<!--<section id="#work" class="content-section">-->
-	<div class="container">   <!-- CONTAINER -->
-		<div class="row">
-			<div class="col-xs-12 text-center">
-				<header class="section-header">
-					<h2>Featured Work</h2></header>
-			</div>
-		</div>
-		<div class="row">  <!-- WRAPPER ROW -->
-			<div class="col-sm-10 col-sm-offset-1">   <!-- WRAPPER DIV -->
-
-				<div class="row">   <!-- PROJECT CARDS ROW -->
-					<ul class="project-cards">   <!-- PROJECT CARDS -->
-						
-						<li>
-							<div id="1" class="project col-xs-12 col-sm-4 col-md-4">
-								<article id="transcense-1">
-									<a href="/projects/transcense-1.html" class="card-snippet card">
-										<p><img class="img-responsive" src="http://res.cloudinary.com/dc8ynxibm/image/upload/v1415851305/placeit-transcense-v1.jpg"></p>
-										<h3><small class="text-black">Transcense</small></h3>
-										<h4>App Structure, Navigation, & User Interface</h4>
-										<!--<h5 class="lead">-->
-										<!--<span class="label label-success"></span>-->
-										<!--<span class="label label-success"></span>-->
-										<!--<span class="label label-success"></span>-->
-										<!--</h5>-->
-									</a>
-								</article>
-							</div>
-						</li>
-						
-						<li>
-							<div id="2" class="project col-xs-12 col-sm-4 col-md-4">
-								<article id="transcense-2">
-									<a href="/projects/transcense-2.html" class="card-snippet card">
-										<p><img class="img-responsive" src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--sTuPrbXL--/c_scale,h_350,q_jpegmini/v1415851305/transcense2-cover-1.jpg"></p>
-										<h3><small class="text-black">Transcense</small></h3>
-										<h4>Onboarding</h4>
-										<!--<h5 class="lead">-->
-										<!--<span class="label label-success"></span>-->
-										<!--<span class="label label-success"></span>-->
-										<!--<span class="label label-success"></span>-->
-										<!--</h5>-->
-									</a>
-								</article>
-							</div>
-						</li>
-						
-						<!--<li>-->
-							<!--<div id="3" class="project col-xs-12 col-sm-4 col-md-4">-->
-								<!--<article id="transcense-3">-->
-									<!--<a href="/projects/transcense-3.html" class="card-snippet card">-->
-										<!--<p><img class="img-responsive" src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--wb63lYm9--/c_scale,h_350,q_jpegmini/v1415851305/transcense3-cover-1.jpg"></p>-->
-										<!--<h3><small class="text-black">Transcense</small></h3>-->
-										<!--<h4>Web Development</h4>-->
-										<!--<h5 class="lead">-->
-										<!--<span class="label label-success"></span>-->
-										<!--<span class="label label-success"></span>-->
-										<!--<span class="label label-success"></span>-->
-										<!--</h5>-->
-									<!--</a>-->
-								<!--</article>-->
-							<!--</div>-->
-						<!--</li>-->
-						
-						<li>
-							<div id="4" class="project col-xs-12 col-sm-4 col-md-4">
-								<article id="truespirit">
-									<a href="/projects/truespirit.html" class="card-snippet card">
-										<p><img class="img-responsive" src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--qCPeIxp8--/c_scale,h_350,q_jpegmini/v1415851306/truespirit-cover-1.jpg"></p>
-										<h3><small class="text-black">Truespirit</small></h3>
-										<h4>E-Commerce Website</h4>
-										<!--<h5 class="lead">-->
-										<!--<span class="label label-success"></span>-->
-										<!--<span class="label label-success"></span>-->
-										<!--<span class="label label-success"></span>-->
-										<!--</h5>-->
-									</a>
-								</article>
-							</div>
-						</li>
-						
-						<li>
-							<div id="5" class="project col-xs-12 col-sm-4 col-md-4">
-								<article id="netflix-social">
-									<a href="https://s3.amazonaws.com/port_site/Netflix+-+Mobile_JamieMarcus.compressed.pdf" class="card-snippet card">
-										<p><img class="img-responsive" src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--zN7qa3IQ--/q_jpegmini/v1416184867/netflix-cover2.jpg"></p>
-										<h3><small class="text-black">Netflix Social</small></h3>
-										<h4></h4>
-										<!--<h5 class="lead">-->
-										<!--<span class="label label-success"></span>-->
-										<!--<span class="label label-success"></span>-->
-										<!--<span class="label label-success"></span>-->
-										<!--</h5>-->
-									</a>
-								</article>
-							</div>
-						</li>
-						
-						<!--<li>-->
-							<!--<div id="" class="project col-xs-12 col-sm-4 col-md-4">-->
-								<!--<article id="">-->
-									<!--<a href="/projects/.html" class="card-snippet card">-->
-										<!--<p><img class="img-responsive" src=""></p>-->
-										<!--<h3><small class="text-black"></small></h3>-->
-										<!--<h4></h4>-->
-										<!--&lt;!&ndash;<h5 class="lead">&ndash;&gt;-->
-										<!--&lt;!&ndash;<span class="label label-success"></span>&ndash;&gt;-->
-										<!--&lt;!&ndash;<span class="label label-success"></span>&ndash;&gt;-->
-										<!--&lt;!&ndash;<span class="label label-success"></span>&ndash;&gt;-->
-										<!--&lt;!&ndash;</h5>&ndash;&gt;-->
-									<!--</a>-->
-								<!--</article>-->
-							<!--</div>-->
-						<!--</li>-->
-						
-					</ul>   <!-- /END PROJECT CARDS -->
-				</div>   <!-- /END PROJECT CARDS ROW -->
-			</div>   <!-- /END WRAPPER DIV -->
-		</div>   <!-- /END WRAPPER ROW -->
-	</div>   <!-- /END CONTAINER -->
-<!--</section>-->
-<!-- /END WORK -->
-
-</section>
-
-<!--<section id="process" class="pad-50-vertical">-->
-	<!--<div class="container">   &lt;!&ndash; CONTAINER &ndash;&gt;-->
-	<!--<div class="row">-->
-		<!--<div class="col-xs-12 text-center">-->
-			<!--<header class="section-header">-->
-				<!--<h2>Process</h2>-->
-				<!--</header>-->
-		<!--</div>-->
-	<!--</div>-->
-
-	<!--<div class="row">-->
-
-	<!--</div>-->
-<!--</div>-->
-<!--</section>-->
-
-	<!-- ==== SECTION DIVIDER1 -->
-	<!--<section class="section-divider textdivider san-francisco">-->
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1 text-center pad-25-top">
+					<a class="btn btn-link btn-link-info btn-link-toggle" data-toggle="collapse" href="#dev-skills" aria-expanded="false" aria-controls="collapseExample">View Dev Skills
+						<i class="fa fa-code"></i>
+						<br><i class="fa fa-angle-down fa-lg"></i>
+					</a>
+					<div class="collapse" id="dev-skills">
+						<hr class="hr-info">
+						<!--<div class="well">-->
+							<section id="dev-skills">
 		<!--<div class="container">-->
-			<!--<h1>Get In Touch!</h1>-->
-			<!--<hr>-->
-			<!--<p>I live in sunny San Francisco, California.  I am currently available for work and would love to chat!</p>-->
-			<!--<a href="#" class="btn btn-lg btn-outline btn-white-big">Contact Me</a>-->
-		<!--</div><!-- container -->
-	<!--</section><!-- section -->
+			<div class="row">
+				<!--<h3 class="text-center pathway-font pad-25-vertical">Dev Skills</h3>-->
+
+				<div class="col-xs-6 col-sm-2 col-sm-offset-2">
+					<canvas id="html" height="140" width="140" class="center-block"></canvas>
+					<p class="lead text-black text-center">HTML5</p>
+					<br>
+				</div>
+
+				<div class="col-xs-6 col-sm-2">
+					<canvas id="css" height="140" width="140" class="center-block"></canvas>
+					<p class="lead text-black text-center">CSS3 / LESS</p>
+					<br>
+				</div>
+
+				<div class="col-xs-6 col-sm-2">
+					<canvas id="js" height="140" width="140" class="center-block"></canvas>
+					<p class="lead text-black text-center">JavaScript / jQuery</p>
+					<br>
+				</div>
+
+				<div class="col-xs-6 col-sm-2">
+					<canvas id="misc" height="140" width="140" class="center-block"></canvas>
+					<p class="lead text-black text-center">Ruby / PHP / MySQL</p>
+					<br>
+				</div>
+
+			</div>
+		<!--</div>-->
+</section>
+          <!--</div>-->
+        </div>
+      </div>
+      <!-- /.col-sm-10 -->
+    </div>
+    	<!-- /.row -->
+		</div> <!-- /.container -->
+		<!--</section>-->
+	</section>
+
+	<section id="work" class="gray-section pad-50-vertical">
+		<!-- WORK -->
+		<!--<section id="#work" class="content-section">-->
+		<div class="container">   <!-- CONTAINER -->
+			<div class="row">
+						<div class="col-xs-12 text-center">
+							<header class="section-header">
+								<h2>Featured Work</h2></header>
+						</div>
+					</div>
+			<div class="row pad-25-lateral">  <!-- WRAPPER ROW -->
+				<div id="1" class="project col-xs-12 col-sm-4 col-md-4">
+					<article id="transcense-1">
+						<a href="/projects/transcense-1.html" class="card-snippet card">
+							<p><img class="img-responsive" src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--H45AV76v--/c_scale,h_350,q_jpegmini:1/v1415851305/placeit-transcense-v1.jpg"></p>
+							<div class="cardDetails text-center">
+								<!-- /.card-details -->
+								<h3 class="text-black">Transcense</h3>
+								<h4>App Structure, Navigation, & User Interface</h4>
+								<button class="btn btn-primary btn-sm">View</button>
+							</div>
+						</a>
+					</article>
+				</div>     <!-- /END PROJECT CARDS -->
+
+				<div id="6" class="project col-xs-12 col-sm-4 col-md-4">
+					<article id="transcense-2">
+						<a href="/projects/transcense-2.html" class="card-snippet card">
+							<p><img class="img-responsive" src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--sTuPrbXL--/c_scale,h_350,q_jpegmini/v1415851305/transcense2-cover-1.jpg"></p>
+							<div class="cardDetails text-center">
+								<!-- /.card-details -->
+								<h3 class="text-black">Transcense</h3>
+								<h4>Onboarding</h4>
+								<button class="btn btn-primary btn-sm">View</button>
+							</div>
+						</a>
+					</article>
+				</div>     <!-- /END PROJECT CARDS -->
+
+				<div id="7" class="project col-xs-12 col-sm-4 col-md-4">
+					<article id="truespirit">
+						<a href="/projects/truespirit.html" class="card-snippet card">
+							<p><img class="img-responsive" src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--qCPeIxp8--/c_scale,h_350,q_jpegmini/v1415851306/truespirit-cover-1.jpg"></p>
+							<div class="cardDetails text-center">
+								<!-- /.card-details -->
+								<h3 class="text-black">Truespirit</h3>
+								<h4>E-Commerce Website</h4>
+								<button class="btn btn-primary btn-sm">View</button>
+							</div>
+						</a>
+					</article>
+				</div>     <!-- /END PROJECT CARDS -->
+			</div>
+
+			<div class="row pad-25-lateral">  <!-- WRAPPER ROW -->
+				<div id="2" class="project col-xs-12 col-sm-4 col-md-4">
+					<article id="rimokh-architects">
+						<a href="#" class="card-snippet card">
+							<p><img class="img-responsive" src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--SLkIerqB--/c_scale,h_350,q_jpegmini:1/v1433976829/rimokh-architects-cover.jpg"></p>
+							<div class="cardDetails text-center">
+								<!-- /.card-details -->
+								<h3 class="text-black">Rimokh Architects</h3>
+								<h4>Wordpress Site Development</h4>
+								<!--<button class="btn btn-primary btn-sm">View</button>-->
+							</div>
+						</a>
+					</article>
+				</div>     <!-- /END PROJECT CARDS -->
+
+				<div id="3" class="project col-xs-12 col-sm-4 col-md-4">
+					<article id="tuul">
+						<a href="#" class="card-snippet card">
+							<p><img class="img-responsive" src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--ahzdbLZi--/c_scale,h_350,q_jpegmini:1/v1433976834/tuul-cover.jpg"></p>
+							<div class="cardDetails text-center">
+								<!-- /.card-details -->
+								<h3 class="text-black">Tuul, Inc</h3>
+								<h4>Landing Page & Marketing Site Development</h4>
+								<!--<button class="btn btn-primary btn-sm">View</button>-->
+							</div>
+						</a>
+					</article>
+				</div>     <!-- /END PROJECT CARDS -->
+
+				<div id="4" class="project col-xs-12 col-sm-4 col-md-4">
+					<article id="transcense-3">
+						<a href="#" class="card-snippet card">
+							<p><img class="img-responsive" src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--wb63lYm9--/c_scale,h_350,q_jpegmini/v1415851305/transcense3-cover-1.jpg"></p>
+							<div class="cardDetails text-center">
+								<!-- /.card-details -->
+								<h3 class="text-black">Transcense</h3>
+								<h4>Web Development</h4>
+								<!--<button class="btn btn-primary btn-sm">View</button>-->
+							</div>
+						</a>
+					</article>
+				</div>     <!-- /END PROJECT CARDS -->
+			</div>
+
+			<div class="row pad-25-lateral">  <!-- WRAPPER ROW -->
+				<div id="8" class="project col-xs-12 col-sm-4 col-md-4">
+					<article id="netflix-social">
+						<a href="https://s3.amazonaws.com/port_site/Netflix+-+Mobile_JamieMarcus.compressed.pdf" target="_blank" class="card-snippet card">
+							<p><img class="img-responsive" src="http://res.cloudinary.com/dc8ynxibm/image/upload/s--zN7qa3IQ--/q_jpegmini/v1416184867/netflix-cover2.jpg"></p>
+							<div class="cardDetails text-center">
+								<!-- /.card-details -->
+								<h3 class="text-black">Netflix Social</h3>
+								<h4></h4>
+								<button class="btn btn-primary btn-sm">View</button>
+							</div>
+						</a>
+					</article>
+				</div>     <!-- /END PROJECT CARDS -->
+			</div>   <!-- /END PROJECT CARDS ROW -->
+		</div>   <!-- /END CONTAINER -->
+	<!--</section>-->
+	<!-- /END WORK -->
+	</section>
+
+	<section id="process" class="pad-50-top pad-75-bottom">
+		<div class="container">
+			 <!-- CONTAINER -->
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<header class="section-header">
+						<h2>UX Process</h2>
+					</header>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<p class="lead project-text pad-25-bottom">Long-term, sustainable user experience design is an iterative, cyclical process. Design sprints will almost always start with ideation, followed by analysis & assessment, even more ideation, strategy planning, & implementation.   Testing & iteration will begin towards the end of the sprint, & will continue long after the sprint is over.  As a company's business goals evolve, & more data & insight about its users & their behavior, is gained, the products & features being designed will evolve as well.</p>
+				</div>
+			</div>
+
+			<div class="row pad-25-vertical">
+				<div class="col-sm-6 col-md-3">
+					<div class="panel panel-default box-shadow wow animated fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.1s">
+						<h3 class="text-center pathway-font pad-10-vertical">DISCOVERY <br>& IDEATION</h3>
+						<div class="panel-body">
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-3">
+					<div class="panel panel-default box-shadow wow animated fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.6s">
+						<h3 class="text-center pathway-font pad-10-vertical">ANALYZE<br>& ASSESS</h3>
+						<div class="panel-body">
+							<!--<a href="#" class="btn btn-default">Learn More</a>-->
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-3">
+					<div class="panel panel-default box-shadow wow animated fadeInLeftBig" data-wow-duration="1s" data-wow-delay="1.2s">
+						<h3 class="text-center pathway-font pad-10-vertical">STRATEGIZE<br>& IMPLEMENT</h3>
+						<div class="panel-body">
+							<!--<a href="#" class="btn btn-default">Learn More</a>-->
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-3">
+					<div class="panel panel-default box-shadow wow animated fadeInLeftBig" data-wow-duration="1s" data-wow-delay="1.8s">
+						<h3 class="text-center pathway-font pad-10-vertical">TEST & <br>ITERATE</h3>
+						<div class="panel-body">
+							<!--<a href="#" class="btn btn-default">Learn More</a>-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
   <!-- CONTACT SECTION -->
-<section id="contact" class="contact">
+	<section id="contact" class="contact">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-4 col-sm-offset-1">
@@ -543,8 +501,7 @@
   <div class="scroll-btn"><a id="scroll-to-top" href="#" class="btn btn-info scroll-btn"><i class="fa fa-angle-up fa-2x fa-scroll-btn" role="button" data-toggle="tooltip"></i></a></div>
 
   <!-- FOOTER -->
-
-<footer class="white visible-xs">
+	<footer class="white visible-xs">
 	<!-- <hr> -->
 	<div class="container visible-xs footer-content-mobile">
 		<div class="row">
@@ -559,18 +516,13 @@
 		</div>
 		<div class="row">
 			<div class="center-block">
-				<p class="muted center-block footer-txt"><small>© 2014 Jamie Marcus. All rights reserved</small></p>
+				<p class="muted center-block footer-txt"><small>© 2015 Jamie Marcus. All rights reserved</small></p>
 			</div>
 		</div>
 	</div>
 </footer><!-- END FOOTER -->
 
-<!-- <a href="https://github.com/jnmarcus/jnmarcus.github.io/archive/v.zip">Download</a> -->
-<!-- <p>Currently v</p> -->
-
-<!-- FOOTER -->
-
-<footer class="white hidden-xs">
+	<footer class="white hidden-xs">
 	<!-- <hr> -->
 	<div class="container-fluid hidden-xs footer-content">
 		<div class="row">
@@ -580,7 +532,7 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-6">
-				<p class="muted pull-left footer-txt"><small>© 2014 Jamie Marcus. All rights reserved</small></p>
+				<p class="muted pull-left footer-txt"><small>© 2015 Jamie Marcus</small></p>
 			</div>
 			<div class="col-sm-6">
 				<p class="muted pull-right"><small><a href="https://github.com/jnmarcus/jnmarcus.github.io" class="text-black" target="blank">View Project on Github</a></small></p>
@@ -589,11 +541,9 @@
 	</div>
 </footer><!-- END FOOTER -->
 
+	</div> <!-- END GLOBAL SITE FLUID CONTAINER -->
 
-</div> <!-- END GLOBAL SITE FLUID CONTAINER -->
+	<script src="dist/js/scripts.min.js"></script>
 
-		<script src="dist/js/scripts.min.js"></script>
-
-
-	</body>
+</body>
 </html>
