@@ -18,9 +18,19 @@
   display: block;
 }
 
+//.btn-success {
+//  border-color: rgba(154, 205, 50, 0.79)  ;
+//  background-color: rgba(154, 205, 50, 0.79);
+//}
+
 .btn-success {
-  border-color: rgba(154, 205, 50, 0.79)  ;
-  background-color: rgba(154, 205, 50, 0.79);
+  color: #000;
+  border-color: @brand-success  ;
+  background-color: @brand-success;
+}
+
+.btn-shadow {
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .btn-lg {
@@ -29,8 +39,42 @@
   padding: 6px 26px;
 }
 
+.btn-xl {
+  .btn;
+  padding: 15px;
+}
+
 .btn-link {
   &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn-link-info {
+  .pathway-font;
+  .text-pink;
+  font-size: 19px;
+}
+
+.btn-link-toggle {
+  .pathway-font;
+  font-size: 19px;
+  .text-pink;
+  padding: 10px 15px;
+  //padding: 2px 10px;
+  //box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+
+  &:hover { box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);}
+
+  &:hover, &:active, &:focus {
+    background-color: @white;
+    //border-color: #e0e0e0;
+    //border-color: @brand-info;
+    //background-color: @brand-info;
+    //box-shadow: -1px 1px 2px 1px rgba(0,0,0,0.1) inset;
+    color: @brand-info;
+    //color: @white;
     text-decoration: none;
   }
 }

@@ -11,22 +11,59 @@
 
     <!-- About Me Section -->
     <div class="row">
+      <div class="col-xs-12 col-sm-8 col-md-7">
+        <div class="row">
+          <div class="col-sm-3 pad-25-bottom">
+            <div class="about-media center-block"><img src="http://res.cloudinary.com/dc8ynxibm/image/upload/v1399672137/jamie_marcus_headpic.jpg" alt="Jamie Marcus" class="img-responsive img-circle">
+            </div>
+          </div>
+          <div class="col-sm-9">
+            <div class="about-desc">
+              <p class="lead no-lead small-lead">I'm a Civil Engineer gone UX Designer & Developer!  I enjoy designing & developing digital products optimized for the people using them.</p>
+              <p class="lead no-lead small-lead pad-25-bottom">I'm also a product strategist & consultant.  I work with interdisciplinary, technical & non-technical teams to help boost communication & make sure projects stay on track & within budget.</p>
+            </div>
+          </div>
 
-      <div class="col-xs-3 col-md-2">
-        <div class="about-media center-block"><img src="http://res.cloudinary.com/dc8ynxibm/image/upload/v1399672137/jamie_marcus_headpic.jpg" alt="Jamie Marcus" class="img-responsive"></div>
+        </div>
+        <!-- /.row -->
       </div>
 
-      <div class="col-xs-9 col-sm-9 col-md-10 pad-50-left">
-        <div class="about-desc">
-          <p class="lead no-lead small-lead">I am a UX designer with a background in engineering, and experience working as a front-end developer.</p>
-          <p class="lead no-lead small-lead pad-25-bottom">I enjoy designing and developing digital products optimized for the people using them!</p>
-          <!--<div class="page-scroll margin-top-20"><a class="btn btn-default" href="#contact">Hire Me</a>-->
-            <!--<a class="btn btn-default" href="#works">See Portfolio</a>-->
+      <div class="col-xs-12 col-sm-4 col-md-5">
+        <div class="row pad-50-top">
+          <div class="col-xs-12 col-sm-6 col-sm-offset-3 pad-25-bottom">
+            <div class="center-block text-center">
+              <a class="btn btn-primary btn-xl btn-block btn-shadow" href="#work">Check Out My Work</a>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-sm-offset-3 pad-25-top">
+            <div class="center-block text-center">
+              <a href="#contact" class="btn btn-success btn-xl btn-block btn-shadow">Contact Me</a>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.col-xs-12 -->
+    </div>
+
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1 text-center">
+        <a class="btn btn-link btn-link-info btn-link-toggle" data-toggle="collapse" href="#dev-skills" aria-expanded="false" aria-controls="collapseExample">View Dev Skills
+          <i class="fa fa-code"></i>
+          <br><i class="fa fa-angle-down fa-lg"></i>
+        </a>
+        <div class="collapse" id="dev-skills">
+          <hr class="hr-info">
+          <!--<div class="well">-->
+            {% include dev-skills.html %}
           <!--</div>-->
         </div>
       </div>
+      <!-- /.col-sm-10 -->
     </div>
+    <!-- /.row -->
   </div>
-  {% include experience.html %}
-
+  <!-- /.container -->
 <!--</section>-->

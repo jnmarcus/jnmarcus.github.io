@@ -3,8 +3,7 @@
 var htmlDoughnut = document.getElementById("html").getContext("2d");
 var cssDoughnut = document.getElementById("css").getContext("2d");
 var jsDoughnut = document.getElementById("js").getContext("2d");
-var gitDoughnut = document.getElementById("git").getContext("2d");
-var devOpsDoughnut = document.getElementById("devOps").getContext("2d");
+var miscDoughnut = document.getElementById("misc").getContext("2d");
 
 var htmlData = [
   {
@@ -39,18 +38,7 @@ var jsData = [
   }
 ];
 
-var gitData = [
-  {
-    value: 85,
-    color:"#FF0054"
-  },
-  {
-    value : 15,
-    color : "#f2f2f2"
-  }
-];
-
-var devOpsData = [
+var miscData = [
   {
     value: 40,
     color:"#FF0054"
@@ -74,13 +62,6 @@ var myJSdoughnut = new Chart(jsDoughnut).Doughnut(jsData, {
   percentageInnerCutout : 80
 });
 
-var myGitdoughnut = new Chart(gitDoughnut).Doughnut(gitData, {
+var myMiscDoughnut = new Chart(miscDoughnut).Doughnut(miscData, {
   percentageInnerCutout : 80
 });
-
-var myDevOpsDoughnut = new Chart(devOpsDoughnut).Doughnut(devOpsData, {
-  percentageInnerCutout : 80
-});
-
-
-
