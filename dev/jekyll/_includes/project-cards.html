@@ -8,13 +8,13 @@
 			</div>
 		</div>
 		<div class="row">  <!-- WRAPPER ROW -->
-			<div class="col-sm-10 col-sm-offset-1">   <!-- WRAPPER DIV -->
+			<div class="col-sm-12">   <!-- WRAPPER DIV -->
 
 				<div class="row">   <!-- PROJECT CARDS ROW -->
 					<ul class="project-cards">   <!-- PROJECT CARDS -->
 						{% for project in site.data.projects %}
 						<li>
-							<div id="{{ project.id }}" class="project col-xs-12 col-sm-4 col-md-4">
+							<div id="{{ project.id }}" class="project col-xs-6 col-sm-4 col-md-4">
 								<article id="{{ project.file }}">
 									<a href="/projects/{{ project.file }}.html" class="card-snippet card">
 										<p><img class="img-responsive" src="{{ project.imageURL }}"></p>
