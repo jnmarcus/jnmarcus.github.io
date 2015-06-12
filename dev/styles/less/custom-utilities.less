@@ -52,9 +52,19 @@
 }
 
 // PADDING UTILITIES --------------------------------------------------
+@pad-10: 10px;
 @pad-25: 25px;
 @pad-50: 12.5px;
 @pad-75: 75px;
+
+.pad-10-vertical {
+  padding-top: @pad-10;
+  padding-bottom: @pad-10;
+}
+
+.pad-10-top {
+  padding-top: @pad-10;
+}
 
 .pad-25-vertical {
   padding-top: @pad-25;
@@ -136,6 +146,10 @@
 .pad-75-lateral {
   padding-right: 0;
   padding-left: 0;
+}
+
+.no-top-pad-on-mobile {
+  padding-top: 0;
 }
 
 // WRAPPERS --------------------------------------------------

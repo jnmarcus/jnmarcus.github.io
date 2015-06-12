@@ -14,9 +14,9 @@ module.exports = function(grunt) {
         // Configurable paths
         jekyllBuild: './dev/_pub',
         ghPagesBuild: 'gh-pages',
-        dev: './dev',
+        dev: 'dev',
         prod: '.',
-        bower: './dev/_bower_components'
+        bower: 'dev/_bower_components'
     },
     dev: {
         styles: './dev/styles',
@@ -52,10 +52,11 @@ module.exports = function(grunt) {
               '<%= config.bower %>/bootstrap-material-design/scripts/*.js',
               '<%= config.bower %>/wow/dist/wow.js',
               '<%= config.bower %>/Chart.js/Chart.js',
+              '<%= config.bower %>/fluidbox/jquery.fluidbox.js',
               '<%= config.dev %>/scripts/lib/*.js'
         ],
         // the location of the resulting JS file
-        dest: '<%= config.dev %>/scripts/scripts.js',
+        dest: '<%= config.dev %>/scripts/scripts.js'
       }
     },
     uglify: {
@@ -106,24 +107,24 @@ module.exports = function(grunt) {
           sourceMapFilename: '<%= config.dev %>/styles/css/main.css.map'
         },
         files: {
-          '<%= config.dev %>/styles/css/main.css': ['<%= config.dev %>/styles/less/main.less'],
-        },
+          '<%= config.dev %>/styles/css/main.css': ['<%= config.dev %>/styles/less/main.less']
+        }
       },
       minify: { //minify CSS file
         options: {
-          cleancss: true,
+          cleancss: true
         },
         files: [
           {src: '<%= config.dev %>/styles/css/main.css', dest: '<%= config.dev %>/styles/css/main.min.css'},
           {src: '<%= config.dev %>/styles/css/main.css', dest: '<%= config.dev %>/jekyll/dist/css/main.min.css'}
-        ],
-      },
+        ]
+      }
     },
 
     clean: {
       dist: {
         src: [ 'dist' ]
-      },
+      }
       //buildDist: {
       //  src: [ '<%= config.jekyllBuild %>/dist' ]
       //},
@@ -134,12 +135,12 @@ module.exports = function(grunt) {
         files: [
           { expand: true, cwd: '<%= dev.styles %>/', src: ['css/*'], dest: '<%= dev.dist %>/'},
           { expand: true, cwd: '<%= dev.styles %>/', src: ['css/*'], dest: '<%= config.dev %>/jekyll/dist/'}
-        ],
+        ]
       },  
       fonts: {    //'dist/fonts/' to everywhere
         files: {
           expand: true, cwd: '<%= config.dev %>/jekyll/dist/', src: ['fonts/**'], dest: 'dist/'
-        },
+        }
       },
       scripts: {   //'dist/js/' to 'jekyll/dist/js'
         expand: true,
@@ -156,10 +157,10 @@ module.exports = function(grunt) {
       minifiedAssets: {   //only minified assets to 'gh-pages/dist/' directories
         files: [
           //minified styles
-          {src: '<%= config.jekyllBuild %>/dist/css/main.min.css', dest: '<%= config.ghPagesBuild %>/dist/css/main.min.css'},
+          {src: '<%= config.jekyllBuild %>/dist/css/main.min.css', dest: '<%= config.ghPagesBuild %>/dist/css/main.min.css'}
           //minified javascript
           // {src: 'js/**.min.js', dest: '<%= config.ghPagesBuild %>/dist/js/'},
-        ],
+        ]
       },
       js: {
         expand: true,
@@ -171,13 +172,23 @@ module.exports = function(grunt) {
         files: {
           src: '<%= config.dev %>/jekyll/dist/css/main.min.css',
           dest: 'dist/css/main.min.css'
-        },
+        }
       },
       img: {
         files: {
           src: '<%= config.dev %>/jekyll/dist/img/**/*',
           dest: 'dist/img/**/*'
         }
+      },
+      modernizr: {
+        files: [
+          { src: '<%= config.dev %>/_bower_components/modernizr/modernizr.js', dest: '<%= config.dev %>/scripts/modernizr.js'},
+          { src: '<%= config.dev %>/_bower_components/modernizr/modernizr.js', dest: '<%= config.dev %>/jekyll/dist/js/modernizr.js'},
+          { src: '<%= config.dev %>/_bower_components/modernizr/modernizr.js', dest: 'dist/js/modernizr.js'}
+        ]
+        //files: {
+        //  '<%= config.dev %>/scripts/modernizr.js': ['<%= config.dev %>/_bower_components/modernizr/modernizr.js']
+        //}
       },
       //staticBuildFiles: { //static jekyll build files to staging directory 'gh-pages/'
       //  files: [
@@ -194,14 +205,14 @@ module.exports = function(grunt) {
       siteHTML: {
         files: [
           //static homepage
-          { src: '<%= config.jekyllBuild %>/index.html', dest: './index.html'},
+          { src: '<%= config.jekyllBuild %>/index.html', dest: './index.html'}
           //static about page
           //{ expand: true, cwd: '<%= config.jekyllBuild %>/', src: ['about/*.html'], dest: './'},
           //static work page
           // { expand: true, cwd: '<%= config.jekyllBuild %>/', src: ['work/*.html'], dest: './'},
           //static contact page
 //          { expand: true, cwd: '<%= config.jekyllBuild %>/', src: ['contact/*.html'], dest: './'},
-        ],
+        ]
       },
       distToPub: {  //'dev/_pub/dist' to './dist'
         expand: true,
@@ -231,15 +242,15 @@ module.exports = function(grunt) {
           watch: true, //+
           drafts: true,
           exclude: ['node_modules', 'less', 'gh-pages', 'Gemfile', 'Gemfile.lock', 'README.md', 'package.json', 'Gruntfile.js','custom-bootstrap.map', '.grunt', 'about', 'test']
-        },
+        }
       },
       build: {
         options: {
           dest: '<%= config.jekyllBuild %>',
           drafts: true,
           exclude: ['node_modules', 'less', 'gh-pages', 'Gemfile', 'Gemfile.lock', 'README.md', 'package.json', 'Gruntfile.js','custom-bootstrap.map', '.grunt', 'about', 'test']
-        },
-      },
+        }
+      }
     },
 
     'gh-pages': {   //WORKS!!
@@ -258,18 +269,18 @@ module.exports = function(grunt) {
           message: 'grunt testing 123'
         },
         src: ['**/*']  
-      },
+      }
     },
 
     watch: {
       less: {   //Recompile and minify CSS files when changes to LESS files are made -- WORKS!
         files: ['dev/styles/less/**/*.less'],
-        tasks: ['less', 'copy:styles'],
+        tasks: ['less', 'copy:styles']
       },
       js: {
         files: ['dev/scripts/lib/**/*', 'Gruntfile.js'],
-        tasks: ['concat', 'uglify'],
-      },
+        tasks: ['concat', 'uglify']
+      }
       //dist: {
       //  files: ['dev/dist/**/*'],
       //  tasks: ['newer:copy:toJekyllDist']
@@ -297,7 +308,7 @@ module.exports = function(grunt) {
           tasks: ['newer:less', 'newer:copy:styles', 'watch:less'],
           options: {
               logConcurrentOutput: true
-          },
+          }
       },
       target2: ['jekyll:serve'],
       target3: ['watch:less', 'watch:jekyll']

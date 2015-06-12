@@ -1,7 +1,7 @@
 <div class="container pad-25-top pad-75-bottom">
     <div class="row">
         <div class="col-xs-12 col-sm-6 pp-project-header-txt center-on-mobile">
-          <div class="wow fadeInDown animated" data-wow-offset="0" data-wow-delay="0.1s" style="visibility: visible; -webkit-animation: fadeInDown 0.1s;">
+          <div class="animated fadeInDown">
             <h1 class="big-h capitol pp-project-title animated slideInDown">{{ page.title }}</h1>
             <h2 class="small-h2 text-gray pp-project-subtitle">{{ page.subtitle }}</h2>
             <h5 class="lead pp-project-tags no-lead">
@@ -9,13 +9,14 @@
               <span class="label label-success">{{ page.tag1 }}</span>
               <span class="label label-success">{{ page.tag2 }}</span>
             </h5>
-            <p class="project-text">{{ page.description }}</p>
+            <p class="project-text">{{ page.description1 }}</p>
+            <p class="project-text pad-10-top">{{ page.description2 }}</p>
             <p class="project-text pad-25-top"><strong class="margin-right-10">My Role:</strong>{{page.myRole}}</p>
           </div>
         </div>
 
         <div class="col-xs-12 col-sm-6 pad-25-top">
-          <div class="wow fadeInUp animated" data-wow-duration="2s" data-wow-delay="0.2s" style="visibility: visible; -webkit-animation: fadeInUp 2s 0.2s;">
+          <div class="animated fadeInUp">
             <img src="{{page.cloudinary}}/{{ page.coverPhotoURL }}" class="img-responsive center-block" alt="{{ page.coverPhotoALT}}">
           </div>
         </div>

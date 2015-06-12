@@ -17,7 +17,8 @@
     "wow": "~1.0.2",
     "mixitup": "~2.1.7",
     "venobox": "~1.5.2",
-    "Chart.js": "~0.2.0"
+    "Chart.js": "~0.2.0",
+    "fluidbox": "~1.4.3"
   },
   "devDependencies": {}
 }

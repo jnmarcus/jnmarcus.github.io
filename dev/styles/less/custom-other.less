@@ -27,6 +27,7 @@ hr {
 	border-width: 3px 0 0;
 }
 
+.hr-info { border-color: @brand-info; }
 //img {
 //	margin: 3rem auto;
 //}
@@ -385,15 +386,25 @@ a.card-snippet {
 .panel-header {
 		padding: 5px 15px;
 		color: @white;
+		border-radius: 0px;
 }
 
-.panel-primary {
-	border: 5px solid @brand-primary;
+.panel-primary,.panel-info {
+	//border: 5px solid @brand-primary;
+	border: 5px solid;
 	.panel-header {
 		h3 {
 			color: @white;
 		}
 	}
+}
+
+.panel-primary {
+	border-color: @brand-primary;
+}
+
+.panel-info {
+	border-color: @brand-info;
 }
 
 .panel-button-row {
