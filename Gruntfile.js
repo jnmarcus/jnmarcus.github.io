@@ -168,11 +168,11 @@ module.exports = function(grunt) {
         src: ['scripts.min.js'],
         dest: 'dist/js/'
       },
-      css: {  
-        files: {
-          src: '<%= config.dev %>/jekyll/dist/css/main.min.css',
-          dest: 'dist/css/main.min.css'
-        }
+      css: {
+        expand: true,
+        cwd: '<%= config.dev %>/jekyll/dist/css/',
+        src: ['main.min.css'],
+        dest: 'dist/css/'
       },
       img: {
         files: {
@@ -222,9 +222,11 @@ module.exports = function(grunt) {
       },
       pubToRoot: {  //'dev/_pub/' to './'
         expand: true,
-        cwd: '<%= config.dev %>/',
-        src: ['_pub/**/*'],
+        cwd: '<%= config.dev %>/_pub/',
+        //src: ['_pub/**/*', '!test*/**/*'],
+        src: ['index.html', 'dist/**/*', 'projects/t*.html', '!projects/transcense-3.html'],
         dest: './'
+        //dest: 'test/'
       }
     },
 
