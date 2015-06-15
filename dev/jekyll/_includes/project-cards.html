@@ -9,7 +9,7 @@
 		</div>
 		<div class="row pad-25-lateral">  <!-- WRAPPER ROW -->
 			{% for project in site.data.projects %}
-			<div id="{{ project.id }}" class="project col-xs-12 col-sm-4 col-md-4">   <!-- PROJECT CARDS -->
+			<div id="{{ project.id }}" class="project col-xs-12 col-sm-6 col-md-4">   <!-- PROJECT CARDS -->
 				<article id="{{ project.file }}">
 					<a href="/projects/{{ project.file }}.html" class="card-snippet card">
 						<p><img class="img-responsive" src="{{ project.imageURL }}"></p>
