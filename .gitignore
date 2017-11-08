@@ -4,7 +4,6 @@ node_modules
 test
 .grunt
 dev/_pub
-dev/_bower_components
 dev/dist
 dev/styles/css
 dev/jekyll/dist

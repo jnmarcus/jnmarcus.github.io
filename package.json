@@ -8,7 +8,23 @@
     "url": "https://github.com/jnmarcus/jnmarcus.github.io.git"
   },
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 0.10.0",
+    "npm": ">= 2.0.0"
+  },
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.3.0",
+    "font-awesome": "~4.2.0",
+    "modernizr": "~3.5.0",
+    "requirejs": "~2.1.15",
+    "bootstrap-material-design": "~0.3.0",
+    "animate.less": "*",
+    "lesshat": "~3.0.2",
+    "wow": "0.0.6",
+    "mixitup": "~3.0.0",
+    "venobox": "~1.7.0",
+    "chartjs": "~0.2.0",
+    "fluidbox": "~1.4.3"
   },
   "devDependencies": {
     "grunt": "~0.4.2",

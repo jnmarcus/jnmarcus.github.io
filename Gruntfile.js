@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         ghPagesBuild: 'gh-pages',
         dev: 'dev',
         prod: '.',
-        bower: 'dev/_bower_components'
+        npm: './node_modules'
     },
     dev: {
         styles: './dev/styles',
@@ -47,12 +47,12 @@ module.exports = function(grunt) {
       dist: {
         // the files to concatenate
         src: [
-              '<%= config.bower %>/jquery/dist/jquery.js',
-              '<%= config.bower %>/bootstrap/dist/js/bootstrap.js',
-              '<%= config.bower %>/bootstrap-material-design/scripts/*.js',
-              '<%= config.bower %>/wow/dist/wow.js',
-              '<%= config.bower %>/Chart.js/Chart.js',
-              '<%= config.bower %>/fluidbox/jquery.fluidbox.js',
+              '<%= config.npm %>/jquery/dist/jquery.js',
+              '<%= config.npm %>/bootstrap/dist/js/bootstrap.js',
+              '<%= config.npm %>/bootstrap-material-design/scripts/*.js',
+              '<%= config.npm %>/wow/dist/wow.js',
+              '<%= config.npm %>/chartjs/chart.js',
+              '<%= config.npm %>/fluidbox/jquery.fluidbox.js',
               '<%= config.dev %>/scripts/lib/*.js'
         ],
         // the location of the resulting JS file
@@ -182,13 +182,13 @@ module.exports = function(grunt) {
       },
       modernizr: {
         files: [
-          { src: '<%= config.dev %>/_bower_components/modernizr/modernizr.js', dest: '<%= config.dev %>/scripts/modernizr.js'},
-          { src: '<%= config.dev %>/_bower_components/modernizr/modernizr.js', dest: '<%= config.dev %>/jekyll/dist/js/modernizr.js'},
-          { src: '<%= config.dev %>/_bower_components/modernizr/modernizr.js', dest: 'dist/js/modernizr.js'}
+          // { src: '<%= config.npm %>/modernizr/modernizr.js', dest: '<%= config.dev %>/scripts/modernizr.js'},
+          // { src: '<%= config.npm %>/modernizr/modernizr.js', dest: '<%= config.dev %>/jekyll/dist/js/modernizr.js'},
+          // { src: '<%= config.npm %>/modernizr/modernizr.js', dest: 'dist/js/modernizr.js'}
+          { src: '<%= config.npm %>/modernizr/cli.js', dest: '<%= config.dev %>/scripts/modernizr.js'},
+          { src: '<%= config.npm %>/modernizr/cli.js', dest: '<%= config.dev %>/jekyll/dist/js/modernizr.js'},
+          { src: '<%= config.npm %>/modernizr/cli.js', dest: 'dist/js/modernizr.js'}
         ]
-        //files: {
-        //  '<%= config.dev %>/scripts/modernizr.js': ['<%= config.dev %>/_bower_components/modernizr/modernizr.js']
-        //}
       },
       //staticBuildFiles: { //static jekyll build files to staging directory 'gh-pages/'
       //  files: [
