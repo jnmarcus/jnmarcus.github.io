@@ -138,9 +138,11 @@ module.exports = function(grunt) {
         ]
       },  
       fonts: {    //'dist/fonts/' to everywhere
-        files: {
-          expand: true, cwd: '<%= config.dev %>/jekyll/dist/', src: ['fonts/**'], dest: 'dist/'
-        }
+        files: [
+          { expand: true, cwd: '<%= config.npm %>/font-awesome/', src: ['fonts/**'], dest: 'dist/'},
+          { expand: true, cwd: '<%= config.npm %>/font-awesome/', src: ['fonts/**'], dest: '<%= dev.dist %>/'},
+          { expand: true, cwd: '<%= config.npm %>/font-awesome/', src: ['fonts/**'], dest: '<%= config.dev %>/jekyll/dist/'}
+        ]
       },
       scripts: {   //'dist/js/' to 'jekyll/dist/js'
         expand: true,
