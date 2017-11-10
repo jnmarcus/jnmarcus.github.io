@@ -16,13 +16,13 @@ module.exports = function(grunt) {
         npm: './node_modules',
         dev: {
           root: './dev',
+          styles: './dev/styles',
           jekyllBuild: './dev/_pub'
         },
         ghPagesBuild: 'gh-pages',
         prod: '.'
     },
     dev: {
-        styles: './dev/styles',
         scripts: './dev/scripts',
         dist: './dev/dist'
     },
@@ -106,10 +106,10 @@ module.exports = function(grunt) {
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapURL: 'main.css.map',
-          sourceMapFilename: '<%= config.dev.root %>/styles/css/main.css.map'
+          sourceMapFilename: '<%= config.dev.styles %>/css/main.css.map'
         },
         files: {
-          '<%= config.dev.root %>/styles/css/main.css': ['<%= config.dev.root %>/styles/less/main.less']
+          '<%= config.dev.styles %>/css/main.css': ['<%= config.dev.styles %>/less/main.less']
         }
       },
       minify: { //minify CSS file
@@ -117,8 +117,8 @@ module.exports = function(grunt) {
           cleancss: true
         },
         files: [
-          {src: '<%= config.dev.root %>/styles/css/main.css', dest: '<%= config.dev.root %>/styles/css/main.min.css'},
-          {src: '<%= config.dev.root %>/styles/css/main.css', dest: '<%= config.dev.root %>/jekyll/dist/css/main.min.css'}
+          {src: '<%= config.dev.styles %>/css/main.css', dest: '<%= config.dev.styles %>/css/main.min.css'},
+          {src: '<%= config.dev.styles %>/css/main.css', dest: '<%= config.dev.root %>/jekyll/dist/css/main.min.css'}
         ]
       }
     },
@@ -135,8 +135,8 @@ module.exports = function(grunt) {
     copy: {  //WORKS!!
       styles: {   //'dev/styles/css/' to 'dist/css/' and 'jekyll/dist/css'
         files: [
-          { expand: true, cwd: '<%= dev.styles %>/', src: ['css/*'], dest: '<%= dev.dist %>/'},
-          { expand: true, cwd: '<%= dev.styles %>/', src: ['css/*'], dest: '<%= config.dev.root %>/jekyll/dist/'}
+          { expand: true, cwd: '<%= config.dev.styles %>/', src: ['css/*'], dest: '<%= dev.dist %>/'},
+          { expand: true, cwd: '<%= config.dev.styles %>/', src: ['css/*'], dest: '<%= config.dev.root %>/jekyll/dist/'}
         ]
       },  
       fonts: {    //'dist/fonts/' to everywhere
