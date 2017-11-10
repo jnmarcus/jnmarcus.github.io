@@ -17,13 +17,13 @@ module.exports = function(grunt) {
         dev: {
           root: './dev',
           styles: './dev/styles',
+          scripts: './dev/scripts',
           jekyllBuild: './dev/_pub'
         },
         ghPagesBuild: 'gh-pages',
         prod: '.'
     },
     dev: {
-        scripts: './dev/scripts',
         dist: './dev/dist'
     },
 
@@ -55,10 +55,10 @@ module.exports = function(grunt) {
               '<%= config.npm %>/wow/dist/wow.js',
               '<%= config.npm %>/chartjs/chart.js',
               '<%= config.npm %>/fluidbox/jquery.fluidbox.js',
-              '<%= dev.scripts %>/lib/*.js'
+              '<%= config.dev.scripts %>/lib/*.js'
         ],
         // the location of the resulting JS file
-        dest: '<%= config.dev.root %>/scripts/scripts.js'
+        dest: '<%= config.dev.scripts %>/scripts.js'
       }
     },
     uglify: {
@@ -148,7 +148,7 @@ module.exports = function(grunt) {
       },
       scripts: {   //'dist/js/' to 'jekyll/dist/js'
         expand: true,
-        cwd: '<%= dev.scripts %>/',
+        cwd: '<%= config.dev.scripts %>/',
         src: ['*.js'],
         dest: '<%= config.dev.root %>/jekyll/dist/js/'
       }, 
@@ -186,10 +186,7 @@ module.exports = function(grunt) {
       },
       modernizr: {
         files: [
-          // { src: '<%= config.npm %>/modernizr/modernizr.js', dest: '<%= config.dev.root %>/scripts/modernizr.js'},
-          // { src: '<%= config.npm %>/modernizr/modernizr.js', dest: '<%= config.dev.root %>/jekyll/dist/js/modernizr.js'},
-          // { src: '<%= config.npm %>/modernizr/modernizr.js', dest: 'dist/js/modernizr.js'}
-          { src: '<%= config.npm %>/modernizr/cli.js', dest: '<%= config.dev.root %>/scripts/modernizr.js'},
+          { src: '<%= config.npm %>/modernizr/cli.js', dest: '<%= config.dev.scripts %>/modernizr.js'},
           { src: '<%= config.npm %>/modernizr/cli.js', dest: '<%= config.dev.root %>/jekyll/dist/js/modernizr.js'},
           { src: '<%= config.npm %>/modernizr/cli.js', dest: 'dist/js/modernizr.js'}
         ]
