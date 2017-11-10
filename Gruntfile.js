@@ -53,7 +53,7 @@ module.exports = function(grunt) {
               '<%= config.npm %>/wow/dist/wow.js',
               '<%= config.npm %>/chartjs/chart.js',
               '<%= config.npm %>/fluidbox/jquery.fluidbox.js',
-              '<%= config.dev %>/scripts/lib/*.js'
+              '<%= dev.scripts %>/lib/*.js'
         ],
         // the location of the resulting JS file
         dest: '<%= config.dev %>/scripts/scripts.js'
@@ -146,22 +146,22 @@ module.exports = function(grunt) {
       },
       scripts: {   //'dist/js/' to 'jekyll/dist/js'
         expand: true,
-        cwd: '<%= config.dist %>/',
-        src: ['js/**'],
-        dest: '<%= config.dev %>/jekyll/dist/'
+        cwd: '<%= dev.scripts %>/',
+        src: ['*.js'],
+        dest: '<%= config.dev %>/jekyll/dist/js/'
       }, 
-      //toJekyllDist: {  //'dev/dist/' to 'dev/jekyll/'
-      //  expand: true,
-      //  cwd: '<%= config.dev %>/',
-      //  src: ['dist/**/*'],
-      //  dest: 'dev/jekyll/'
-      //},
+      toJekyllDist: {  //'dev/dist/' to 'dev/jekyll/'
+       expand: true,
+       cwd: '<%= config.dev %>/',
+       src: ['dist/**/*'],
+       dest: 'dev/jekyll/'
+      },
       minifiedAssets: {   //only minified assets to 'gh-pages/dist/' directories
         files: [
           //minified styles
-          {src: '<%= config.jekyllBuild %>/dist/css/main.min.css', dest: '<%= config.ghPagesBuild %>/dist/css/main.min.css'}
+          {src: '<%= config.jekyllBuild %>/dist/css/main.min.css', dest: '<%= config.ghPagesBuild %>/dist/css/main.min.css'},
           //minified javascript
-          // {src: 'js/**.min.js', dest: '<%= config.ghPagesBuild %>/dist/js/'},
+          {src: 'js/**.min.js', dest: '<%= config.ghPagesBuild %>/dist/js/'}
         ]
       },
       js: {
