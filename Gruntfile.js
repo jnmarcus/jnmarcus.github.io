@@ -12,16 +12,18 @@ module.exports = function(grunt) {
     // Project settings
     config: {
         // Configurable paths
-        jekyllBuild: './dev/_pub',
+        root: '.',
+        npm: './node_modules',
+        dev: {
+          root: './dev',
+          jekyllBuild: './dev/_pub'
+        },
         ghPagesBuild: 'gh-pages',
-        dev: 'dev',
-        prod: '.',
-        npm: './node_modules'
+        prod: '.'
     },
     dev: {
         styles: './dev/styles',
         scripts: './dev/scripts',
-        pub: './dev/_pub',
         dist: './dev/dist'
     },
 
@@ -37,7 +39,7 @@ module.exports = function(grunt) {
 //        dest: 'dist/<%= pkg.name %>.js'
 //      }
 //    },
-   // <%= config.dev %>/dist/js/**/*.js
+   // <%= config.dev.root %>/dist/js/**/*.js
 
     concat: {
       options: {
@@ -56,7 +58,7 @@ module.exports = function(grunt) {
               '<%= dev.scripts %>/lib/*.js'
         ],
         // the location of the resulting JS file
-        dest: '<%= config.dev %>/scripts/scripts.js'
+        dest: '<%= config.dev.root %>/scripts/scripts.js'
       }
     },
     uglify: {
@@ -66,7 +68,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          '<%= config.dev %>/jekyll/dist/js/scripts.min.js': ['<%= concat.dist.dest %>']
+          '<%= config.dev.root %>/jekyll/dist/js/scripts.min.js': ['<%= concat.dist.dest %>']
         }
       }
     },
@@ -104,10 +106,10 @@ module.exports = function(grunt) {
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapURL: 'main.css.map',
-          sourceMapFilename: '<%= config.dev %>/styles/css/main.css.map'
+          sourceMapFilename: '<%= config.dev.root %>/styles/css/main.css.map'
         },
         files: {
-          '<%= config.dev %>/styles/css/main.css': ['<%= config.dev %>/styles/less/main.less']
+          '<%= config.dev.root %>/styles/css/main.css': ['<%= config.dev.root %>/styles/less/main.less']
         }
       },
       minify: { //minify CSS file
@@ -115,8 +117,8 @@ module.exports = function(grunt) {
           cleancss: true
         },
         files: [
-          {src: '<%= config.dev %>/styles/css/main.css', dest: '<%= config.dev %>/styles/css/main.min.css'},
-          {src: '<%= config.dev %>/styles/css/main.css', dest: '<%= config.dev %>/jekyll/dist/css/main.min.css'}
+          {src: '<%= config.dev.root %>/styles/css/main.css', dest: '<%= config.dev.root %>/styles/css/main.min.css'},
+          {src: '<%= config.dev.root %>/styles/css/main.css', dest: '<%= config.dev.root %>/jekyll/dist/css/main.min.css'}
         ]
       }
     },
@@ -126,7 +128,7 @@ module.exports = function(grunt) {
         src: [ 'dist' ]
       }
       //buildDist: {
-      //  src: [ '<%= config.jekyllBuild %>/dist' ]
+      //  src: [ '<%= config.dev.jekyllBuild %>/dist' ]
       //},
     },
 
@@ -134,97 +136,97 @@ module.exports = function(grunt) {
       styles: {   //'dev/styles/css/' to 'dist/css/' and 'jekyll/dist/css'
         files: [
           { expand: true, cwd: '<%= dev.styles %>/', src: ['css/*'], dest: '<%= dev.dist %>/'},
-          { expand: true, cwd: '<%= dev.styles %>/', src: ['css/*'], dest: '<%= config.dev %>/jekyll/dist/'}
+          { expand: true, cwd: '<%= dev.styles %>/', src: ['css/*'], dest: '<%= config.dev.root %>/jekyll/dist/'}
         ]
       },  
       fonts: {    //'dist/fonts/' to everywhere
         files: [
           { expand: true, cwd: '<%= config.npm %>/font-awesome/', src: ['fonts/**'], dest: 'dist/'},
           { expand: true, cwd: '<%= config.npm %>/font-awesome/', src: ['fonts/**'], dest: '<%= dev.dist %>/'},
-          { expand: true, cwd: '<%= config.npm %>/font-awesome/', src: ['fonts/**'], dest: '<%= config.dev %>/jekyll/dist/'}
+          { expand: true, cwd: '<%= config.npm %>/font-awesome/', src: ['fonts/**'], dest: '<%= config.dev.root %>/jekyll/dist/'}
         ]
       },
       scripts: {   //'dist/js/' to 'jekyll/dist/js'
         expand: true,
         cwd: '<%= dev.scripts %>/',
         src: ['*.js'],
-        dest: '<%= config.dev %>/jekyll/dist/js/'
+        dest: '<%= config.dev.root %>/jekyll/dist/js/'
       }, 
       toJekyllDist: {  //'dev/dist/' to 'dev/jekyll/'
        expand: true,
-       cwd: '<%= config.dev %>/',
+       cwd: '<%= config.dev.root %>/',
        src: ['dist/**/*'],
        dest: 'dev/jekyll/'
       },
       minifiedAssets: {   //only minified assets to 'gh-pages/dist/' directories
         files: [
           //minified styles
-          {src: '<%= config.jekyllBuild %>/dist/css/main.min.css', dest: '<%= config.ghPagesBuild %>/dist/css/main.min.css'},
+          {src: '<%= config.dev.jekyllBuild %>/dist/css/main.min.css', dest: '<%= config.ghPagesBuild %>/dist/css/main.min.css'},
           //minified javascript
           {src: 'js/**.min.js', dest: '<%= config.ghPagesBuild %>/dist/js/'}
         ]
       },
       js: {
         expand: true,
-        cwd: '<%= config.dev %>/jekyll/dist/js/',
+        cwd: '<%= config.dev.root %>/jekyll/dist/js/',
         src: ['scripts.min.js'],
         dest: 'dist/js/'
       },
       css: {
         expand: true,
-        cwd: '<%= config.dev %>/jekyll/dist/css/',
+        cwd: '<%= config.dev.root %>/jekyll/dist/css/',
         src: ['main.min.css'],
         dest: 'dist/css/'
       },
       img: {
         files: {
-          src: '<%= config.dev %>/jekyll/dist/img/**/*',
+          src: '<%= config.dev.root %>/jekyll/dist/img/**/*',
           dest: 'dist/img/**/*'
         }
       },
       modernizr: {
         files: [
-          // { src: '<%= config.npm %>/modernizr/modernizr.js', dest: '<%= config.dev %>/scripts/modernizr.js'},
-          // { src: '<%= config.npm %>/modernizr/modernizr.js', dest: '<%= config.dev %>/jekyll/dist/js/modernizr.js'},
+          // { src: '<%= config.npm %>/modernizr/modernizr.js', dest: '<%= config.dev.root %>/scripts/modernizr.js'},
+          // { src: '<%= config.npm %>/modernizr/modernizr.js', dest: '<%= config.dev.root %>/jekyll/dist/js/modernizr.js'},
           // { src: '<%= config.npm %>/modernizr/modernizr.js', dest: 'dist/js/modernizr.js'}
-          { src: '<%= config.npm %>/modernizr/cli.js', dest: '<%= config.dev %>/scripts/modernizr.js'},
-          { src: '<%= config.npm %>/modernizr/cli.js', dest: '<%= config.dev %>/jekyll/dist/js/modernizr.js'},
+          { src: '<%= config.npm %>/modernizr/cli.js', dest: '<%= config.dev.root %>/scripts/modernizr.js'},
+          { src: '<%= config.npm %>/modernizr/cli.js', dest: '<%= config.dev.root %>/jekyll/dist/js/modernizr.js'},
           { src: '<%= config.npm %>/modernizr/cli.js', dest: 'dist/js/modernizr.js'}
         ]
       },
       //staticBuildFiles: { //static jekyll build files to staging directory 'gh-pages/'
       //  files: [
           //static homepage
-          //{src: '<%= config.jekyllBuild %>/index.html', dest: '<%= config.ghPagesBuild %>/index.html'}
+          //{src: '<%= config.dev.jekyllBuild %>/index.html', dest: '<%= config.ghPagesBuild %>/index.html'}
           //static about page
-          //{src: '<%= config.jekyllBuild %>/about.html', dest: '<%= config.ghPagesBuild %>/about/index.html'},
+          //{src: '<%= config.dev.jekyllBuild %>/about.html', dest: '<%= config.ghPagesBuild %>/about/index.html'},
           //static portfolio projects page
-          // {src: '<%= config.jekyllBuild %>/portfolio-projects.html', dest: '<%= config.ghPagesBuild %>/portfolio-projects/index.html'},
+          // {src: '<%= config.dev.jekyllBuild %>/portfolio-projects.html', dest: '<%= config.ghPagesBuild %>/portfolio-projects/index.html'},
           //static contact page
-          // {src: '<%= config.jekyllBuild %>/contact.html', dest: '<%= config.ghPagesBuild %>/contact/index.html'},
+          // {src: '<%= config.dev.jekyllBuild %>/contact.html', dest: '<%= config.ghPagesBuild %>/contact/index.html'},
       //  ],
       //},
       siteHTML: {
         files: [
           //static homepage
-          { src: '<%= config.jekyllBuild %>/index.html', dest: './index.html'}
+          { src: '<%= config.dev.jekyllBuild %>/index.html', dest: './index.html'}
           //static about page
-          //{ expand: true, cwd: '<%= config.jekyllBuild %>/', src: ['about/*.html'], dest: './'},
+          //{ expand: true, cwd: '<%= config.dev.jekyllBuild %>/', src: ['about/*.html'], dest: './'},
           //static work page
-          // { expand: true, cwd: '<%= config.jekyllBuild %>/', src: ['work/*.html'], dest: './'},
+          // { expand: true, cwd: '<%= config.dev.jekyllBuild %>/', src: ['work/*.html'], dest: './'},
           //static contact page
-//          { expand: true, cwd: '<%= config.jekyllBuild %>/', src: ['contact/*.html'], dest: './'},
+//          { expand: true, cwd: '<%= config.dev.jekyllBuild %>/', src: ['contact/*.html'], dest: './'},
         ]
       },
       distToPub: {  //'dev/_pub/dist' to './dist'
         expand: true,
-        cwd: '<%= config.dev %>/_pub/',
+        cwd: '<%= config.dev.jekyllBuild %>/',
         src: ['dist/**/*'],
         dest: './'
       },
       pubToRoot: {  //'dev/_pub/' to './'
         expand: true,
-        cwd: '<%= config.dev %>/_pub/',
+        cwd: '<%= config.dev.jekyllBuild %>/',
         //src: ['_pub/**/*', '!test*/**/*'],
         src: ['index.html', 'dist/**/*', 'projects/t*.html', '!projects/transcense-3.html'],
         dest: './'
@@ -239,7 +241,7 @@ module.exports = function(grunt) {
       },
       serve: {
         options: {
-          dest: '<%= config.jekyllBuild %>',
+          dest: '<%= config.dev.jekyllBuild %>',
           config: './_config.yml',
           serve: true, //+
           server_port: 8000, //+
@@ -250,7 +252,7 @@ module.exports = function(grunt) {
       },
       build: {
         options: {
-          dest: '<%= config.jekyllBuild %>',
+          dest: '<%= config.dev.jekyllBuild %>',
           drafts: true,
           exclude: ['node_modules', 'less', 'gh-pages', 'Gemfile', 'Gemfile.lock', 'README.md', 'package.json', 'Gruntfile.js','custom-bootstrap.map', '.grunt', 'about', 'test']
         }
@@ -294,7 +296,7 @@ module.exports = function(grunt) {
 //        tasks: ['clean:buildDist', 'copy:toBuildDist'],
 //      },
 //      pub:{
-//        files: ['./dev/_pub/**/*'],
+//        files: ['<%= config.dev.jekyllBuild %>/**/*'],
 //        tasks: ['newer:copy:siteHTML', 'newer:copy:distToPub'],
 //      },
 //      src: {
