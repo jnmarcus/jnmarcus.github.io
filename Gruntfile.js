@@ -18,13 +18,11 @@ module.exports = function(grunt) {
           root: './dev',
           styles: './dev/styles',
           scripts: './dev/scripts',
+          dist: './dev/dist',
           jekyllBuild: './dev/_pub'
         },
         ghPagesBuild: 'gh-pages',
         prod: '.'
-    },
-    dev: {
-        dist: './dev/dist'
     },
 
     // TASK CONFIGURATION
@@ -39,7 +37,7 @@ module.exports = function(grunt) {
 //        dest: 'dist/<%= pkg.name %>.js'
 //      }
 //    },
-   // <%= config.dev.root %>/dist/js/**/*.js
+   // <%= config.dev.dist %>/js/**/*.js
 
     concat: {
       options: {
@@ -135,14 +133,14 @@ module.exports = function(grunt) {
     copy: {  //WORKS!!
       styles: {   //'dev/styles/css/' to 'dist/css/' and 'jekyll/dist/css'
         files: [
-          { expand: true, cwd: '<%= config.dev.styles %>/', src: ['css/*'], dest: '<%= dev.dist %>/'},
+          { expand: true, cwd: '<%= config.dev.styles %>/', src: ['css/*'], dest: '<%= config.dev.dist %>/'},
           { expand: true, cwd: '<%= config.dev.styles %>/', src: ['css/*'], dest: '<%= config.dev.root %>/jekyll/dist/'}
         ]
       },  
       fonts: {    //'dist/fonts/' to everywhere
         files: [
           { expand: true, cwd: '<%= config.npm %>/font-awesome/', src: ['fonts/**'], dest: 'dist/'},
-          { expand: true, cwd: '<%= config.npm %>/font-awesome/', src: ['fonts/**'], dest: '<%= dev.dist %>/'},
+          { expand: true, cwd: '<%= config.npm %>/font-awesome/', src: ['fonts/**'], dest: '<%= config.dev.dist %>/'},
           { expand: true, cwd: '<%= config.npm %>/font-awesome/', src: ['fonts/**'], dest: '<%= config.dev.root %>/jekyll/dist/'}
         ]
       },
